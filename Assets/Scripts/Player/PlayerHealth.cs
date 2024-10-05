@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Collections;
 using UnityEngine;
+using TMPro;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -18,16 +19,19 @@ public class PlayerHealth : MonoBehaviour
     private bool isImmune = false;
     [SerializeField]
     private float iFrames = 2f;
+    public TextMeshProUGUI playerHPText;
 
     private void OnEnable()
     {
-        PlayerStats.currentHealth = MaxHealth;
+        curHealth = MaxHealth;
+        playerHPText.text = ("HP: " + curHealth);
     }
     public void ModHealth(int modifier)
     {
         if (!isImmune) 
         {
             curHealth = (int)Mathf.Clamp(curHealth + modifier, 0, MaxHealth);
+            playerHPText.text = ("HP: " + curHealth);
             ;
             if(curHealth <= 0)
             {
