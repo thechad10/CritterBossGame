@@ -22,7 +22,8 @@ public abstract class Boss : MonoBehaviour
     protected void OnEnable()
     {
         CurrentHealth = maxHealth;
-        bossHealthBar.fillAmount = 1;
+        if (bossHealthBar)
+            bossHealthBar.fillAmount = 1;
     }
 
     /// <summary>
