@@ -140,11 +140,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1141806534409185535, guid: 77b1f1c5fd05a8142a65c1d32a681c8c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.16
+      value: 7.0534806
       objectReference: {fileID: 0}
     - target: {fileID: 1141806534409185535, guid: 77b1f1c5fd05a8142a65c1d32a681c8c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.98
+      value: -1.0443461
       objectReference: {fileID: 0}
     - target: {fileID: 1141806534409185535, guid: 77b1f1c5fd05a8142a65c1d32a681c8c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -178,13 +178,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3953588466843134517, guid: 77b1f1c5fd05a8142a65c1d32a681c8c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4551704292339279270, guid: 77b1f1c5fd05a8142a65c1d32a681c8c, type: 3}
       propertyPath: Attacks.Array.size
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4901056449713674758, guid: 77b1f1c5fd05a8142a65c1d32a681c8c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6494840503234619469, guid: 77b1f1c5fd05a8142a65c1d32a681c8c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7799376167332111484, guid: 77b1f1c5fd05a8142a65c1d32a681c8c, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7799376167332111484, guid: 77b1f1c5fd05a8142a65c1d32a681c8c, type: 3}
       propertyPath: m_Constraints
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8494899212815389353, guid: 77b1f1c5fd05a8142a65c1d32a681c8c, type: 3}
       propertyPath: m_Name
@@ -553,10 +569,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitbox: {fileID: 667883792}
-  jumpHeight: 5
-  chargeSpeed: 20
   pauseDuration: 0.5
-  attackDelay: 2
+  jumpHeight: 5
+  moveSpeed: 5
   target1: {fileID: 267642346}
   target2: {fileID: 1196521956}
 --- !u!1 &890342039
