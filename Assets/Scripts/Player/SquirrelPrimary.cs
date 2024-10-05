@@ -17,6 +17,8 @@ public class SquirrelPrimary : MonoBehaviour
     [Header("Projectile Attributes")]
     [SerializeField] private float projectileThrowForce = 20f;
     [SerializeField] private float projectileActiveTime = 3f;
+    [SerializeField] private float projectileArcForce = 4f;
+    [SerializeField] private float projectileFalloff = 1.5f;
 
     private PlayerInput pInput;
     private PlayerMovement playerMovement;
@@ -60,18 +62,13 @@ public class SquirrelPrimary : MonoBehaviour
         attackCounter = attackSpeed;
         projectilePool[listIncrementor].transform.position = transform.position;
 
-        if (GetComponent<Rigidbody2D>().linearVelocity.x != 0) // Normalise Projectile Speed to Player Speed
-        {
-            projectileThrowForce += GetComponent<Rigidbody2D>().linearVelocity.x;
-        }
-
         if (playerMovement.bPlayerIsFacingRight) // Fire Right Logic
         {
-            projectilePool[listIncrementor].GetComponent<EnablePlayerProjectile>().Kunai_EnableProjectileParameters(projectileActiveTime, projectileThrowForce, false);
+            projectilePool[listIncrementor].GetComponent<EnablePlayerProjectile>().Kunai_EnableProjectileParameters(projectileActiveTime, projectileThrowForce, false, projectileArcForce, projectileFalloff);
         }
         else                                     // Fire Left Logic
         {
-            projectilePool[listIncrementor].GetComponent<EnablePlayerProjectile>().Kunai_EnableProjectileParameters(projectileActiveTime, -projectileThrowForce, true);
+            projectilePool[listIncrementor].GetComponent<EnablePlayerProjectile>().Kunai_EnableProjectileParameters(projectileActiveTime, -projectileThrowForce, true, projectileArcForce, projectileFalloff);
         }
     }
 }

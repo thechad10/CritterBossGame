@@ -47,7 +47,7 @@ public class EnablePlayerProjectile : MonoBehaviour
     }
 
     #region Kunai Set (Selection 0)
-    public void Kunai_EnableProjectileParameters(float updateActiveTime, float updateThrowForce, bool updateSpriteDirection)
+    public void Kunai_EnableProjectileParameters(float updateActiveTime, float updateThrowForce, bool updateSpriteDirection, float updateArcForce, float updateDropoffForce)
     {
         projCollider.enabled = true;
 
@@ -56,6 +56,8 @@ public class EnablePlayerProjectile : MonoBehaviour
 
         activeTimeKunai = updateActiveTime;
         projRB.linearVelocityX = updateThrowForce;
+        projRB.AddForceY(updateArcForce, ForceMode2D.Impulse);
+        projRB.gravityScale = updateDropoffForce;
     }
 
     private void Kunai_DisableProjectileParameters()
@@ -67,6 +69,8 @@ public class EnablePlayerProjectile : MonoBehaviour
 
         activeTimeKunai = 0;
         projRB.linearVelocityX = 0;
+        projRB.linearVelocityY = 0;
+        projRB.gravityScale = 0;
     }
     #endregion
 
