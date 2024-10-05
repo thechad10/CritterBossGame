@@ -1,13 +1,17 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public abstract class Boss : MonoBehaviour
 {
     [Header("Health")]
-    protected int _maxHealth;
-    public int MaxHealth => _maxHealth;
+    [SerializeField]
+    private int maxHealth;
     public int CurrentHealth { get; private set; }
-    public float HealthPercentage => MaxHealth / CurrentHealth;
+    public float HealthPercentage => maxHealth / CurrentHealth;
+    [Header("Attacks")]
+    [SerializeField]
+    protected List<EnemyAttack> Attacks = new();
     
     public static Action OnBossDeath = delegate { }; 
 
