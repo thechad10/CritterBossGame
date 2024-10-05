@@ -16,6 +16,9 @@ public abstract class Boss : MonoBehaviour
     protected List<EnemyAttack> Attacks = new();
     public Image bossHealthBar;
     public bool IsAttacking { get; private set; }
+    [Header("Death")]
+    [SerializeField, Tooltip("The death sequence for the boss")]
+    protected GameActionTrigger deathSeq;
     public bool IsDead { get; private set; }
     public static Action OnBossDeath = delegate { };
 
@@ -32,6 +35,7 @@ public abstract class Boss : MonoBehaviour
     /// <param name="amount">Negative -> lose health. Positive -> gain health.</param>
     public void ChangeHealth(int amount)
     {
+        if (IsDead) return;
         CurrentHealth += amount;
         bossHealthBar.fillAmount = HealthPercentage;
         if(CurrentHealth <= 0)
@@ -54,6 +58,7 @@ public abstract class Boss : MonoBehaviour
     protected void PlayerWin()
     {
         Debug.Log($"YEEEOOOOOOWWWWCH! {name} HAS DIED!");
+        deathSeq.PlaySequence();
         OnBossDeath();
     }
 }

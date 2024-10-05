@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 public class Coyote : Boss
 {
+    [Header("Coyote Specific")]
     [SerializeField, Tooltip("The amount of time it takes to execute another attack")]
     private float attackDelay;
     [SerializeField, Tooltip("Attacks that are available in second phase")]

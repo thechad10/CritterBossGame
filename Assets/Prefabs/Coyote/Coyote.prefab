@@ -839,6 +839,8 @@ GameObject:
   - component: {fileID: 5765833866838584245}
   - component: {fileID: 153647376728372558}
   - component: {fileID: 4192473624501323877}
+  - component: {fileID: 6242888498833243919}
+  - component: {fileID: 4719211640629638690}
   m_Layer: 10
   m_Name: Coyote
   m_TagString: Untagged
@@ -883,6 +885,7 @@ MonoBehaviour:
   - {fileID: 3403805973588825363}
   - {fileID: 6494840503234619469}
   bossHealthBar: {fileID: 0}
+  deathSeq: {fileID: 6242888498833243919}
   attackDelay: 1
   secondPhaseAttacks:
   - {fileID: 7470727974023541160}
@@ -1267,6 +1270,40 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &6242888498833243919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8494899212815389353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68617f2531792f94b8bdb796c15aec18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bDisableTrigger: 1
+  gActions:
+  - {fileID: 4719211640629638690}
+--- !u!114 &4719211640629638690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8494899212815389353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 854a702f0d4928b4798c627778734125, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 0
+  gameObjects:
+  - {fileID: 1185560686368306415}
+  - {fileID: 4521500251936091380}
+  - {fileID: 4959458784923797820}
+  - {fileID: 6931760098780725214}
+  setActive: 0
 --- !u!1 &9196221293512285992
 GameObject:
   m_ObjectHideFlags: 0
