@@ -47,7 +47,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Ground") // Grounded Check
+        if (collision.tag == "Ground" || collision.tag == "Platform") // Grounded Check
         {
             isGrounded = true;
             rb.gravityScale = 4f;
@@ -55,7 +55,7 @@ public class PlayerMovement : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.tag == "Ground") // Grounded Check
+        if (collision.tag == "Ground" || collision.tag == "Platform") // Grounded Check
             isGrounded = false;
     }
 
