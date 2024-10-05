@@ -6,6 +6,8 @@ public class MapManager : MonoBehaviour
 	public Character Character;
 	public Pin StartPin;
 	public Text SelectedLevelText;
+
+	private PlayerInput pInput;
 	
 	/// <summary>
 	/// Use this for initialization
@@ -14,6 +16,8 @@ public class MapManager : MonoBehaviour
 	{
 		// Pass a ref and default the player Starting Pin
 		Character.Initialise(this, StartPin);
+		pInput = new PlayerInput();
+		pInput.Enable();
 	}
 
 
@@ -35,7 +39,7 @@ public class MapManager : MonoBehaviour
 	/// </summary>
 	private void CheckForInput()
 	{
-		if (Input.GetKeyUp(KeyCode.UpArrow))
+		/*if (Input.GetKeyUp(KeyCode.UpArrow))
 		{
 			Character.TrySetDirection(Direction.Up);
 		}
@@ -50,8 +54,25 @@ public class MapManager : MonoBehaviour
 		else if(Input.GetKeyUp(KeyCode.RightArrow))
 		{
 			Character.TrySetDirection(Direction.Right);
-		}
-	}
+		}*/
+
+		if (pInput.Player.Move.ReadValue<Vector2>().x > 0)
+		{
+            Character.TrySetDirection(Direction.Right);
+        }
+        if (pInput.Player.Move.ReadValue<Vector2>().x < 0)
+        {
+            Character.TrySetDirection(Direction.Left);
+        }
+        if (pInput.Player.Move.ReadValue<Vector2>().y > 0)
+        {
+            Character.TrySetDirection(Direction.Up);
+        }
+        if (pInput.Player.Move.ReadValue<Vector2>().y < 0)
+        {
+            Character.TrySetDirection(Direction.Down);
+        }
+    }
 
 	
 	/// <summary>
