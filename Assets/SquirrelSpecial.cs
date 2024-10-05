@@ -1,0 +1,91 @@
+using UnityEngine;
+using System.Collections.Generic;
+
+public class SquirrelSpecial : MonoBehaviour
+{
+    [Header("Projectile Pooling")]
+    [SerializeField] private GameObject squirrelSpecialProjectile;
+    private int spawnPoolAmount = 3;
+    private List<GameObject> projectilePool = new List<GameObject>();
+
+    [Header("Projectile Attributes")]
+    [SerializeField] private float projectileThrowForce = 30f;
+    [SerializeField] private float projectileActiveTime = 3f;
+    private float projectileAngleForce;
+
+    private PlayerInput pInput;
+    private PlayerMovement playerMovement;
+    private PlayerAbilityRefresh playerAbilityRefresh;
+
+    void Start()
+    {
+        pInput = new PlayerInput();
+        pInput.Enable();
+        playerMovement = GetComponent<PlayerMovement>();
+        playerAbilityRefresh = GetComponent<PlayerAbilityRefresh>();
+
+        for (int i = 0; i < spawnPoolAmount; i++) // Instantiate and add projectiles to pool
+        {
+            GameObject spwanedProj = Instantiate(squirrelSpecialProjectile);
+            spwanedProj.GetComponent<SpriteRenderer>().enabled = false;
+            projectilePool.Add(spwanedProj);
+        }
+
+        projectileAngleForce = projectileThrowForce / 6; // 15 degree rise/fall
+    }
+
+    void Update()
+    {
+        if (pInput.Player.Ability.WasPerformedThisFrame() && playerAbilityRefresh.playerSpecialAbilityReady) // Projectile Logic
+        {
+            FireProjectile();
+        }
+    }
+
+    private void FireProjectile()
+    {
+        int incrementor = 0;
+
+        foreach (GameObject projectile in projectilePool)
+        {
+            projectile.transform.position = transform.position;
+
+            if (incrementor == 0) // Fly Straight
+            {
+                if (playerMovement.bPlayerIsFacingRight) // Fire Right Logic
+                {
+                    projectile.GetComponent<EnablePlayerProjectile>().NinjaStar_EnableProjectileParameters(projectileActiveTime, projectileThrowForce, false, 0);
+                }
+                else                                     // Fire Left Logic
+                {
+                    projectile.GetComponent<EnablePlayerProjectile>().NinjaStar_EnableProjectileParameters(projectileActiveTime, -projectileThrowForce, true, 0);
+                }
+            }
+            if (incrementor == 1) // Fly Up
+            {
+                if (playerMovement.bPlayerIsFacingRight)
+                {
+                    projectile.GetComponent<EnablePlayerProjectile>().NinjaStar_EnableProjectileParameters(projectileActiveTime, projectileThrowForce, false, projectileAngleForce);
+                }
+                else
+                {
+                    projectile.GetComponent<EnablePlayerProjectile>().NinjaStar_EnableProjectileParameters(projectileActiveTime, -projectileThrowForce, true, projectileAngleForce);
+                }
+            }
+            if (incrementor == 2) // Fly Down
+            {
+                if (playerMovement.bPlayerIsFacingRight)
+                {
+                    projectile.GetComponent<EnablePlayerProjectile>().NinjaStar_EnableProjectileParameters(projectileActiveTime, projectileThrowForce, false, -projectileAngleForce);
+                }
+                else
+                {
+                    projectile.GetComponent<EnablePlayerProjectile>().NinjaStar_EnableProjectileParameters(projectileActiveTime, -projectileThrowForce, true, -projectileAngleForce);
+                }
+                break;
+            }
+
+            incrementor++;
+        }
+    }
+}

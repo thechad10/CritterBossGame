@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class EnablePlayerProjectile : MonoBehaviour
 {
-    private float activeTimeKunai;
+    private float activeTimeKunai, activeTimeNinjaStar;
     private SpriteRenderer spriteRenderer;
     private Collider2D projCollider;
     private Rigidbody2D projRB;
@@ -35,10 +35,13 @@ public class EnablePlayerProjectile : MonoBehaviour
                 Kunai_DisableProjectileParameters();
         }
 
-        /*if (currentSelection == 1)
+        if (currentSelection == 1)
         {
-            //
-        }*/
+            if (activeTimeNinjaStar > 0)
+                activeTimeNinjaStar -= Time.deltaTime;
+            if (activeTimeNinjaStar <= 0)
+                NinjaStar_DisableProjectileParameters();
+        }
 
         /*if (currentSelection == 2)
         {
@@ -46,7 +49,7 @@ public class EnablePlayerProjectile : MonoBehaviour
         }*/
     }
 
-    #region Kunai Set (Selection 0)
+    #region Kunai Set (currentSelection 0)
     public void Kunai_EnableProjectileParameters(float updateActiveTime, float updateThrowForce, bool updateSpriteDirection, float updateArcForce, float updateDropoffForce)
     {
         projCollider.enabled = true;
@@ -75,12 +78,34 @@ public class EnablePlayerProjectile : MonoBehaviour
     #endregion
 
 
-    #region Ninja Star Set (Selection 1)
+    #region Ninja Star Set (currentSelection 1)
+    public void NinjaStar_EnableProjectileParameters(float updateActiveTime, float updateThrowForce, bool updateSpriteDirection, float updateAngleForce)
+    {
+        projCollider.enabled = true;
 
+        spriteRenderer.enabled = true;
+        spriteRenderer.flipX = updateSpriteDirection;
+
+        activeTimeNinjaStar = updateActiveTime;
+        projRB.linearVelocityX = updateThrowForce;
+        projRB.linearVelocityY = updateAngleForce;
+    }
+
+    private void NinjaStar_DisableProjectileParameters()
+    {
+        projCollider.enabled = false;
+
+        spriteRenderer.enabled = false; // maybe incorperate an animation that plays here, then the renderer disables after
+        spriteRenderer.flipX = false;
+
+        activeTimeNinjaStar = 0;
+        projRB.linearVelocityX = 0;
+        projRB.linearVelocityY = 0;
+    }
     #endregion
 
 
-    #region Bullet Set (Selection 2)
+    #region Bullet Set (currentSelection 2)
 
     #endregion
 }

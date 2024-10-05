@@ -15,7 +15,7 @@ public class SquirrelPrimary : MonoBehaviour
     private bool attackReady;
 
     [Header("Projectile Attributes")]
-    [SerializeField] private float projectileThrowForce = 20f;
+    [SerializeField] private float projectileThrowForce = 30f;
     [SerializeField] private float projectileActiveTime = 3f;
     [SerializeField] private float projectileArcForce = 4f;
     [SerializeField] private float projectileFalloff = 1.5f;
