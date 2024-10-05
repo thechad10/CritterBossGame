@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class CoyoteSwipe : EnemyAttack
+public class Swipe_EA : EnemyAttack
 {
     [SerializeField, Tooltip("Speed this attack goes")]
     private float attackSpeed;
@@ -12,8 +12,12 @@ public class CoyoteSwipe : EnemyAttack
     private AnimationCurve yScale;
     [SerializeField, Tooltip("Used for the y AnimationCurve's calculation")]
     private Transform yMaxPos;
+    [SerializeField, Tooltip("Used for the y AnimationCurve's calculation")]
+    private Transform yMinPos;
     private bool isAttacking;
     private float rate;
+    [SerializeField]
+    private Transform tPivot;
     public override void Attack()
     {
         if (isAttacking)
@@ -21,7 +25,6 @@ public class CoyoteSwipe : EnemyAttack
             Debug.LogError($"{this} is already attacking! Don't call this.");
             return;
         }
-
         hitbox.gameObject.SetActive(true);
         isAttacking = true;
     }
@@ -29,7 +32,9 @@ public class CoyoteSwipe : EnemyAttack
     {
         if (!isAttacking) return;
         rate += Time.deltaTime * attackSpeed;
-        hitbox.transform.localScale = new Vector3(xMaxPos.position.x * xScale.Evaluate(rate), yMaxPos.position.y * yScale.Evaluate(rate), 0);
+        Debug.Log(xMaxPos.localPosition.x);
+        tPivot.localScale = new Vector3(xMaxPos.localPosition.x * xScale.Evaluate(rate), (yMaxPos.localPosition.y - yMinPos.localPosition.y)* yScale.Evaluate(rate), 0);
+        //hitbox.transform.localScale = new Vector3(xMaxPos.position.x * xScale.Evaluate(rate), yMaxPos.localPosition.y * yScale.Evaluate(rate), 0);
 
         if (rate >= 1)
         {
