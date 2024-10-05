@@ -62,7 +62,7 @@ public class SquirrelPrimary : MonoBehaviour
 
         if (GetComponent<Rigidbody2D>().linearVelocity.x != 0) // Normalise Projectile Speed to Player Speed
         {
-            projectileThrowForce -= GetComponent<Rigidbody2D>().linearVelocity.x;
+            projectileThrowForce += GetComponent<Rigidbody2D>().linearVelocity.x;
         }
 
         if (playerMovement.bPlayerIsFacingRight) // Fire Right Logic

@@ -5,7 +5,6 @@ public class PlayerStats : ScriptableObject
 {
     [Header("Movement")]
     public float speed;
-    [Header("Health")]
-    public int maxHealth;
-    public int currentHealth;
+    public readonly static int maxHealth = 3;
+    public static int currentHealth = maxHealth;
 }
