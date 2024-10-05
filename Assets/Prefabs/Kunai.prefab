@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -6719781653911740979}
   - component: {fileID: 4537481783793922482}
   - component: {fileID: -7966010134613177142}
+  - component: {fileID: 8800569468941053700}
   m_Layer: 8
   m_Name: Kunai
   m_TagString: Untagged
@@ -166,3 +167,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectileType: 0
+--- !u!114 &8800569468941053700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 350055554692712528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b563ee16fdf07464ca8e846122fc8e47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthMod: -1

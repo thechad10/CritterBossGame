@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 8705946570576308132}
   - component: {fileID: 1003240810085422084}
   - component: {fileID: 8689610187346820316}
+  - component: {fileID: 876340987805430440}
   m_Layer: 0
   m_Name: Swipe_Hitbox
   m_TagString: Untagged
@@ -259,6 +260,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &876340987805430440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2558413989065904792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b563ee16fdf07464ca8e846122fc8e47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthMod: -1
 --- !u!1 &2911253077364267710
 GameObject:
   m_ObjectHideFlags: 0
@@ -363,6 +377,7 @@ GameObject:
   - component: {fileID: 7445025319289013532}
   - component: {fileID: 4063125693587803836}
   - component: {fileID: 859598776888587980}
+  - component: {fileID: 1113625021542384074}
   m_Layer: 0
   m_Name: Swipe_Hitbox
   m_TagString: Untagged
@@ -486,6 +501,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1113625021542384074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4513535682995529995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b563ee16fdf07464ca8e846122fc8e47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthMod: -1
 --- !u!1 &4521500251936091380
 GameObject:
   m_ObjectHideFlags: 0
@@ -1398,6 +1426,7 @@ GameObject:
   - component: {fileID: 8312708391297446484}
   - component: {fileID: 3118074190078070605}
   - component: {fileID: 7680417603156673459}
+  - component: {fileID: 901219014913793253}
   m_Layer: 0
   m_Name: Boomerang_Hitbox
   m_TagString: Untagged
@@ -1521,3 +1550,16 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &901219014913793253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9196221293512285992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b563ee16fdf07464ca8e846122fc8e47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthMod: -1
