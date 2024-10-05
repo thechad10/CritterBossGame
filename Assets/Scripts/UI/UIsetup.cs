@@ -6,8 +6,6 @@ public class UIsetup : MonoBehaviour
 {
     [SerializeField]
     private Image bossHealth;
-    //[SerializeField]
-    //private Image playerAbilityRecharge;
     [SerializeField]
     private TextMeshProUGUI playerHealthText;
     private void OnEnable()
