@@ -45,7 +45,7 @@ public class BombingRun_EA : EnemyAttack
     }
     private void Update()
     {
-        bird.bIsAttacking = IsAttacking;
+        
         if (!IsAttacking) return;
         moveRate += Time.deltaTime * moveSpeed;
         attackRate += Time.deltaTime * attackSpeed;
@@ -61,6 +61,7 @@ public class BombingRun_EA : EnemyAttack
         {
             moveRate = 0;
             IsAttacking = false;
+            bird.bIsAttacking = false;
         }
     }
 

@@ -23,35 +23,27 @@ public class Bird : Boss
     private void Update()
     {
         if (bIsAttacking) return;
-
+        bIsAttacking = true;
         int attackIndex;
 
-        timer += Time.deltaTime;
-        if (timer > idleTime)
+        if (isSecondPhase)
         {
-            if (isSecondPhase)
-            {
-                attackIndex = UnityEngine.Random.Range(0, Attacks.Count);
-            }
-            else //isn't second phase
-            {
-                attackIndex = UnityEngine.Random.Range(0, Attacks.Count - 1);
-            }
-            StartCoroutine(nameof(StartAttack),(attackIndex));
+            attackIndex = UnityEngine.Random.Range(0, Attacks.Count);
         }
-
-        
-        
+        else //isn't second phase
+        {
+            attackIndex = UnityEngine.Random.Range(0, Attacks.Count);
+        }
+        StartCoroutine(nameof(StartAttack),(attackIndex));
     }
 
     IEnumerator StartAttack(int attack)
     {
-        bIsAttacking = true;
-        Attacks[attack].Attack();
+
         yield return new WaitForSeconds(attackDelay);
+        Attacks[attack].Attack();
 
         timer = 0;
-        bIsAttacking = false;
     }
 
     public void StartSecondPhase()
