@@ -13,7 +13,12 @@ public abstract class Boss : MonoBehaviour
     [SerializeField]
     protected List<EnemyAttack> Attacks = new();
     
-    public static Action OnBossDeath = delegate { }; 
+    public static Action OnBossDeath = delegate { };
+
+    protected void OnEnable()
+    {
+        CurrentHealth = maxHealth;
+    }
 
     /// <summary>
     /// Change the health by a set amount, postive or negative
