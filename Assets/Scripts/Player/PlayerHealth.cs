@@ -24,7 +24,8 @@ public class PlayerHealth : MonoBehaviour
     private void OnEnable()
     {
         curHealth = MaxHealth;
-        playerHPText.text = ("HP: " + curHealth);
+        if (playerHPText)
+            playerHPText.text = ("HP: " + curHealth);
     }
     public void ModHealth(int modifier)
     {

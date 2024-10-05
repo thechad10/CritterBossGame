@@ -9,6 +9,9 @@ public class Bird : Boss
     [SerializeField, Tooltip("The amount of time it takes to execute another attack")]
     private float attackDelay;
     public bool bIsAttacking;
+    [SerializeField]
+    private float idleTime = 1;
+    private float timer = 0;
     [SerializeField, Tooltip("Whether or not this boss is in second phase")]
     private bool isSecondPhase;
 
@@ -23,15 +26,21 @@ public class Bird : Boss
 
         int attackIndex;
 
-        if (isSecondPhase)
+        timer += Time.deltaTime;
+        if (timer > idleTime)
         {
-            attackIndex = UnityEngine.Random.Range(0, Attacks.Count);
+            if (isSecondPhase)
+            {
+                attackIndex = UnityEngine.Random.Range(0, Attacks.Count);
+            }
+            else //isn't second phase
+            {
+                attackIndex = UnityEngine.Random.Range(0, Attacks.Count - 1);
+            }
+            StartCoroutine(nameof(StartAttack),(attackIndex));
         }
-        else //isn't second phase
-        {
-            attackIndex = UnityEngine.Random.Range(0, Attacks.Count - 1);
-        }
-        StartCoroutine(nameof(StartAttack),(attackIndex));
+
+        
         
     }
 
@@ -41,6 +50,7 @@ public class Bird : Boss
         Attacks[attack].Attack();
         yield return new WaitForSeconds(attackDelay);
 
+        timer = 0;
         bIsAttacking = false;
     }
 

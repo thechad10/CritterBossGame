@@ -14,13 +14,15 @@ public class PlayerAbilityRefresh : MonoBehaviour
     {
         pInput = new PlayerInput();
         pInput.Enable();
-        playerAbilityFill = GameObject.FindWithTag("PlayerAbilityFill").GetComponent<Image>();
+        if(GameObject.FindWithTag("PlayerAbilityFill"))
+            playerAbilityFill = GameObject.FindWithTag("PlayerAbilityFill").GetComponent<Image>();
         refreshCounter = 0;
     }
 
     private void Update()
     {
-        playerAbilityFill.fillAmount = refreshCounter / refreshTime;
+        if (playerAbilityFill)
+            playerAbilityFill.fillAmount = refreshCounter / refreshTime;
 
         if (!playerSpecialAbilityReady)
         {
