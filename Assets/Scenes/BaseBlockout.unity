@@ -679,6 +679,90 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1405545297 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8494899212815389353, guid: 77b1f1c5fd05a8142a65c1d32a681c8c, type: 3}
+  m_PrefabInstance: {fileID: 1773615513856812078}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1405545303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1405545297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff78cd4df5dfe534d97b80feae61a7b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitbox: {fileID: 1773615513856812079}
+  xPosition:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: -19.450802
+      outSlope: -19.450802
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.06693227
+    - serializedVersion: 3
+      time: 0.5
+      value: -5
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 19.89056
+      outSlope: 19.89056
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.07968128
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  yPosition:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.8
+      value: 1
+      inSlope: 0.20098132
+      outSlope: -0.311569
+      tangentMode: 1
+      weightedMode: 0
+      inWeight: 0.107569695
+      outWeight: 0.30278865
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: -7.0474014
+      outSlope: -7.0474014
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.08366526
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1520860032
 GameObject:
   m_ObjectHideFlags: 0
@@ -980,8 +1064,16 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8494899212815389353, guid: 77b1f1c5fd05a8142a65c1d32a681c8c, type: 3}
+      insertIndex: 2
+      addedObject: {fileID: 1405545303}
   m_SourcePrefab: {fileID: 100100000, guid: 77b1f1c5fd05a8142a65c1d32a681c8c, type: 3}
+--- !u!61 &1773615513856812079 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 3118074190078070605, guid: 77b1f1c5fd05a8142a65c1d32a681c8c, type: 3}
+  m_PrefabInstance: {fileID: 1773615513856812078}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
