@@ -172,6 +172,7 @@ MonoBehaviour:
   jumpStrength: 7
   cayoteTime: 0.1
   jumpBufferTime: 0.2
+  bPlayerIsFacingRight: 0
 --- !u!114 &6203376877242694895
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -187,6 +188,8 @@ MonoBehaviour:
   squirrelProjectile: {fileID: 350055554692712528, guid: c8ee0525610d2ef4ebf48c9f398ed13d, type: 3}
   spawnPoolAmount: 20
   attackSpeed: 0.25
+  projectileThrowForce: 20
+  projectileActiveTime: 3
 --- !u!1 &6118119920323160993
 GameObject:
   m_ObjectHideFlags: 0

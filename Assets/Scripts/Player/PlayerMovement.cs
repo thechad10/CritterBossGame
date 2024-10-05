@@ -17,6 +17,8 @@ public class PlayerMovement : MonoBehaviour
     private PlayerInput pInput;
     private Collider2D groundCollider;
 
+    [HideInInspector] public bool bPlayerIsFacingRight;
+
 
     private void Start()
     {
@@ -64,10 +66,12 @@ public class PlayerMovement : MonoBehaviour
         if (movement.x < 0)
         {
             GetComponent<SpriteRenderer>().flipX = true;
+            bPlayerIsFacingRight = false;
         }
         if (movement.x > 0)
         {
             GetComponent<SpriteRenderer>().flipX = false;
+            bPlayerIsFacingRight = true;
         }
         transform.Translate(movement);
     }
