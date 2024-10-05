@@ -8,7 +8,7 @@ public abstract class Boss : MonoBehaviour
     [SerializeField]
     private int maxHealth;
     public int CurrentHealth { get; private set; }
-    public float HealthPercentage => maxHealth / CurrentHealth;
+    public float HealthPercentage => CurrentHealth <= 0 ? 0 : maxHealth / CurrentHealth;
     [Header("Attacks")]
     [SerializeField]
     protected List<EnemyAttack> Attacks = new();
