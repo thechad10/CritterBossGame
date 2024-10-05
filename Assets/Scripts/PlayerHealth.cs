@@ -15,16 +15,42 @@ public class PlayerHealth : MonoBehaviour
     private float hitWaitTime;
     public List<GameAction> hitAction;
 
+    private bool isImmune;
+    [SerializeField]
+    private float iFrames = 2f;
+
     public void modHealth(int modifier)
     {
-        pStats.currentHealth += modifier;
-        if(curHealth <= 0)
-        {
-            StartCoroutine(nameof(DeathSeq));
+        if (!isImmune) 
+        { 
+            pStats.currentHealth += modifier;
+            if(curHealth <= 0)
+            {
+                StartCoroutine(nameof(DeathSeq));
+            }
+            else if (modifier < 0)
+            {
+                StartCoroutine(nameof(HitSeq));
+                StartCoroutine(nameof(ImmuneDelay));
+            }
         }
-        else if (modifier < 0)
+    }
+    IEnumerator ImmuneDelay() // Perform a series of game actions upon spawning
+    {
+        int immuneTickCount = 0;
+        while (isImmune)
         {
-            StartCoroutine(nameof(HitSeq));
+            yield return new WaitForSeconds(1);
+            {
+                if (immuneTickCount < iFrames)
+                {
+                    immuneTickCount += 1;
+                }
+                else
+                {
+                    isImmune = false;
+                }
+            }
         }
     }
 
