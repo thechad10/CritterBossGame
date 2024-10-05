@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[RequireComponent (typeof(BoxCollider2D))]
+[RequireComponent (typeof(Collider2D))]
 public class DamageModifier : MonoBehaviour
 {
     [Tooltip("Positive for Heal, Negative for Damage")]
