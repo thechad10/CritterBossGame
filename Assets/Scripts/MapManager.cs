@@ -39,23 +39,6 @@ public class MapManager : MonoBehaviour
 	/// </summary>
 	private void CheckForInput()
 	{
-		/*if (Input.GetKeyUp(KeyCode.UpArrow))
-		{
-			Character.TrySetDirection(Direction.Up);
-		}
-		else if(Input.GetKeyUp(KeyCode.DownArrow))
-		{
-			Character.TrySetDirection(Direction.Down);
-		}
-		else if(Input.GetKeyUp(KeyCode.LeftArrow))
-		{
-			Character.TrySetDirection(Direction.Left);
-		}
-		else if(Input.GetKeyUp(KeyCode.RightArrow))
-		{
-			Character.TrySetDirection(Direction.Right);
-		}*/
-
 		if (pInput.Player.Move.ReadValue<Vector2>().x > 0)
 		{
             Character.TrySetDirection(Direction.Right);

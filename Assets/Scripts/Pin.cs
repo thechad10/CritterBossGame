@@ -24,7 +24,9 @@ public class Pin : MonoBehaviour
 	public Pin LeftPin;
 	public Pin RightPin;
 
-	private Dictionary<Direction, Pin> _pinDirections; 
+	private Dictionary<Direction, Pin> _pinDirections;
+	[SerializeField] private GameObject _levelStartScreen;
+	[SerializeField] private GameObject _playerCharacter;
 	
 	
 	/// <summary>
@@ -47,15 +49,21 @@ public class Pin : MonoBehaviour
 			GetComponent<SpriteRenderer>().enabled = false;
 		}
 	}
-	
-	
-	/// <summary>
-	/// Get the pin in a selected direction
-	/// Using a switch statement rather than linq so this can run in the editor
-	/// </summary>
-	/// <param name="direction"></param>
-	/// <returns></returns>
-	public Pin GetPinInDirection(Direction direction)
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+		Debug.Log("This is working");
+		_levelStartScreen.SetActive(true);
+		_playerCharacter.SetActive(false);
+    }
+
+    /// <summary>
+    /// Get the pin in a selected direction
+    /// Using a switch statement rather than linq so this can run in the editor
+    /// </summary>
+    /// <param name="direction"></param>
+    /// <returns></returns>
+    public Pin GetPinInDirection(Direction direction)
 	{
 		switch (direction)
 		{
