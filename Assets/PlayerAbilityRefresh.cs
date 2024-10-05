@@ -15,7 +15,7 @@ public class PlayerAbilityRefresh : MonoBehaviour
         pInput = new PlayerInput();
         pInput.Enable();
         playerAbilityFill = GameObject.FindWithTag("PlayerAbilityFill").GetComponent<Image>();
-        refreshCounter = refreshTime;
+        refreshCounter = 0;
     }
 
     private void Update()
@@ -33,7 +33,6 @@ public class PlayerAbilityRefresh : MonoBehaviour
         if (pInput.Player.Ability.WasPerformedThisFrame() && playerSpecialAbilityReady)
         {
             refreshCounter = 0;
-            playerSpecialAbilityReady = false;
         }
     }
 }
