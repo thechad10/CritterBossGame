@@ -190,6 +190,8 @@ MonoBehaviour:
   attackSpeed: 0.25
   projectileThrowForce: 30
   projectileActiveTime: 3
+  projectileArcForce: 4
+  projectileFalloff: 1.5
 --- !u!1 &6118119920323160993
 GameObject:
   m_ObjectHideFlags: 0

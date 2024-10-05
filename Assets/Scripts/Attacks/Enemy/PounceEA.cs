@@ -1,8 +1,7 @@
 using UnityEngine;
 using System.Collections;
-using static UnityEngine.RuleTile.TilingRuleOutput;
 
-public class PounceEA : EnemyAttack 
+public class PounceEA : EnemyAttack
 {
     [SerializeField, Tooltip("Time to pause in the air at the top of the jump")]
     private float pauseDuration = 0.5f;
@@ -14,13 +13,13 @@ public class PounceEA : EnemyAttack
     private float moveSpeed = 5f;
 
     [SerializeField, Tooltip("First target point on one side of the map")]
-    private UnityEngine.Transform target1;
+    private Transform target1;
 
     [SerializeField, Tooltip("Second target point on the opposite side of the map")]
-    private UnityEngine.Transform target2;
+    private Transform target2;
 
     private Rigidbody2D rb;
-    private UnityEngine.Transform currentTarget;
+    private Transform currentTarget;
     private bool movingToTarget1;
     private Vector3 originalScale;
 
@@ -39,13 +38,23 @@ public class PounceEA : EnemyAttack
         // Decide initial target based on the enemy's position
         currentTarget = target1.position.x > transform.position.x ? target1 : target2;
         movingToTarget1 = currentTarget == target1;
+    }
 
-        // Start the attack once
-        StartCoroutine(PerformAttack());
+    public override void Attack()
+    {
+        if (!IsAttacking)
+        {
+            StartCoroutine(PerformAttack());
+        }
     }
 
     private IEnumerator PerformAttack()
     {
+        IsAttacking = true;
+
+        // Enable the hitbox for the attack duration
+        hitbox.enabled = true;
+
         // Step 1: Jump straight up
         rb.linearVelocity = new Vector2(0, Mathf.Sqrt(2 * jumpHeight * Mathf.Abs(Physics2D.gravity.y)));
 
@@ -79,16 +88,16 @@ public class PounceEA : EnemyAttack
 
         // Step 4: Flip the enemy
         FlipEnemy();
+
+        // Disable the hitbox after the attack
+        hitbox.enabled = false;
+
+        IsAttacking = false;
     }
 
     private void FlipEnemy()
     {
         // Flip the enemy by inverting the x scale
         transform.localScale = new Vector3(-transform.localScale.x, originalScale.y, originalScale.z);
-    }
-
-    public override void Attack()
-    {
-        throw new System.NotImplementedException();
     }
 }
