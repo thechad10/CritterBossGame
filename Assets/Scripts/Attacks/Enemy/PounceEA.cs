@@ -68,6 +68,7 @@ public class PounceEA : EnemyAttack
         // Step 3: Move horizontally to the opposite target
         Vector2 startPosition = transform.position;
         Vector2 targetPosition = movingToTarget1 ? target2.position : target1.position;
+        movingToTarget1 = !movingToTarget1;
 
         // Calculate the time it will take to move to the target
         float distance = Vector2.Distance(startPosition, targetPosition);

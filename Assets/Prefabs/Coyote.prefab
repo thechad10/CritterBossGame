@@ -883,12 +883,12 @@ MonoBehaviour:
   - {fileID: 3403805973588825363}
   - {fileID: 6494840503234619469}
   bossHealthBar: {fileID: 0}
+  attackDelay: 1
   secondPhaseAttacks:
   - {fileID: 7470727974023541160}
   - {fileID: 3403805973588825363}
   - {fileID: 6494840503234619469}
   - {fileID: 181605139260498947}
-  attackDelay: 1
 --- !u!114 &7470727974023541160
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1285,7 +1285,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8312708391297446484
 Transform:
   m_ObjectHideFlags: 0
@@ -1296,7 +1296,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 0.4, z: 1}
+  m_LocalScale: {x: 1, y: 0.4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1867055169114052712}
