@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 526125a35fc84fd4e98f51ce565ce40a, type: 3}
   m_Name: SquirrelStats
   m_EditorClassIdentifier: 
-  speed: 0
-  maxHealth: 0
-  currentHealth: 0
+  speed: 15
+  maxHealth: 3
+  currentHealth: 3
