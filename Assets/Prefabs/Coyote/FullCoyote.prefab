@@ -144,6 +144,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3118074190078070605, guid: 77b1f1c5fd05a8142a65c1d32a681c8c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3403805973588825363, guid: 77b1f1c5fd05a8142a65c1d32a681c8c, type: 3}
       propertyPath: target1
       value: 
@@ -156,9 +160,21 @@ PrefabInstance:
       propertyPath: deathSeq
       value: 
       objectReference: {fileID: 4015388903201501286}
+    - target: {fileID: 4551704292339279270, guid: 77b1f1c5fd05a8142a65c1d32a681c8c, type: 3}
+      propertyPath: maxHealth
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 7680417603156673459, guid: 77b1f1c5fd05a8142a65c1d32a681c8c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8494899212815389353, guid: 77b1f1c5fd05a8142a65c1d32a681c8c, type: 3}
       propertyPath: m_Name
       value: Coyote
+      objectReference: {fileID: 0}
+    - target: {fileID: 9196221293512285992, guid: 77b1f1c5fd05a8142a65c1d32a681c8c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
