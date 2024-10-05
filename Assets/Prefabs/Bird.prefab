@@ -189,6 +189,7 @@ MonoBehaviour:
   secondPhaseAttacks: []
   attackDelay: 1
   bIsAttacking: 0
+  idleTime: 1
   isSecondPhase: 0
 --- !u!114 &7747773625584582044
 MonoBehaviour:
@@ -210,13 +211,13 @@ MonoBehaviour:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
-      inSlope: 0.08943766
-      outSlope: 0.08943766
+      value: 1.0032967
+      inSlope: -0.045019932
+      outSlope: -0.045019932
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0.19976813
+      outWeight: 0.19956085
     - serializedVersion: 3
       time: 0.26400825
       value: 0.5016407
@@ -227,14 +228,14 @@ MonoBehaviour:
       inWeight: 0.07077116
       outWeight: 0.27688953
     - serializedVersion: 3
-      time: 0.50192976
-      value: 1.0056682
-      inSlope: 0.06318417
-      outSlope: 0.06318417
+      time: 0.50089216
+      value: -0.00000047683716
+      inSlope: 0.000009792904
+      outSlope: 0.000009792904
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
-      outWeight: 0.21375173
+      outWeight: 0.19484574
     - serializedVersion: 3
       time: 0.750793
       value: 0.49760473
@@ -245,8 +246,8 @@ MonoBehaviour:
       inWeight: 0.33333334
       outWeight: 0.2332827
     - serializedVersion: 3
-      time: 0.9989624
-      value: 0.0070762634
+      time: 0.99999547
+      value: 1.0032573
       inSlope: 0
       outSlope: 0
       tangentMode: 0
