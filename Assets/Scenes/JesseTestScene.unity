@@ -571,7 +571,7 @@ MonoBehaviour:
   hitbox: {fileID: 667883792}
   pauseDuration: 0.5
   jumpHeight: 5
-  moveSpeed: 5
+  moveSpeed: 20
   target1: {fileID: 267642346}
   target2: {fileID: 1196521956}
 --- !u!1 &890342039
