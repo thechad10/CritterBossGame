@@ -15,12 +15,12 @@ public class OneWayPlatformDrop : MonoBehaviour
     }
     private void Update()
     {
-        if (pInput.Player.Fall.WasPerformedThisFrame())
+        if (pInput.Player.Fall.WasPerformedThisFrame()) // Flip Platforms
         {
             effector.rotationalOffset = 180f;
             playerObject.GetComponent<Rigidbody2D>().gravityScale = 4.5f;
         }
-        if (pInput.Player.Jump.WasPerformedThisFrame())
+        if (pInput.Player.Jump.WasPerformedThisFrame()) // Reset Platforms
         {
             effector.rotationalOffset = 0f;
         }

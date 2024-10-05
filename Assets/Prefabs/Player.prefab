@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4842264853675583072}
   - component: {fileID: 1805496367872007615}
   - component: {fileID: 2908321725261860478}
+  - component: {fileID: 6203376877242694895}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -171,6 +172,21 @@ MonoBehaviour:
   jumpStrength: 7
   cayoteTime: 0.1
   jumpBufferTime: 0.2
+--- !u!114 &6203376877242694895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 366852669131201908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a2ab4f443502fd498861fc676cd675a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  squirrelProjectile: {fileID: 350055554692712528, guid: c8ee0525610d2ef4ebf48c9f398ed13d, type: 3}
+  spawnPoolAmount: 20
+  attackSpeed: 0.25
 --- !u!1 &6118119920323160993
 GameObject:
   m_ObjectHideFlags: 0
