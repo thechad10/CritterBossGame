@@ -16,6 +16,9 @@ GameObject:
   - component: {fileID: 6203376877242694895}
   - component: {fileID: 1989703828146837761}
   - component: {fileID: 8879184406393363635}
+  - component: {fileID: 9154879714767479625}
+  - component: {fileID: 6672245747792032069}
+  - component: {fileID: 649364831522346205}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -222,6 +225,55 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSpecialAbilityReady: 0
+--- !u!114 &9154879714767479625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 366852669131201908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c6c8743dee282f469d3a089ea1f6c73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pStats: {fileID: 11400000, guid: a3eb7711c465d1841a406cbf6235d24e, type: 2}
+  deathWaitTime: 0
+  deathAction:
+  - {fileID: 649364831522346205}
+  hitWaitTime: 0
+  hitAction:
+  - {fileID: 6672245747792032069}
+  iFrames: 2
+  playerHPText: {fileID: 0}
+--- !u!114 &6672245747792032069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 366852669131201908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1aaf4d99e84714341a26a6682c607856, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 0
+  message: Player Hit
+--- !u!114 &649364831522346205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 366852669131201908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1aaf4d99e84714341a26a6682c607856, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 0
+  message: Player Death
 --- !u!1 &6118119920323160993
 GameObject:
   m_ObjectHideFlags: 0
