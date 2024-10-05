@@ -6,36 +6,42 @@ public class PlayerHealth : MonoBehaviour
 {
     public PlayerStats pStats;
     private int maxHealth => pStats.maxHealth;
-    private int curHealth => pStats.currentHealth;
+    private int curHealth;
 
     [SerializeField]
     private float deathWaitTime;
-    public List<GameAction> deathAction;
+    public List<GameAction> deathAction = new List<GameAction>();
     [SerializeField]
     private float hitWaitTime;
-    public List<GameAction> hitAction;
+    public List<GameAction> hitAction = new List<GameAction>();
 
-    private bool isImmune;
+    private bool isImmune = false;
     [SerializeField]
     private float iFrames = 2f;
 
+    private void OnEnable()
+    {
+        curHealth = maxHealth;
+    }
     public void modHealth(int modifier)
     {
         if (!isImmune) 
-        { 
-            pStats.currentHealth += modifier;
+        {
+            curHealth = (int)Mathf.Clamp(curHealth + modifier, 0, maxHealth);
+            ;
             if(curHealth <= 0)
             {
                 StartCoroutine(nameof(DeathSeq));
             }
             else if (modifier < 0)
             {
+                isImmune = true;
                 StartCoroutine(nameof(HitSeq));
                 StartCoroutine(nameof(ImmuneDelay));
             }
         }
     }
-    IEnumerator ImmuneDelay() // Perform a series of game actions upon spawning
+    IEnumerator ImmuneDelay()
     {
         int immuneTickCount = 0;
         while (isImmune)
