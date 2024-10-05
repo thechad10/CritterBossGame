@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 1805496367872007615}
   - component: {fileID: 2908321725261860478}
   - component: {fileID: 6203376877242694895}
+  - component: {fileID: 1989703828146837761}
+  - component: {fileID: 8879184406393363635}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -192,6 +194,34 @@ MonoBehaviour:
   projectileActiveTime: 3
   projectileArcForce: 4
   projectileFalloff: 1.5
+--- !u!114 &1989703828146837761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 366852669131201908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2455d64b521aaa04085627f3bacac851, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  squirrelSpecialProjectile: {fileID: 350055554692712528, guid: e48bca554449587459136a66fb5fcb9f, type: 3}
+  projectileThrowForce: 30
+  projectileActiveTime: 3
+--- !u!114 &8879184406393363635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 366852669131201908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f064a8c69ed94f149873381b55dd7670, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSpecialAbilityReady: 0
 --- !u!1 &6118119920323160993
 GameObject:
   m_ObjectHideFlags: 0

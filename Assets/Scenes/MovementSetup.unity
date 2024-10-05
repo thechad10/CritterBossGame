@@ -126,45 +126,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 418097374017282955, guid: a634b7ba7d9c0b54a8345827834ca2ed, type: 3}
-      propertyPath: m_TagString
-      value: PlayerAbilityFill
-      objectReference: {fileID: 0}
     - target: {fileID: 1223750196516613553, guid: a634b7ba7d9c0b54a8345827834ca2ed, type: 3}
       propertyPath: m_Name
       value: GameUI
-      objectReference: {fileID: 0}
-    - target: {fileID: 4897943834038723539, guid: a634b7ba7d9c0b54a8345827834ca2ed, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4897943834038723539, guid: a634b7ba7d9c0b54a8345827834ca2ed, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4897943834038723539, guid: a634b7ba7d9c0b54a8345827834ca2ed, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4897943834038723539, guid: a634b7ba7d9c0b54a8345827834ca2ed, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6681767550628251866, guid: a634b7ba7d9c0b54a8345827834ca2ed, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6681767550628251866, guid: a634b7ba7d9c0b54a8345827834ca2ed, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6681767550628251866, guid: a634b7ba7d9c0b54a8345827834ca2ed, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6681767550628251866, guid: a634b7ba7d9c0b54a8345827834ca2ed, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6708341943702600456, guid: a634b7ba7d9c0b54a8345827834ca2ed, type: 3}
       propertyPath: m_Pivot.x
