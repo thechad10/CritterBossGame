@@ -20,14 +20,20 @@ public class SquirrelPrimary : MonoBehaviour
     [SerializeField] private float projectileArcForce = 4f;
     [SerializeField] private float projectileFalloff = 1.5f;
 
+    public bool playerIsAttacking;
+
     private PlayerInput pInput;
     private PlayerMovement playerMovement;
+    private Animator playerAnimator;
+    private PlayerHealth playerHealth;
 
     void Start()
     {
         pInput = new PlayerInput();
         pInput.Enable();
         playerMovement = GetComponent<PlayerMovement>();
+        playerAnimator = GetComponent<Animator>();
+        playerHealth = GetComponent<PlayerHealth>();
 
         for (int i = 0; i < spawnPoolAmount; i++) // Instantiate and add projectiles to pool
         {
@@ -39,13 +45,21 @@ public class SquirrelPrimary : MonoBehaviour
 
     void Update()
     {
+        if (attackCounter <= attackSpeed - 0.1f)
+            playerIsAttacking = false;
+
         if (attackCounter > 0) // Resets firing
             attackCounter -= Time.deltaTime;
         else
+        {
             attackReady = true;
+        }
 
         if (pInput.Player.Attack.IsInProgress() && attackReady) // Projectile Logic
         {
+            playerIsAttacking = true;
+            if (!playerMovement.playerIsJumping && !playerHealth.playerIsTakingDamage && !playerHealth.playerIsNowDead)
+                playerAnimator.Play("Squirrel_Attack");
             attackReady = false;
 
             FireProjectile();

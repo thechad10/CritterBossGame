@@ -20,7 +20,7 @@ public class OneWayPlatformDrop : MonoBehaviour
             effector.rotationalOffset = 180f;
             playerObject.GetComponent<Rigidbody2D>().gravityScale = 4.5f;
         }
-        if (pInput.Player.Jump.WasPerformedThisFrame()) // Reset Platforms
+        if (pInput.Player.Fall.WasReleasedThisFrame()) // Reset Platforms
         {
             effector.rotationalOffset = 0f;
         }

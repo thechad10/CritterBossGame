@@ -16,6 +16,10 @@ public class SquirrelSpecial : MonoBehaviour
     private PlayerInput pInput;
     private PlayerMovement playerMovement;
     private PlayerAbilityRefresh playerAbilityRefresh;
+    private Animator playerAnimator;
+    private PlayerHealth playerHealth;
+
+    public bool playerSpecialAttacking;
 
     void Start()
     {
@@ -23,6 +27,8 @@ public class SquirrelSpecial : MonoBehaviour
         pInput.Enable();
         playerMovement = GetComponent<PlayerMovement>();
         playerAbilityRefresh = GetComponent<PlayerAbilityRefresh>();
+        playerAnimator = GetComponent<Animator>();
+        playerHealth = GetComponent<PlayerHealth>();
 
         for (int i = 0; i < spawnPoolAmount; i++) // Instantiate and add projectiles to pool
         {
@@ -49,6 +55,10 @@ public class SquirrelSpecial : MonoBehaviour
 
         foreach (GameObject projectile in projectilePool)
         {
+            playerSpecialAttacking = true;
+            if (!playerMovement.playerIsJumping && !playerHealth.playerIsTakingDamage && !playerHealth.playerIsNowDead)
+                playerAnimator.Play("Squirrel_Attack");
+
             projectile.transform.position = transform.position;
 
             if (incrementor == 0) // Fly Straight

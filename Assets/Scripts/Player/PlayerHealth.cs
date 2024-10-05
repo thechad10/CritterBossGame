@@ -21,6 +21,14 @@ public class PlayerHealth : MonoBehaviour
     private float iFrames = 2f;
     public TextMeshProUGUI playerHPText;
 
+    private Animator playerAnimator;
+    public bool playerIsTakingDamage, playerIsNowDead;
+
+    private void Start()
+    {
+        playerAnimator = GetComponent<Animator>();
+    }
+
     private void OnEnable()
     {
         curHealth = MaxHealth;
@@ -40,6 +48,9 @@ public class PlayerHealth : MonoBehaviour
             }
             else if (modifier < 0)
             {
+                playerIsTakingDamage = true;
+                playerAnimator.Play("Squirrel_Damaged");
+                playerIsTakingDamage = false; // this needs its own timer shit
                 isImmune = true;
                 StartCoroutine(nameof(HitSeq));
                 StartCoroutine(nameof(ImmuneDelay));
@@ -67,6 +78,8 @@ public class PlayerHealth : MonoBehaviour
 
     IEnumerator DeathSeq()
     {
+        playerIsNowDead = true;
+        playerAnimator.Play("Squirrel_Dead");
 
         for (int x = 0; x < deathAction.Count; x++)
         {

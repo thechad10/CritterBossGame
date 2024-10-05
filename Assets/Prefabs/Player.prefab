@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8149818611967024882}
   - component: {fileID: 2996571138757418601}
+  - component: {fileID: 1935290928876879772}
   - component: {fileID: 4842264853675583072}
   - component: {fileID: 1805496367872007615}
   - component: {fileID: 2908321725261860478}
@@ -17,6 +18,7 @@ GameObject:
   - component: {fileID: 1989703828146837761}
   - component: {fileID: 8879184406393363635}
   - component: {fileID: 9154879714767479625}
+  - component: {fileID: 3429350524061494431}
   - component: {fileID: 6672245747792032069}
   - component: {fileID: 649364831522346205}
   m_Layer: 6
@@ -86,7 +88,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c371a4134d599b14fa3cabfa9a96bf84, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -97,6 +99,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1935290928876879772
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 366852669131201908}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 32a960b583a9d214aa9c51c8f5fc2d63, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!70 &4842264853675583072
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -178,6 +202,7 @@ MonoBehaviour:
   cayoteTime: 0.1
   jumpBufferTime: 0.2
   bPlayerIsFacingRight: 0
+  playerIsJumping: 0
 --- !u!114 &6203376877242694895
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -197,6 +222,7 @@ MonoBehaviour:
   projectileActiveTime: 3
   projectileArcForce: 4
   projectileFalloff: 1.5
+  playerIsAttacking: 0
 --- !u!114 &1989703828146837761
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -212,6 +238,7 @@ MonoBehaviour:
   squirrelSpecialProjectile: {fileID: 350055554692712528, guid: e48bca554449587459136a66fb5fcb9f, type: 3}
   projectileThrowForce: 30
   projectileActiveTime: 3
+  playerSpecialAttacking: 0
 --- !u!114 &8879184406393363635
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -243,9 +270,25 @@ MonoBehaviour:
   - {fileID: 649364831522346205}
   hitWaitTime: 0
   hitAction:
+  - {fileID: 3429350524061494431}
   - {fileID: 6672245747792032069}
   iFrames: 2
   playerHPText: {fileID: 0}
+  playerIsTakingDamage: 0
+  playerIsNowDead: 0
+--- !u!114 &3429350524061494431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 366852669131201908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dcc22514c584c44dbe7f1a4bfb5c9cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 0
 --- !u!114 &6672245747792032069
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -350,5 +393,5 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.8, y: 0.2}
+  m_Size: {x: 0.8, y: 0.1}
   m_EdgeRadius: 0

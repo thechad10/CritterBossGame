@@ -9,14 +9,17 @@ public class PlayerAbilityRefresh : MonoBehaviour
     private Image playerAbilityFill;
 
     private PlayerInput pInput;
+    private SquirrelSpecial squirrelSpecial;
 
     private void Start()
     {
         pInput = new PlayerInput();
         pInput.Enable();
-        if(GameObject.FindWithTag("PlayerAbilityFill"))
+        squirrelSpecial = GetComponent<SquirrelSpecial>();
+        if (GameObject.FindWithTag("PlayerAbilityFill"))
             playerAbilityFill = GameObject.FindWithTag("PlayerAbilityFill").GetComponent<Image>();
-        refreshCounter = 0;
+        //refreshCounter = 0;
+        refreshCounter = refreshTime;
     }
 
     private void Update()
@@ -30,6 +33,11 @@ public class PlayerAbilityRefresh : MonoBehaviour
 
             if (refreshCounter >= refreshTime)
                 playerSpecialAbilityReady = true;
+        }
+
+        if (refreshCounter >= 0.1f)
+        {
+            squirrelSpecial.playerSpecialAttacking = false;
         }
 
         if (pInput.Player.Ability.WasPerformedThisFrame() && playerSpecialAbilityReady)

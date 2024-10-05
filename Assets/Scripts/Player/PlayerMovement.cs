@@ -16,8 +16,13 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     private PlayerInput pInput;
     private Collider2D groundCollider;
+    private Animator playerAnimator;
+    private SquirrelPrimary squirrelPrimary;
+    private SquirrelSpecial squirrelSpecial;
+    private PlayerHealth playerHealth;
 
     [HideInInspector] public bool bPlayerIsFacingRight;
+    public bool playerIsJumping;
 
 
     private void Start()
@@ -27,6 +32,12 @@ public class PlayerMovement : MonoBehaviour
         pInput = new PlayerInput();
         pInput.Enable();
         groundCollider = GetComponentInChildren<Collider2D>();
+        playerAnimator = GetComponent<Animator>();
+        squirrelPrimary = GetComponent<SquirrelPrimary>();
+        squirrelSpecial = GetComponent<SquirrelSpecial>();
+        playerHealth = GetComponent<PlayerHealth>();
+
+        bPlayerIsFacingRight = true;
     }
 
     private void Update()
@@ -49,6 +60,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.tag == "Ground" || collision.tag == "Platform") // Grounded Check
         {
+            playerIsJumping = false;
             isGrounded = true;
             rb.gravityScale = 4f;
         }
@@ -67,12 +79,19 @@ public class PlayerMovement : MonoBehaviour
         {
             GetComponent<SpriteRenderer>().flipX = true;
             bPlayerIsFacingRight = false;
+            if (!playerIsJumping && !squirrelPrimary.playerIsAttacking && !squirrelSpecial.playerSpecialAttacking && !playerHealth.playerIsTakingDamage && !playerHealth.playerIsNowDead)
+                playerAnimator.Play("Squirrel_Run");
         }
         if (movement.x > 0)
         {
             GetComponent<SpriteRenderer>().flipX = false;
             bPlayerIsFacingRight = true;
+            if (!playerIsJumping && !squirrelPrimary.playerIsAttacking && !squirrelSpecial.playerSpecialAttacking && !playerHealth.playerIsTakingDamage && !playerHealth.playerIsNowDead)
+                playerAnimator.Play("Squirrel_Run");
         }
+        if (movement.x == 0 && !playerIsJumping && !squirrelPrimary.playerIsAttacking && !squirrelSpecial.playerSpecialAttacking && !playerHealth.playerIsTakingDamage && !playerHealth.playerIsNowDead)
+            playerAnimator.Play("Squirrel_Idle");
+
         transform.Translate(movement);
     }
 
@@ -111,6 +130,9 @@ public class PlayerMovement : MonoBehaviour
         }
         if (pInput.Player.Jump.IsPressed() && canJump) // Initiate Jump
         {
+            playerIsJumping = true;
+            if (!playerHealth.playerIsTakingDamage && !playerHealth.playerIsNowDead)
+                playerAnimator.Play("Squirrel_Jump");
             canJump = false;
             jumpQueued = false;
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpStrength * 3);
