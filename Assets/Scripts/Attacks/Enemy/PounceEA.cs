@@ -1,7 +1,8 @@
 using UnityEngine;
 using System.Collections;
+using static UnityEngine.RuleTile.TilingRuleOutput;
 
-public class PounceEA : EnemyAttack
+public class PounceEA : EnemyAttack 
 {
     [SerializeField, Tooltip("Time to pause in the air at the top of the jump")]
     private float pauseDuration = 0.5f;
@@ -13,13 +14,13 @@ public class PounceEA : EnemyAttack
     private float moveSpeed = 5f;
 
     [SerializeField, Tooltip("First target point on one side of the map")]
-    private Transform target1;
+    private UnityEngine.Transform target1;
 
     [SerializeField, Tooltip("Second target point on the opposite side of the map")]
-    private Transform target2;
+    private UnityEngine.Transform target2;
 
     private Rigidbody2D rb;
-    private Transform currentTarget;
+    private UnityEngine.Transform currentTarget;
     private bool movingToTarget1;
     private Vector3 originalScale;
 
@@ -35,55 +36,49 @@ public class PounceEA : EnemyAttack
 
         originalScale = transform.localScale;
 
-        // Start by moving to the opposite target
+        // Decide initial target based on the enemy's position
         currentTarget = target1.position.x > transform.position.x ? target1 : target2;
         movingToTarget1 = currentTarget == target1;
 
-        // Begin the attack sequence
+        // Start the attack once
         StartCoroutine(PerformAttack());
     }
 
     private IEnumerator PerformAttack()
     {
-        while (true) // Loop indefinitely for continuous behavior
+        // Step 1: Jump straight up
+        rb.linearVelocity = new Vector2(0, Mathf.Sqrt(2 * jumpHeight * Mathf.Abs(Physics2D.gravity.y)));
+
+        // Wait until the enemy reaches the peak of the jump
+        yield return new WaitUntil(() => rb.linearVelocity.y <= 0);
+
+        // Step 2: Pause at the top of the jump
+        rb.linearVelocity = Vector2.zero; // Stop vertical movement
+        yield return new WaitForSeconds(pauseDuration);
+
+        // Step 3: Move horizontally to the opposite target
+        Vector2 startPosition = transform.position;
+        Vector2 targetPosition = movingToTarget1 ? target2.position : target1.position;
+
+        // Calculate the time it will take to move to the target
+        float distance = Vector2.Distance(startPosition, targetPosition);
+        float moveTime = distance / moveSpeed;
+
+        float elapsedTime = 0f;
+
+        // Move towards the target in a straight line
+        while (elapsedTime < moveTime)
         {
-            // Step 1: Jump straight up
-            rb.linearVelocity = new Vector2(0, Mathf.Sqrt(2 * jumpHeight * Mathf.Abs(Physics2D.gravity.y)));
-
-            // Wait until the enemy reaches the peak of the jump
-            yield return new WaitUntil(() => rb.linearVelocity.y <= 0);
-
-            // Step 2: Pause at the top of the jump
-            rb.linearVelocity = Vector2.zero; // Stop vertical movement
-            yield return new WaitForSeconds(pauseDuration);
-
-            // Step 3: Move horizontally to the opposite target
-            Vector2 startPosition = transform.position;
-            Vector2 targetPosition = movingToTarget1 ? target2.position : target1.position;
-
-            // Calculate the time it will take to move to the target
-            float distance = Vector2.Distance(startPosition, targetPosition);
-            float moveTime = distance / moveSpeed;
-
-            float elapsedTime = 0f;
-
-            // Move towards the target in a straight line
-            while (elapsedTime < moveTime)
-            {
-                transform.position = Vector2.Lerp(startPosition, targetPosition, elapsedTime / moveTime);
-                elapsedTime += Time.deltaTime;
-                yield return null;
-            }
-
-            // Snap to the exact target position
-            transform.position = targetPosition;
-
-            // Step 4: Flip the enemy
-            FlipEnemy();
-
-            // Switch target for the next attack
-            movingToTarget1 = !movingToTarget1;
+            transform.position = Vector2.Lerp(startPosition, targetPosition, elapsedTime / moveTime);
+            elapsedTime += Time.deltaTime;
+            yield return null;
         }
+
+        // Snap to the exact target position
+        transform.position = targetPosition;
+
+        // Step 4: Flip the enemy
+        FlipEnemy();
     }
 
     private void FlipEnemy()
