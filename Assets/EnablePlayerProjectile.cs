@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class EnablePlayerProjectile : MonoBehaviour
 {
-    private float activeTimeKunai, activeTimeNinjaStar;
+    public float activeTimeKunai, activeTimeNinjaStar;
     private SpriteRenderer spriteRenderer;
     private Collider2D projCollider;
     private Rigidbody2D projRB;

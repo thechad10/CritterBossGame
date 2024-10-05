@@ -8,6 +8,7 @@ public class DamageModifier : MonoBehaviour
     private int healthMod;
     private PlayerHealth pHealth;
     private Boss bhealth;
+    private EnablePlayerProjectile yes;
     private void OnTriggerEnter2D(Collider2D other)
     {
         if(other.TryGetComponent<PlayerHealth>(out pHealth))
@@ -17,6 +18,11 @@ public class DamageModifier : MonoBehaviour
         else if(other.TryGetComponent<Boss>(out bhealth))
         {
             bhealth.ChangeHealth(healthMod);
+            if(TryGetComponent<EnablePlayerProjectile>(out yes))
+            {
+                yes.activeTimeKunai = 0;
+                yes.activeTimeNinjaStar = 0;
+            }
         }
     }
 }
