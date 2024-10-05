@@ -5,8 +5,8 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour
 {
     public PlayerStats pStats;
-    private int maxHealth => PlayerStats.maxHealth;
-    private int curHealth;
+    private int MaxHealth => PlayerStats.maxHealth;
+    private int curHealth = PlayerStats.currentHealth;
 
     [SerializeField]
     private float deathWaitTime;
@@ -21,13 +21,13 @@ public class PlayerHealth : MonoBehaviour
 
     private void OnEnable()
     {
-        curHealth = maxHealth;
+        PlayerStats.currentHealth = MaxHealth;
     }
-    public void modHealth(int modifier)
+    public void ModHealth(int modifier)
     {
         if (!isImmune) 
         {
-            curHealth = (int)Mathf.Clamp(curHealth + modifier, 0, maxHealth);
+            curHealth = (int)Mathf.Clamp(curHealth + modifier, 0, MaxHealth);
             ;
             if(curHealth <= 0)
             {
