@@ -18,11 +18,12 @@ public class DamageModifier : MonoBehaviour
         else if(other.TryGetComponent<Boss>(out bhealth))
         {
             bhealth.ChangeHealth(healthMod);
-            if(TryGetComponent<EnablePlayerProjectile>(out yes))
-            {
-                yes.activeTimeKunai = 0;
-                yes.activeTimeNinjaStar = 0;
-            }
+        }
+
+        if (TryGetComponent<EnablePlayerProjectile>(out yes))
+        {
+            yes.activeTimeKunai = 0;
+            yes.activeTimeNinjaStar = 0;
         }
     }
 }
