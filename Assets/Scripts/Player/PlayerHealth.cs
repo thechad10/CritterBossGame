@@ -6,7 +6,7 @@ public class PlayerHealth : MonoBehaviour
 {
     public PlayerStats pStats;
     private int MaxHealth => PlayerStats.maxHealth;
-    private int curHealth = PlayerStats.currentHealth;
+    private int curHealth = PlayerStats.currentHealth; //not sure if this sets up a reference to it or copies the value into it
 
     [SerializeField]
     private float deathWaitTime;

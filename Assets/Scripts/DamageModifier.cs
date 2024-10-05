@@ -10,7 +10,7 @@ public class DamageModifier : MonoBehaviour
     {
         if(other.TryGetComponent<PlayerHealth>(out pHealth))
         {
-            pHealth.modHealth(healthMod);
+            pHealth.ModHealth(healthMod);
         }
     }
 }
