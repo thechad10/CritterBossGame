@@ -25,16 +25,15 @@ public class Swipe_EA : EnemyAttack
             Debug.LogError($"{this} is already attacking! Don't call this.");
             return;
         }
-        hitbox.gameObject.SetActive(true);
+        hitbox.gameObject.GetComponent<SpriteRenderer>().enabled = true;
+        hitbox.enabled = true;
         isAttacking = true;
     }
     private void Update()
     {
         if (!isAttacking) return;
         rate += Time.deltaTime * attackSpeed;
-        Debug.Log(xMaxPos.localPosition.x);
         tPivot.localScale = new Vector3(xMaxPos.localPosition.x * xScale.Evaluate(rate), (yMaxPos.localPosition.y - yMinPos.localPosition.y)* yScale.Evaluate(rate), 0);
-        //hitbox.transform.localScale = new Vector3(xMaxPos.position.x * xScale.Evaluate(rate), yMaxPos.localPosition.y * yScale.Evaluate(rate), 0);
 
         if (rate >= 1)
         {
