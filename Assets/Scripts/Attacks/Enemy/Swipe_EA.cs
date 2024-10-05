@@ -14,31 +14,30 @@ public class Swipe_EA : EnemyAttack
     private Transform yMaxPos;
     [SerializeField, Tooltip("Used for the y AnimationCurve's calculation")]
     private Transform yMinPos;
-    private bool isAttacking;
     private float rate;
     [SerializeField]
     private Transform tPivot;
     public override void Attack()
     {
-        if (isAttacking)
+        if (IsAttacking)
         {
             Debug.LogError($"{this} is already attacking! Don't call this.");
             return;
         }
         hitbox.gameObject.GetComponent<SpriteRenderer>().enabled = true;
         hitbox.enabled = true;
-        isAttacking = true;
+        IsAttacking = true;
     }
     private void Update()
     {
-        if (!isAttacking) return;
+        if (IsAttacking) return;
         rate += Time.deltaTime * attackSpeed;
         tPivot.localScale = new Vector3(xMaxPos.localPosition.x * xScale.Evaluate(rate), (yMaxPos.localPosition.y - yMinPos.localPosition.y)* yScale.Evaluate(rate), 0);
 
         if (rate >= 1)
         {
             rate = 0;
-            isAttacking = false;
+            IsAttacking = false;
         }
     }
 }

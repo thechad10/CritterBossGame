@@ -12,22 +12,21 @@ public class Boomerang_EA : EnemyAttack
     private AnimationCurve yPosition;
     [SerializeField, Tooltip("Used for the y AnimationCurve's calculation")]
     private Transform yMaxPos;
-    private bool isAttacking;
     private float rate;
     public override void Attack()
     {
-        if (isAttacking)
+        if (IsAttacking)
         {
             Debug.LogError($"{this} is already attacking! Don't call this.");
             return;
         }
         
         hitbox.gameObject.SetActive(true);
-        isAttacking = true;
+        IsAttacking = true;
     }
     private void Update()
     {
-        if (!isAttacking) return;
+        if (!IsAttacking) return;
         rate += Time.deltaTime * attackSpeed;
         hitbox.transform.localPosition = 
             new Vector3(xMaxPos.position.x * xPosition.Evaluate(rate), yMaxPos.position.y * yPosition.Evaluate(rate), 0);
@@ -35,7 +34,7 @@ public class Boomerang_EA : EnemyAttack
         if(rate >= 1)
         {
             rate = 0;
-            isAttacking = false;
+            IsAttacking = false;
         }
     }
 }
