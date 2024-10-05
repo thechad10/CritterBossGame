@@ -12,7 +12,9 @@ public class UIsetup : MonoBehaviour
     private TextMeshProUGUI playerHealthText;
     private void OnEnable()
     {
-        FindFirstObjectByType<Boss>().bossHealthBar = bossHealth;
-        FindFirstObjectByType<PlayerHealth>().playerHPText = playerHealthText;
+        if(FindFirstObjectByType<Boss>().bossHealthBar)
+            FindFirstObjectByType<Boss>().bossHealthBar = bossHealth;
+        if(FindFirstObjectByType<PlayerHealth>().playerHPText)
+            FindFirstObjectByType<PlayerHealth>().playerHPText = playerHealthText;
     }
 }
