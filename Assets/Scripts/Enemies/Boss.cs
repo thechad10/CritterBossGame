@@ -8,15 +8,15 @@ public abstract class Boss : MonoBehaviour
 {
     [Header("Health")]
     [SerializeField]
-    private int maxHealth;
+    protected int maxHealth;
     public int CurrentHealth { get; private set; }
-    public float HealthPercentage => CurrentHealth / (float)maxHealth;
+    public float HealthPercentage => (float)CurrentHealth / maxHealth;
     [Header("Attacks")]
     [SerializeField]
     protected List<EnemyAttack> Attacks = new();
     public Image bossHealthBar;
-
-    
+    public bool IsAttacking { get; private set; }
+    public bool IsDead { get; private set; }
     public static Action OnBossDeath = delegate { };
 
     protected void OnEnable()
@@ -34,14 +34,26 @@ public abstract class Boss : MonoBehaviour
     {
         CurrentHealth += amount;
         bossHealthBar.fillAmount = HealthPercentage;
-        if(HealthPercentage <= 0)
+        if(CurrentHealth <= 0)
         {
+            IsDead = true;
             PlayerWin();
         }
     }
 
+    protected void StartAttack()
+    {
+        IsAttacking = true;
+    }
+
+    public void FinishAttack()
+    {
+        IsAttacking = false;
+    }
+
     protected void PlayerWin()
     {
+        Debug.Log($"YEEEOOOOOOWWWWCH! {name} HAS DIED!");
         OnBossDeath();
     }
 }

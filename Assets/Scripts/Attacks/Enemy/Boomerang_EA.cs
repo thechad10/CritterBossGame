@@ -29,12 +29,14 @@ public class Boomerang_EA : EnemyAttack
         if (!IsAttacking) return;
         rate += Time.deltaTime * attackSpeed;
         hitbox.transform.localPosition = 
-            new Vector3(xMaxPos.position.x * xPosition.Evaluate(rate), yMaxPos.position.y * yPosition.Evaluate(rate), 0);
+            new Vector3(xMaxPos.localPosition.x * xPosition.Evaluate(rate), yMaxPos.localPosition.y * yPosition.Evaluate(rate), 0);
 
         if(rate >= 1)
         {
             rate = 0;
+            hitbox.gameObject.SetActive(false);
             IsAttacking = false;
+            GetComponent<Boss>().FinishAttack();
         }
     }
 }

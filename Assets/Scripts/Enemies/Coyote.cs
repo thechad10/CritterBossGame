@@ -4,43 +4,48 @@ using System.Collections.Generic;
 using System.Linq;
 public class Coyote : Boss
 {
-    [SerializeField, Tooltip("Attacks that are available in second phase")]
-    private List<EnemyAttack> secondPhaseAttacks = new();
     [SerializeField, Tooltip("The amount of time it takes to execute another attack")]
     private float attackDelay;
-    private bool bIsAttacking;
-    [SerializeField, Tooltip("Whether or not this boss is in second phase")]
-    private bool isSecondPhase;
-
-    private void Start()
-    {
-    
-    }
+    [SerializeField, Tooltip("Attacks that are available in second phase")]
+    private List<EnemyAttack> secondPhaseAttacks = new();
+    private bool isSecondPhase = false;
+    private EnemyAttack chosenAttack;
 
     private void Update()
     {
-        if (bIsAttacking) return;
+        if (IsDead) return;
+        if(HealthPercentage <= 0.5 && !isSecondPhase)
+        {
+            StartSecondPhase();
+        }
 
+        if (IsAttacking) return;
+        StartAttack();
         int attackIndex;
 
-        if (isSecondPhase)
+        if (!isSecondPhase) //first phase
         {
             attackIndex = UnityEngine.Random.Range(0, Attacks.Count);
+            chosenAttack = Attacks[attackIndex];
         }
-        else //isn't second phase
+        else //second phase
         {
-            attackIndex = UnityEngine.Random.Range(0, Attacks.Count-1);
+            attackIndex = UnityEngine.Random.Range(0, secondPhaseAttacks.Count);
+            chosenAttack = secondPhaseAttacks[attackIndex];
         }
+
+        StartCoroutine(Attack(chosenAttack));
     }
 
-    IEnumerator StartAttack()
+    IEnumerator Attack(EnemyAttack eAttack)
     {
         yield return new WaitForSeconds(attackDelay);
-        Attacks[0].Attack();
+        eAttack.Attack();
     }
 
     public void StartSecondPhase()
     {
         isSecondPhase = true;
+        Debug.Log("COYOTE HAS ENTERED SECOND PHASE!");
     }
 }

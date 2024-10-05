@@ -93,6 +93,7 @@ public class PounceEA : EnemyAttack
         hitbox.enabled = false;
 
         IsAttacking = false;
+        GetComponent<Boss>().FinishAttack();
     }
 
     private void FlipEnemy()

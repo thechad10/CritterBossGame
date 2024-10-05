@@ -30,14 +30,16 @@ public class Swipe_EA : EnemyAttack
     }
     private void Update()
     {
-        if (IsAttacking) return;
+        if (!IsAttacking) return;
         rate += Time.deltaTime * attackSpeed;
         tPivot.localScale = new Vector3(xMaxPos.localPosition.x * xScale.Evaluate(rate), (yMaxPos.localPosition.y - yMinPos.localPosition.y)* yScale.Evaluate(rate), 0);
-
+        
         if (rate >= 1)
         {
             rate = 0;
             IsAttacking = false;
+            hitbox.enabled = false;
+            GetComponent<Boss>().FinishAttack();
         }
     }
 }
