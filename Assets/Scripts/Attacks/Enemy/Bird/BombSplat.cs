@@ -6,13 +6,9 @@ public class BombSplat : MonoBehaviour
 {
     [SerializeField]
     private List<GameAction> gActions;
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.tag == "Ground")
-        {
-            PlaySequence();
-        }
-
+        PlaySequence();
     }
     public void PlaySequence()
     {
