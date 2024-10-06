@@ -23,10 +23,18 @@ public class PlayerHealth : MonoBehaviour
 
     private Animator playerAnimator;
     public bool playerIsTakingDamage, playerIsNowDead;
+    public int publicCurrentHealthPlayer;
+    public bool publicIsImmunePlayer;
 
     private void Start()
     {
         playerAnimator = GetComponent<Animator>();
+    }
+
+    private void Update()
+    {
+        publicCurrentHealthPlayer = curHealth;
+        publicIsImmunePlayer = isImmune;
     }
 
     private void OnEnable()

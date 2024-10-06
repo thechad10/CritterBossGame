@@ -18,8 +18,7 @@ public class PlayerAbilityRefresh : MonoBehaviour
         squirrelSpecial = GetComponent<SquirrelSpecial>();
         if (GameObject.FindWithTag("PlayerAbilityFill"))
             playerAbilityFill = GameObject.FindWithTag("PlayerAbilityFill").GetComponent<Image>();
-        //refreshCounter = 0;
-        refreshCounter = refreshTime;
+        refreshCounter = 0;
     }
 
     private void Update()
