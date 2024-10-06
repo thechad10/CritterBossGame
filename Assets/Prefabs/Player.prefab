@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 3429350524061494431}
   - component: {fileID: 6672245747792032069}
   - component: {fileID: 649364831522346205}
+  - component: {fileID: 6475220608813650676}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -276,6 +277,8 @@ MonoBehaviour:
   playerHPText: {fileID: 0}
   playerIsTakingDamage: 0
   playerIsNowDead: 0
+  publicCurrentHealthPlayer: 0
+  publicIsImmunePlayer: 0
 --- !u!114 &3429350524061494431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -317,6 +320,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0
   message: Player Death
+--- !u!114 &6475220608813650676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 366852669131201908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 408aacc51f7c5504ba7357aa7ac5b832, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6118119920323160993
 GameObject:
   m_ObjectHideFlags: 0
