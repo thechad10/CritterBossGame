@@ -10,34 +10,19 @@ public class SuckHitbox : MonoBehaviour
     {
         if (suck == null) Debug.LogError("There is no suck script attached here!");
     }
-/*    private void OnTriggerStay2D(Collider2D collision)
-    {
-        if(collision.CompareTag("Player") || collision.CompareTag("PlayerProj"))
-        {
-            var rb = collision.GetComponent<Rigidbody2D>();
-            Vector3 direction = transform.position - collision.transform.position;
-            rb.AddForce(direction.normalized * suck.suckStrength, ForceMode2D.Force);
-            //rb.linearVelocityX += direction.normalized.x * suck.suckStrength;
-            //rb.linearVelocityY += direction.normalized.y * suck.suckStrength;
-            Debug.Log(rb.linearVelocity);
-        }
-    }*/
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player") || collision.CompareTag("PlayerProj"))
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Player") || 
+            collision.gameObject.layer == LayerMask.NameToLayer("PlayerProj"))
         {
             keepSucking = true;
-            var rb = collision.GetComponent<Rigidbody2D>();
-            StartCoroutine(Suck(rb, collision));
-/*
-            var rb = collision.GetComponent<Rigidbody2D>();
-            Vector3 direction = transform.position - collision.transform.position;
-            rb.AddForce(direction.normalized * suck.suckStrength, ForceMode2D.Force);
-            //rb.linearVelocityX += direction.normalized.x * suck.suckStrength;
-            //rb.linearVelocityY += direction.normalized.y * suck.suckStrength;
-            Debug.Log(rb.linearVelocity);
-        */}
+            if(collision.TryGetComponent<Rigidbody2D>(out Rigidbody2D rb))
+            {
+                StartCoroutine(Suck(rb, collision));
+            }
+            else { return; }
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -52,11 +37,7 @@ public class SuckHitbox : MonoBehaviour
             Vector3 direction;
             direction = transform.position - collision.transform.position;
             direction = direction.normalized;
-            //rb.AddForce(direction.normalized * suck.suckStrength, ForceMode2D.Force);
-            Debug.Log(direction);
             rb.linearVelocityX = direction.x * suck.suckStrength;
-            //rb.linearVelocityY = direction.y * suck.suckStrength;
-            //Debug.Log(rb.linearVelocity);
             yield return null;
         }
     }
