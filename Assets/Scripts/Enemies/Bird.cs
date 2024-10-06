@@ -4,16 +4,17 @@ using System.Collections.Generic;
 using System.Linq;
 public class Bird : Boss
 {
-    [SerializeField, Tooltip("Attacks that are available in second phase")]
-    private List<EnemyAttack> secondPhaseAttacks = new();
+    [Header("Bird Specific")]
+    [SerializeField, Tooltip("The amount of time it takes to execute the first attack")]
+    private float firstAttackDelay;
     [SerializeField, Tooltip("The amount of time it takes to execute another attack")]
     private float attackDelay;
-    [SerializeField]
-    private float idleTime = 1;
-    private float timer = 0;
+    [SerializeField, Tooltip("Attacks that are available in second phase")]
+    private List<EnemyAttack> secondPhaseAttacks = new();
     [SerializeField, Tooltip("Whether or not this boss is in second phase")]
     private bool isSecondPhase;
-
+    private bool isBeginningOfFight;
+    private float startingTimer;
     private void Start()
     {
 
@@ -21,6 +22,20 @@ public class Bird : Boss
 
     private void Update()
     {
+        if (isBeginningOfFight)
+        {
+            startingTimer += Time.deltaTime;
+
+            if (startingTimer >= firstAttackDelay)
+            {
+                isBeginningOfFight = false;
+                startingTimer = 0;
+            }
+            else
+            {
+                return;
+            }
+        }
         if (IsAttacking) return;
         StartAttack();
         int attackIndex;
@@ -38,11 +53,8 @@ public class Bird : Boss
 
     IEnumerator StartAttack(int attack)
     {
-
         yield return new WaitForSeconds(attackDelay);
         Attacks[attack].Attack();
-
-        timer = 0;
     }
 
     public void StartSecondPhase()

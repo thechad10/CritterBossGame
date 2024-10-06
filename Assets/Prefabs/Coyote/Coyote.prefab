@@ -879,13 +879,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a87892c227ccaff49ae92df6917e9ee5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 20
+  maxHealth: 300
   Attacks:
   - {fileID: 7470727974023541160}
   - {fileID: 3403805973588825363}
   - {fileID: 6494840503234619469}
   bossHealthBar: {fileID: 0}
   deathSeq: {fileID: 6242888498833243919}
+  firstAttackDelay: 0
   attackDelay: 1
   secondPhaseAttacks:
   - {fileID: 7470727974023541160}
