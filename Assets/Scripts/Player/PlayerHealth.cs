@@ -88,7 +88,7 @@ public class PlayerHealth : MonoBehaviour
     IEnumerator DeathSeq()
     {
         playerIsNowDead = true;
-        playerAnimator.Play("Squirrel_Dead");
+        //playerAnimator.Play("Squirrel_Dead");
 
         for (int x = 0; x < deathAction.Count; x++)
         {
