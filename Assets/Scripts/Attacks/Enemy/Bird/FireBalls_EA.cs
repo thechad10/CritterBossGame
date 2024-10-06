@@ -57,7 +57,7 @@ public class FireBalls_EA : EnemyAttack
         float range = maxPos.y - minPos.y;
         transform.position =
             new Vector3(xPos.position.x, Mathf.Clamp((range * xPosition.Evaluate(moveRate)) + minPos.y, minPos.y, maxPos.y), 0);
-        Debug.Log(Mathf.Clamp((range * xPosition.Evaluate(moveRate)) + minPos.y, minPos.y, maxPos.y));
+        //Debug.Log(Mathf.Clamp((range * xPosition.Evaluate(moveRate)) + minPos.y, minPos.y, maxPos.y));
         //Debug.Log((range * -xPosition.Evaluate(moveRate)));
         if (attackRate >= 10)
         {
