@@ -405,6 +405,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bossHealth: {fileID: 3769196859120761033}
+  bossNameText: {fileID: 4739811641849289851}
+  bossTitleText: {fileID: 8779869564934056509}
   playerHealthText: {fileID: 6175801112159217954}
 --- !u!1 &1520797841370836501
 GameObject:
@@ -652,7 +654,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: -160}
-  m_SizeDelta: {x: 1250, y: 120}
+  m_SizeDelta: {x: 1500, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &822021384130080967
 CanvasRenderer:

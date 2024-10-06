@@ -15,6 +15,8 @@ public abstract class Boss : MonoBehaviour
     [SerializeField]
     protected List<EnemyAttack> Attacks = new();
     public Image bossHealthBar;
+    public string bossName;
+    public string bossTitle;
     public bool IsAttacking { get; private set; }
     [Header("Death")]
     [SerializeField, Tooltip("The death sequence for the boss")]

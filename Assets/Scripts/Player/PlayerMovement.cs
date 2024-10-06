@@ -82,7 +82,7 @@ public class PlayerMovement : MonoBehaviour
     private void MoveLR()
     {
         float horizontalInput = pInput.Player.Move.ReadValue<Vector2>().x;
-        Vector2 movement = new Vector2(horizontalInput, 0f) * movementSpeed * Time.fixedDeltaTime;
+        Vector2 movement = new Vector2(horizontalInput, 0f) * movementSpeed * Time.deltaTime;
         if (movement.x < 0)
         {
             GetComponent<SpriteRenderer>().flipX = true;

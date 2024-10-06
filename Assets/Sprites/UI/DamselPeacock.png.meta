@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      DamselPeacock_0: -7003932410616866226
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

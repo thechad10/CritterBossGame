@@ -449,11 +449,11 @@ MonoBehaviour:
   - {fileID: 1816540225124596051}
   - {fileID: 3789849895872007538}
   bossHealthBar: {fileID: 0}
+  bossName: DAMSEL PEACOCK
+  bossTitle: FACE OF THE FAMILY
   deathSeq: {fileID: 0}
-  secondPhaseAttacks: []
+  firstAttackDelay: 0
   attackDelay: 1
-  idleTime: 3
-  isSecondPhase: 0
 --- !u!114 &1816540225124596051
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -520,9 +520,16 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  yPosition:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   xMaxPos: {fileID: 6779682710653266762}
   xMinPos: {fileID: 1358849457107886054}
-  yPos: {fileID: 6558056988805813252}
+  yMaxPos: {fileID: 0}
+  yMinPos: {fileID: 0}
   bird: {fileID: 5357811941691263333}
   bombPrefab: {fileID: 3903034276171966611, guid: 68c32dd6146c6434b8d9e002bc13918d, type: 3}
 --- !u!114 &3789849895872007538

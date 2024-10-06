@@ -7,15 +7,22 @@ public class UIsetup : MonoBehaviour
     [SerializeField]
     private Image bossHealth;
     [SerializeField]
+    private TextMeshProUGUI bossNameText;
+    private string bossname;
+    [SerializeField]
+    private TextMeshProUGUI bossTitleText;
+    private string bosstitle;
+    [SerializeField]
     private TextMeshProUGUI playerHealthText;
     private bool bRefilling = false;
     private float refillTimer = 0;
     private void OnEnable()
     {
-        //if(FindFirstObjectByType<Boss>().bossHealthBar)
+        /*//if(FindFirstObjectByType<Boss>().bossHealthBar)
             FindFirstObjectByType<Boss>().bossHealthBar = bossHealth;
         //if(FindFirstObjectByType<PlayerHealth>().playerHPText)
-            FindFirstObjectByType<PlayerHealth>().playerHPText = playerHealthText;
+            FindFirstObjectByType<PlayerHealth>().playerHPText = playerHealthText;*/
+        ResetUIComponents();
     }
     private void Update()
     {
@@ -42,6 +49,8 @@ public class UIsetup : MonoBehaviour
     private void ResetUIComponents()
     {
         FindFirstObjectByType<Boss>().bossHealthBar = bossHealth;
+        bossNameText.text = FindFirstObjectByType<Boss>().bossName;
+        bossTitleText.text = FindFirstObjectByType<Boss>().bossTitle;
         FindFirstObjectByType<PlayerHealth>().playerHPText = playerHealthText;
     }
 }

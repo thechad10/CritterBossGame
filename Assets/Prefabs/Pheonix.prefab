@@ -310,11 +310,11 @@ MonoBehaviour:
   - {fileID: 1422362149074474465}
   - {fileID: 7460786788881891948}
   bossHealthBar: {fileID: 0}
+  bossName: THE IMMORTAL PHEONIX
+  bossTitle: UNKILLABLE MAFIA FIXER
   deathSeq: {fileID: 0}
-  secondPhaseAttacks: []
+  firstAttackDelay: 0
   attackDelay: 1
-  idleTime: 3
-  isSecondPhase: 0
 --- !u!114 &7460786788881891948
 MonoBehaviour:
   m_ObjectHideFlags: 0
