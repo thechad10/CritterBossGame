@@ -11,7 +11,7 @@ public class Bird : Boss
     private float attackDelay;
     private bool isBeginningOfFight;
     private int attackIndex;
-    private int cachedIndex;
+    private int cachedIndex = 0;
     private float startingTimer;
 
     private void Update()
