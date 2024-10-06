@@ -40,7 +40,7 @@ public class Swipe_EA : EnemyAttack
     {
         if (!IsAttacking) return;
         rate += Time.deltaTime * attackSpeed;
-        tPivot.localScale = new Vector3(xMaxPos.localPosition.x * xScale.Evaluate(rate), (yMaxPos.localPosition.y - yMinPos.localPosition.y)* yScale.Evaluate(rate), 0);
+        tPivot.localScale = new Vector3((xMaxPos.localPosition.x * xScale.Evaluate(rate)) / 5.783308f, (yMaxPos.localPosition.y - yMinPos.localPosition.y)* yScale.Evaluate(rate), 0);
         
         if (rate >= 1)
         {
