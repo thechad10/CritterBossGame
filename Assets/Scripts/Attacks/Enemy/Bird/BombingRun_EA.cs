@@ -1,5 +1,6 @@
 using NUnit.Framework;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class BombingRun_EA : EnemyAttack
@@ -10,12 +11,16 @@ public class BombingRun_EA : EnemyAttack
     private float moveSpeed;
     [SerializeField, Tooltip("Used for the x-position")]
     private AnimationCurve xPosition;
+    [SerializeField, Tooltip("Used for the y-position")]
+    private AnimationCurve yPosition;
     [SerializeField, Tooltip("Used for the x AnimationCurve's calculation")]
     private Transform xMaxPos;
     [SerializeField, Tooltip("Used for the x AnimationCurve's calculation")]
     private Transform xMinPos;
     [SerializeField, Tooltip("Used for the y height of Bird")]
-    private Transform yPos;
+    private Transform yMaxPos;
+    [SerializeField, Tooltip("Used for the y height of Bird")]
+    private Transform yMinPos;
     private float moveRate;
     private float attackRate;
     private List<GameObject> Bombs = new List<GameObject>();
@@ -29,8 +34,8 @@ public class BombingRun_EA : EnemyAttack
 
     private void OnEnable()
     {
-        maxPos = xMaxPos.position;
-        minPos = xMinPos.position;
+        maxPos = new Vector3(xMaxPos.position.x, yMaxPos.position.y, 0);
+        minPos = new Vector3(xMinPos.position.x, yMinPos.position.y, 0);
     }
     public override void Attack()
     {
@@ -51,7 +56,7 @@ public class BombingRun_EA : EnemyAttack
         attackRate += Time.deltaTime * attackSpeed;
         float range = maxPos.x - minPos.x;
         transform.position =
-            new Vector3(Mathf.Clamp((range * xPosition.Evaluate(moveRate)) + minPos.x, minPos.x, maxPos.x), yPos.position.y, 0);
+            new Vector3(Mathf.Clamp((range * xPosition.Evaluate(moveRate)) + minPos.x, minPos.x, maxPos.x), Mathf.Clamp((range * yPosition.Evaluate(moveRate)) + minPos.y, minPos.y, maxPos.y), 0);
         if (attackRate >= 10)
         {
             attackRate = 0;
