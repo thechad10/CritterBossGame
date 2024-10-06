@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class OneWayPlatformDrop : MonoBehaviour
@@ -18,11 +19,16 @@ public class OneWayPlatformDrop : MonoBehaviour
         if (pInput.Player.Fall.WasPerformedThisFrame()) // Flip Platforms
         {
             effector.rotationalOffset = 180f;
-            playerObject.GetComponent<Rigidbody2D>().gravityScale = 4.5f;
         }
         if (pInput.Player.Fall.WasReleasedThisFrame()) // Reset Platforms
         {
-            effector.rotationalOffset = 0f;
+            StartCoroutine(nameof(ResetDelay));
         }
+    }
+
+    IEnumerator ResetDelay()
+    {
+        yield return new WaitForSeconds(0.16f);
+        effector.rotationalOffset = 0f;
     }
 }
