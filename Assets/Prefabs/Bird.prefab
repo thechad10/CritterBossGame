@@ -660,6 +660,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthMod: -1
+--- !u!1 &8588399407029241404
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3798114675929052655}
+  m_Layer: 0
+  m_Name: YMin
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3798114675929052655
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8588399407029241404}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.000000006535597, y: -11.19, z: 0}
+  m_LocalScale: {x: 0.23391813, y: 0.78048784, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1056960193070260380}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8784438103314809104
 GameObject:
   m_ObjectHideFlags: 0
@@ -674,6 +705,7 @@ GameObject:
   - component: {fileID: 5357811941691263333}
   - component: {fileID: 1816540225124596051}
   - component: {fileID: 5343591654841940429}
+  - component: {fileID: 4711332767271921634}
   m_Layer: 10
   m_Name: BirdHitBox
   m_TagString: Untagged
@@ -697,6 +729,7 @@ Transform:
   - {fileID: 1358849457107886054}
   - {fileID: 6779682710653266762}
   - {fileID: 6558056988805813252}
+  - {fileID: 3798114675929052655}
   m_Father: {fileID: 5019351900164292776}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3189932408823171782
@@ -814,8 +847,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   Attacks:
-  - {fileID: 5343591654841940429}
-  - {fileID: 1816540225124596051}
+  - {fileID: 4711332767271921634}
   bossHealthBar: {fileID: 0}
   deathSeq: {fileID: 0}
   secondPhaseAttacks: []
@@ -836,7 +868,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitbox: {fileID: 2524796846031888167}
-  attackSpeed: 5
+  attackSpeed: 7.5
   moveSpeed: 0.1
   xPosition:
     serializedVersion: 2
@@ -923,3 +955,58 @@ MonoBehaviour:
   idleTime: 2
   lineStartThick: 0.15
   lineEndThick: 0.35
+--- !u!114 &4711332767271921634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8784438103314809104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4de6202c10821354a97609b8d4c95bd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitbox: {fileID: 2524796846031888167}
+  arc: 45
+  attackSpeed: 7.5
+  moveSpeed: 0.1
+  xPosition:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: -0.004707246
+      outSlope: -0.004707246
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 1
+    - serializedVersion: 3
+      time: 0.4994864
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 1
+      outWeight: 0.10927833
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 1
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  yMaxPos: {fileID: 6558056988805813252}
+  yMinPos: {fileID: 3798114675929052655}
+  xPos: {fileID: 6779682710653266762}
+  bird: {fileID: 5357811941691263333}
+  ballCount: 3
+  fireballPrefab: {fileID: 7293431480175470623, guid: 1a0f594e0e96948458fd21138edf0822, type: 3}
