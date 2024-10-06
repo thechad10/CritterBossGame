@@ -8,7 +8,6 @@ public class Bird : Boss
     private List<EnemyAttack> secondPhaseAttacks = new();
     [SerializeField, Tooltip("The amount of time it takes to execute another attack")]
     private float attackDelay;
-    public bool bIsAttacking;
     [SerializeField]
     private float idleTime = 1;
     private float timer = 0;
@@ -22,8 +21,8 @@ public class Bird : Boss
 
     private void Update()
     {
-        if (bIsAttacking) return;
-        bIsAttacking = true;
+        if (IsAttacking) return;
+        StartAttack();
         int attackIndex;
 
         if (isSecondPhase)

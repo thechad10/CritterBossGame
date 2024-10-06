@@ -61,7 +61,7 @@ public class BombingRun_EA : EnemyAttack
         {
             moveRate = 0;
             IsAttacking = false;
-            bird.bIsAttacking = false;
+            bird.FinishAttack();
         }
     }
 
