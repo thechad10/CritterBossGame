@@ -23,8 +23,13 @@ public class PounceEA : EnemyAttack
     private bool movingToTarget1;
     private Vector3 originalScale;
 
+    private Animator coyoteAnimator;
+
+
     private void Start()
     {
+        coyoteAnimator = GetComponentInChildren<Animator>();
+
         rb = GetComponent<Rigidbody2D>();
 
         if (target1 == null || target2 == null)
@@ -94,6 +99,8 @@ public class PounceEA : EnemyAttack
         hitbox.enabled = false;
 
         IsAttacking = false;
+        coyoteAnimator.Play("Coyote_Idle");
+
         GetComponent<Boss>().FinishAttack();
     }
 

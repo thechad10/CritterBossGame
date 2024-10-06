@@ -13,6 +13,15 @@ public class Boomerang_EA : EnemyAttack
     [SerializeField, Tooltip("Used for the y AnimationCurve's calculation")]
     private Transform yMaxPos;
     private float rate;
+
+    private Animator coyoteAnimator;
+
+
+    private void Start()
+    {
+        coyoteAnimator = GetComponentInChildren<Animator>();
+    }
+
     public override void Attack()
     {
         if (IsAttacking)
@@ -36,6 +45,8 @@ public class Boomerang_EA : EnemyAttack
             rate = 0;
             hitbox.gameObject.SetActive(false);
             IsAttacking = false;
+            coyoteAnimator.Play("Coyote_Idle");
+
             GetComponent<Boss>().FinishAttack();
         }
     }

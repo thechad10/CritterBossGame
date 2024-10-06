@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class Swipe_EA : EnemyAttack
@@ -17,6 +18,15 @@ public class Swipe_EA : EnemyAttack
     private float rate;
     [SerializeField]
     private Transform tPivot;
+    [SerializeField] private float telegraphTime = 0.5f;
+
+    private Animator coyoteAnimator;
+
+    private void Start()
+    {
+        coyoteAnimator = GetComponentInChildren<Animator>();
+    }
+
     public override void Attack()
     {
         if (IsAttacking)
@@ -24,9 +34,7 @@ public class Swipe_EA : EnemyAttack
             Debug.LogError($"{this} is already attacking! Don't call this.");
             return;
         }
-        hitbox.gameObject.GetComponent<SpriteRenderer>().enabled = true;
-        hitbox.enabled = true;
-        IsAttacking = true;
+        StartCoroutine(nameof(Telegraph));
     }
     private void Update()
     {
@@ -39,7 +47,16 @@ public class Swipe_EA : EnemyAttack
             rate = 0;
             IsAttacking = false;
             hitbox.enabled = false;
+            coyoteAnimator.Play("Coyote_Idle");
             GetComponent<Boss>().FinishAttack();
         }
+    }
+
+    IEnumerator Telegraph()
+    {
+        yield return new WaitForSeconds(telegraphTime);
+        hitbox.gameObject.GetComponent<SpriteRenderer>().enabled = true;
+        hitbox.enabled = true;
+        IsAttacking = true;
     }
 }

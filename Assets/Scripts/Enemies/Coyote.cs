@@ -16,6 +16,14 @@ public class Coyote : Boss
     private EnemyAttack cachedAttack;
     private bool isBeginningOfFight = true;
     private float startingTimer;
+    private Animator coyoteAnimator;
+    private string animName;
+
+    private void Start()
+    {
+        coyoteAnimator = GetComponentInChildren<Animator>();
+    }
+
     private void Update()
     {
         if (isBeginningOfFight)
@@ -60,11 +68,17 @@ public class Coyote : Boss
         }
         cachedAttack = chosenAttack;
 
-        StartCoroutine(Attack(chosenAttack));
+        StartCoroutine(Attack(chosenAttack, attackIndex));
     }
 
-    IEnumerator Attack(EnemyAttack eAttack)
+    IEnumerator Attack(EnemyAttack eAttack, int attackAnim)
     {
+        if (attackAnim == 0) animName = "Coyote_Swipe_High";
+        if (attackAnim == 1) animName = "Coyote_Pounce";
+        if (attackAnim == 2) animName = "Coyote_Swipe_Low";
+        if (attackAnim == 3) animName = "Coyote_Sling";
+
+        coyoteAnimator.Play(animName);
         yield return new WaitForSeconds(attackDelay);
         eAttack.Attack();
     }
