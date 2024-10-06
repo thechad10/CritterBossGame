@@ -2,7 +2,7 @@
 
 public class Character : MonoBehaviour
 {
-    public float Speed = 3f;
+    public float Speed;
     public bool IsMoving { get; private set; }
 
     public Pin CurrentPin { get; private set; }

@@ -14,7 +14,7 @@ public class LevelSelectLoader : MonoBehaviour
     [SerializeField] private float tweenDuration;
     [SerializeField] private RectTransform rectTransform;
 
-    [SerializeField] private GameObject _playerCharacter;
+    [SerializeField] private Character _playerCharacter;
     private void OnEnable()
     {
         ui_Handler.firstSelectedGameObject = button;
@@ -25,12 +25,12 @@ public class LevelSelectLoader : MonoBehaviour
     public void Kill()
     {
         rectTransform.DOAnchorPosY(posStart, tweenDuration);
+        _playerCharacter.Speed = 10f;
         StartCoroutine(KillHold());
     }
     IEnumerator KillHold()
     {
         yield return new WaitForSeconds(tweenDuration);
-        _playerCharacter.SetActive(true);
         this.gameObject.SetActive(false);
     }
 }

@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      squirell_jump_slash3_0: -6572029902652588201
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

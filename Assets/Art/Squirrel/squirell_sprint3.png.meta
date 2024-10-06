@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      squirell_sprint3_0: -1404861517721355497
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

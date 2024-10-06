@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      squirell_sword_and_throw2_0: -6539785550153386043
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

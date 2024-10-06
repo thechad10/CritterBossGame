@@ -26,7 +26,7 @@ public class Pin : MonoBehaviour
 
 	private Dictionary<Direction, Pin> _pinDirections;
 	[SerializeField] private GameObject _levelStartScreen;
-	[SerializeField] private GameObject _playerCharacter;
+	[SerializeField] private Character _playerCharacter;
 	
 	
 	/// <summary>
@@ -54,7 +54,8 @@ public class Pin : MonoBehaviour
     {
 		Debug.Log("This is working");
 		_levelStartScreen.SetActive(true);
-		_playerCharacter.SetActive(false);
+		_playerCharacter.Speed = 0f;
+		Debug.Log(_playerCharacter.Speed);
     }
 
     /// <summary>
