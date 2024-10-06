@@ -57,7 +57,7 @@ public class FireBalls_EA : EnemyAttack
         float range = maxPos.y - minPos.y;
         transform.position =
             new Vector3(xPos.position.x, Mathf.Clamp((range * xPosition.Evaluate(moveRate)) + minPos.y, minPos.y, maxPos.y), 0);
-        Debug.Log(Mathf.Clamp((range * xPosition.Evaluate(moveRate)) + minPos.y, minPos.y, maxPos.y));
+        //Debug.Log(Mathf.Clamp((range * xPosition.Evaluate(moveRate)) + minPos.y, minPos.y, maxPos.y));
         //Debug.Log((range * -xPosition.Evaluate(moveRate)));
         if (attackRate >= 10)
         {
@@ -79,7 +79,6 @@ public class FireBalls_EA : EnemyAttack
         for(int i = 0; i < ballCount; i++)
         {
             transform.rotation = Quaternion.Euler(0, 0, 90 + (arc * ((i / ((float)ballCount - 1)) - 0.5f)));
-            Debug.Log((i / (float)ballCount) - 0.5f);
             //transform.rotation = Quaternion.Lerp(Quaternion.Euler(0,0, transform.eulerAngles.z + (90 - 45)), Quaternion.Euler(0, 0, transform.eulerAngles.z + (90 + 45)), i / ballCount);
             fireballs.Add(Instantiate(fireballPrefab, (transform.forward * 1) + transform.position, transform.rotation));
         }

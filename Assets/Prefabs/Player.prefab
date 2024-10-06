@@ -202,6 +202,8 @@ MonoBehaviour:
   jumpStrength: 7
   cayoteTime: 0.1
   jumpBufferTime: 0.2
+  stretchScaleX: 0.1
+  stretchScaleY: 0.1
   bPlayerIsFacingRight: 0
   playerIsJumping: 0
 --- !u!114 &6203376877242694895

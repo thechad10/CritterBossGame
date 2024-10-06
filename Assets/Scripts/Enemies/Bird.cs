@@ -4,49 +4,47 @@ using System.Collections.Generic;
 using System.Linq;
 public class Bird : Boss
 {
-    [SerializeField, Tooltip("Attacks that are available in second phase")]
-    private List<EnemyAttack> secondPhaseAttacks = new();
+    [Header("Bird Specific")]
+    [SerializeField, Tooltip("The amount of time it takes to execute the first attack")]
+    private float firstAttackDelay;
     [SerializeField, Tooltip("The amount of time it takes to execute another attack")]
     private float attackDelay;
-    [SerializeField]
-    private float idleTime = 1;
-    private float timer = 0;
-    [SerializeField, Tooltip("Whether or not this boss is in second phase")]
-    private bool isSecondPhase;
-
-    private void Start()
-    {
-
-    }
+    private bool isBeginningOfFight;
+    private int attackIndex;
+    private int cachedIndex = 0;
+    private float startingTimer;
 
     private void Update()
     {
+        if (isBeginningOfFight)
+        {
+            startingTimer += Time.deltaTime;
+
+            if (startingTimer >= firstAttackDelay)
+            {
+                isBeginningOfFight = false;
+                startingTimer = 0;
+            }
+            else
+            {
+                return;
+            }
+        }
         if (IsAttacking) return;
         StartAttack();
-        int attackIndex;
+        
+        do
+        {
+            attackIndex = UnityEngine.Random.Range(0, Attacks.Count);
+        } while (attackIndex == cachedIndex);
+        attackIndex = cachedIndex;
 
-        if (isSecondPhase)
-        {
-            attackIndex = UnityEngine.Random.Range(0, Attacks.Count);
-        }
-        else //isn't second phase
-        {
-            attackIndex = UnityEngine.Random.Range(0, Attacks.Count);
-        }
-        StartCoroutine(nameof(StartAttack),(attackIndex));
+        StartCoroutine(StartAttack(attackIndex));
     }
 
-    IEnumerator StartAttack(int attack)
+    IEnumerator StartAttack(int attackIndex)
     {
-
         yield return new WaitForSeconds(attackDelay);
-        Attacks[attack].Attack();
-
-        timer = 0;
-    }
-
-    public void StartSecondPhase()
-    {
-        isSecondPhase = true;
+        Attacks[attackIndex].Attack();
     }
 }

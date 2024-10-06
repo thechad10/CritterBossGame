@@ -9,6 +9,8 @@ public class PlayerMovement : MonoBehaviour
     [Header("Cayote Time / Jump Buffering")]
     [SerializeField] private float cayoteTime = 0.1f;
     [SerializeField] private float jumpBufferTime = 0.2f;
+    [SerializeField] private float stretchScaleX = 0.05f;
+    [SerializeField] private float stretchScaleY = 0.05f;
 
     private float cayoteCounter = 0f, jumpBufferCounter = 0f;
     private bool isGrounded, canJump, jumpQueued;
@@ -46,6 +48,7 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, -30f);
         }
+        Stretch();
     }
 
     private void FixedUpdate()
@@ -70,11 +73,16 @@ public class PlayerMovement : MonoBehaviour
         if (collision.tag == "Ground" || collision.tag == "Platform") // Grounded Check
             isGrounded = false;
     }
+    private void Stretch()
+    {
+        float horizontalInput = pInput.Player.Move.ReadValue<Vector2>().x;
+        transform.localScale = new Vector3(Mathf.Clamp(1 + Mathf.Abs(horizontalInput * stretchScaleX) - Mathf.Abs(rb.linearVelocityY * stretchScaleX), 0.75f, 2.25f), Mathf.Clamp(1 - Mathf.Abs(horizontalInput * stretchScaleY), 0.85f, 1.25f), 1);
+    }
 
     private void MoveLR()
     {
         float horizontalInput = pInput.Player.Move.ReadValue<Vector2>().x;
-        Vector2 movement = new Vector2(horizontalInput, 0f) * movementSpeed * Time.deltaTime;
+        Vector2 movement = new Vector2(horizontalInput, 0f) * movementSpeed * Time.fixedDeltaTime;
         if (movement.x < 0)
         {
             GetComponent<SpriteRenderer>().flipX = true;
