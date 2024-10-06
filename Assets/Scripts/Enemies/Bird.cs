@@ -11,7 +11,7 @@ public class Bird : Boss
     private float attackDelay;
     private bool isBeginningOfFight;
     private int attackIndex;
-    private int cachedIndex = 0;
+    private int cachedIndex = -1;
     private float startingTimer;
 
     private void Update()
@@ -33,11 +33,11 @@ public class Bird : Boss
         if (IsAttacking) return;
         StartAttack();
         
-        do
-        {
+        /*do
+        {*/
             attackIndex = UnityEngine.Random.Range(0, Attacks.Count);
-        } while (attackIndex == cachedIndex);
-        attackIndex = cachedIndex;
+        //} while (attackIndex == cachedIndex);
+        cachedIndex = attackIndex;
 
         StartCoroutine(StartAttack(attackIndex));
     }

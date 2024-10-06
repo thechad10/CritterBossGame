@@ -5,8 +5,11 @@ using UnityEngine;
 
 public class BombingRun_EA : EnemyAttack
 {
-    [SerializeField, Tooltip("Speed this move attacks")]
-    private float attackSpeed;
+    [SerializeField, Tooltip("How long this attack takes to perform")]
+    private float attackLength;
+    private float timeLeft;
+    [SerializeField, Tooltip("How many this will drop a bomb during a run")]
+    private int bombDrops;
     [SerializeField, Tooltip("Speed this moves")]
     private float moveSpeed;
     [SerializeField, Tooltip("Used for the x-position")]
@@ -23,7 +26,7 @@ public class BombingRun_EA : EnemyAttack
     private Transform yMinPos;
     private float moveRate;
     private float attackRate;
-    private List<GameObject> Bombs = new List<GameObject>();
+    private List<GameObject> bombs = new();
     [SerializeField]
     private Bird bird;
     private Vector3 maxPos;
@@ -47,22 +50,27 @@ public class BombingRun_EA : EnemyAttack
 
         hitbox.gameObject.SetActive(true);
         IsAttacking = true;
+        timeLeft = attackLength;
     }
     private void Update()
     {
-        
         if (!IsAttacking) return;
-        moveRate += Time.deltaTime * moveSpeed;
-        attackRate += Time.deltaTime * attackSpeed;
+        timeLeft -= Time.deltaTime;
+        moveRate = (attackLength - timeLeft) / attackLength;
+        attackRate += Time.deltaTime;
+        Debug.Log(attackRate);
         float range = maxPos.x - minPos.x;
         transform.position =
-            new Vector3(Mathf.Clamp((range * xPosition.Evaluate(moveRate)) + minPos.x, minPos.x, maxPos.x), Mathf.Clamp((range * yPosition.Evaluate(moveRate)) + minPos.y, minPos.y, maxPos.y), 0);
-        if (attackRate >= 10)
+            new Vector3(Mathf.Clamp((range * xPosition.Evaluate(moveRate)) + minPos.x, minPos.x, maxPos.x),
+                        Mathf.Clamp((range * yPosition.Evaluate(moveRate)) + minPos.y, minPos.y, maxPos.y), 
+                        0);
+        if (attackRate >= bombDrops/attackLength)
         {
             attackRate = 0;
             Bomb();
         }
-        if (moveRate >= 1)
+
+        if (timeLeft <= 0)
         {
             moveRate = 0;
             IsAttacking = false;
@@ -72,7 +80,7 @@ public class BombingRun_EA : EnemyAttack
 
     private void Bomb()
     {
-        Bombs.Add(Instantiate(bombPrefab, transform.position, transform.rotation));
+        bombs.Add(Instantiate(bombPrefab, transform.position, transform.rotation));
         //spawn a bomb
     }
 }

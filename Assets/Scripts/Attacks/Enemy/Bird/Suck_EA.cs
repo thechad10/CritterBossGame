@@ -15,7 +15,6 @@ public class Suck_EA : EnemyAttack
             Debug.LogError($"{this} is already attacking! Don't call this.");
             return;
         }
-        Debug.Log("started attack");
         hitbox.enabled = true;
         IsAttacking = true;
     }
@@ -25,7 +24,6 @@ public class Suck_EA : EnemyAttack
         if (!IsAttacking) return;
         if (currentTime >= suckTime)
         {
-            Debug.Log("We are MASSIVE");
             currentTime = 0f;
             IsAttacking = false;
             hitbox.enabled = false;
