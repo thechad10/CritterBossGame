@@ -9,16 +9,10 @@ public class Bird : Boss
     private float firstAttackDelay;
     [SerializeField, Tooltip("The amount of time it takes to execute another attack")]
     private float attackDelay;
-    [SerializeField, Tooltip("Attacks that are available in second phase")]
-    private List<EnemyAttack> secondPhaseAttacks = new();
-    [SerializeField, Tooltip("Whether or not this boss is in second phase")]
-    private bool isSecondPhase;
     private bool isBeginningOfFight;
+    private int attackIndex;
+    private int cachedIndex;
     private float startingTimer;
-    private void Start()
-    {
-
-    }
 
     private void Update()
     {
@@ -38,27 +32,19 @@ public class Bird : Boss
         }
         if (IsAttacking) return;
         StartAttack();
-        int attackIndex;
+        
+        do
+        {
+            attackIndex = UnityEngine.Random.Range(0, Attacks.Count);
+        } while (attackIndex == cachedIndex);
+        attackIndex = cachedIndex;
 
-        if (isSecondPhase)
-        {
-            attackIndex = UnityEngine.Random.Range(0, Attacks.Count);
-        }
-        else //isn't second phase
-        {
-            attackIndex = UnityEngine.Random.Range(0, Attacks.Count);
-        }
-        StartCoroutine(nameof(StartAttack),(attackIndex));
+        StartCoroutine(StartAttack(attackIndex));
     }
 
-    IEnumerator StartAttack(int attack)
+    IEnumerator StartAttack(int attackIndex)
     {
         yield return new WaitForSeconds(attackDelay);
-        Attacks[attack].Attack();
-    }
-
-    public void StartSecondPhase()
-    {
-        isSecondPhase = true;
+        Attacks[attackIndex].Attack();
     }
 }
