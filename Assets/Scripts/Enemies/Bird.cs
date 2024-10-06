@@ -33,10 +33,10 @@ public class Bird : Boss
         if (IsAttacking) return;
         StartAttack();
         
-        /*do
-        {*/
+        do
+        {
             attackIndex = UnityEngine.Random.Range(0, Attacks.Count);
-        //} while (attackIndex == cachedIndex);
+        } while (attackIndex == cachedIndex);
         cachedIndex = attackIndex;
 
         StartCoroutine(StartAttack(attackIndex));

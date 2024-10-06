@@ -1270,37 +1270,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: TwoBirdHandler
       objectReference: {fileID: 0}
-    - target: {fileID: 6283008062092415689, guid: c14fb30c45b3dff49b075eeb8c3cd1ef, type: 3}
-      propertyPath: spriteColor.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6283008062092415689, guid: c14fb30c45b3dff49b075eeb8c3cd1ef, type: 3}
-      propertyPath: spriteColor.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6283008062092415689, guid: c14fb30c45b3dff49b075eeb8c3cd1ef, type: 3}
-      propertyPath: spriteColor.r
+    - target: {fileID: 6902918064478774143, guid: c14fb30c45b3dff49b075eeb8c3cd1ef, type: 3}
+      propertyPath: yMoveTime
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6283008062092415689, guid: c14fb30c45b3dff49b075eeb8c3cd1ef, type: 3}
-      propertyPath: colorChangeCurve.m_Curve.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6283008062092415689, guid: c14fb30c45b3dff49b075eeb8c3cd1ef, type: 3}
-      propertyPath: colorChangeCurve.m_Curve.Array.data[1].time
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6283008062092415689, guid: c14fb30c45b3dff49b075eeb8c3cd1ef, type: 3}
-      propertyPath: colorChangeCurve.m_Curve.Array.data[1].value
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6283008062092415689, guid: c14fb30c45b3dff49b075eeb8c3cd1ef, type: 3}
-      propertyPath: colorChangeCurve.m_Curve.Array.data[0].inSlope
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6283008062092415689, guid: c14fb30c45b3dff49b075eeb8c3cd1ef, type: 3}
-      propertyPath: colorChangeCurve.m_Curve.Array.data[0].outSlope
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7645260409085751319, guid: c14fb30c45b3dff49b075eeb8c3cd1ef, type: 3}
       propertyPath: m_LocalPosition.x

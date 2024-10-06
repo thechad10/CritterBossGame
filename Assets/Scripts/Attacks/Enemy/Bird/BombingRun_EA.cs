@@ -68,9 +68,9 @@ public class BombingRun_EA : EnemyAttack
             timeLeft -= Time.deltaTime;
             moveRate = (attackTime - timeLeft) / attackTime;
             attackRate += Time.deltaTime;
-            Debug.Log(attackRate);
+
             transform.position = new Vector3(Mathf.Lerp(maxPos.position.x, minPos.position.x, xPosition.Evaluate(moveRate)), maxPos.position.y, 0);
-            if (attackRate >= bombDrops / attackTime)
+            if (attackRate >= attackTime / bombDrops )
             {
                 attackRate = 0;
                 Bomb();
