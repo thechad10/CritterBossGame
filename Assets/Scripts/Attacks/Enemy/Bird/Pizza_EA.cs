@@ -24,6 +24,10 @@ public class Pizza_EA : EnemyAttack
     private float lineStartThick = 0.15f;
     [SerializeField]
     private float lineEndThick = 0.35f;
+    [SerializeField]
+    private Color spriteColor;
+    [SerializeField, Tooltip("Used for the Color change rate")]
+    private AnimationCurve colorChangeCurve;
 
 
     public override void Attack()
@@ -50,10 +54,13 @@ public class Pizza_EA : EnemyAttack
         {
             isSpinning = false;
             EnableColliders();
+            spriteColor = Color.white;
+            enableSprites();
             idleTimer += Time.deltaTime;
             updateThick();
             if(idleTimer > idleTime)
             {
+                spriteColor = Color.red;
                 resetThick();
                 disableAll();
                 IsAttacking = false;
@@ -66,6 +73,12 @@ public class Pizza_EA : EnemyAttack
         else if (isSpinning)
         {
             timer += Time.deltaTime;
+            spriteColor.g = colorChangeCurve.Evaluate(1 - Mathf.Clamp(timer / spinTime, 0, 1));
+            spriteColor.a = Mathf.Clamp(timer / spinTime, 0, 1);
+            foreach (SpriteRenderer sprite in renderers)
+            {
+                sprite.color = spriteColor;
+            }
             centerPoint.rotation = Quaternion.Euler(0, 0, centerPoint.rotation.eulerAngles.z + spinSpeed * Time.deltaTime);
         }
 
@@ -89,6 +102,7 @@ public class Pizza_EA : EnemyAttack
         foreach(SpriteRenderer sprite in renderers)
         {
             sprite.enabled = true;
+            sprite.color = spriteColor;
         }
     }
     private void EnableColliders()
