@@ -53,11 +53,14 @@ public class Pizza_EA : EnemyAttack
         if (timer >= spinTime) 
         {
             isSpinning = false;
-            EnableColliders();
-            spriteColor = Color.white;
-            enableSprites();
             idleTimer += Time.deltaTime;
             updateThick();
+            if (idleTimer > idleTime * 4)
+            {
+                EnableColliders();
+                spriteColor = Color.white;
+                enableSprites();
+            }
             if(idleTimer > idleTime)
             {
                 spriteColor = Color.red;
