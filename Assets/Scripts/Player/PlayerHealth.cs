@@ -19,7 +19,7 @@ public class PlayerHealth : MonoBehaviour
     private bool isImmune = false;
     [SerializeField]
     private float iFrames = 2f;
-    public TextMeshProUGUI playerHPText;
+    [HideInInspector] public TextMeshProUGUI playerHPText;
 
     private Animator playerAnimator;
     public bool playerIsTakingDamage, playerIsNowDead;
@@ -29,6 +29,7 @@ public class PlayerHealth : MonoBehaviour
     private void Start()
     {
         playerAnimator = GetComponent<Animator>();
+        playerHPText = GameObject.FindWithTag("PlayerHP_Text").GetComponent<TextMeshProUGUI>();
     }
 
     private void Update()
