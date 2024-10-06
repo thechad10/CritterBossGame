@@ -74,7 +74,7 @@ public class Pizza_EA : EnemyAttack
         {
             timer += Time.deltaTime;
             spriteColor.g = colorChangeCurve.Evaluate(1 - Mathf.Clamp(timer / spinTime, 0, 1));
-            spriteColor.a = Mathf.Clamp(timer / spinTime, 0, 1);
+            spriteColor.a = colorChangeCurve.Evaluate(Mathf.Clamp(timer / spinTime, 0, 1));
             foreach (SpriteRenderer sprite in renderers)
             {
                 sprite.color = spriteColor;

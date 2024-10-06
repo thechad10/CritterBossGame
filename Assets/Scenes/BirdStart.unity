@@ -1254,6 +1254,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 554857304543241341, guid: c14fb30c45b3dff49b075eeb8c3cd1ef, type: 3}
+      propertyPath: m_SortingOrder
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 2136390726760484859, guid: c14fb30c45b3dff49b075eeb8c3cd1ef, type: 3}
+      propertyPath: m_SortingOrder
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 2657625940813166138, guid: c14fb30c45b3dff49b075eeb8c3cd1ef, type: 3}
+      propertyPath: m_SortingOrder
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 3018291026006307270, guid: c14fb30c45b3dff49b075eeb8c3cd1ef, type: 3}
+      propertyPath: m_SortingOrder
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 3078816913778434023, guid: c14fb30c45b3dff49b075eeb8c3cd1ef, type: 3}
+      propertyPath: m_SortingOrder
+      value: 75
+      objectReference: {fileID: 0}
     - target: {fileID: 3401798143037282946, guid: c14fb30c45b3dff49b075eeb8c3cd1ef, type: 3}
       propertyPath: ui
       value: 
@@ -1270,9 +1290,37 @@ PrefabInstance:
       propertyPath: m_Name
       value: TwoBirdHandler
       objectReference: {fileID: 0}
-    - target: {fileID: 6902918064478774143, guid: c14fb30c45b3dff49b075eeb8c3cd1ef, type: 3}
-      propertyPath: yMoveTime
+    - target: {fileID: 6283008062092415689, guid: c14fb30c45b3dff49b075eeb8c3cd1ef, type: 3}
+      propertyPath: spriteColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6283008062092415689, guid: c14fb30c45b3dff49b075eeb8c3cd1ef, type: 3}
+      propertyPath: spriteColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6283008062092415689, guid: c14fb30c45b3dff49b075eeb8c3cd1ef, type: 3}
+      propertyPath: spriteColor.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6283008062092415689, guid: c14fb30c45b3dff49b075eeb8c3cd1ef, type: 3}
+      propertyPath: colorChangeCurve.m_Curve.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6283008062092415689, guid: c14fb30c45b3dff49b075eeb8c3cd1ef, type: 3}
+      propertyPath: colorChangeCurve.m_Curve.Array.data[1].time
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6283008062092415689, guid: c14fb30c45b3dff49b075eeb8c3cd1ef, type: 3}
+      propertyPath: colorChangeCurve.m_Curve.Array.data[1].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6283008062092415689, guid: c14fb30c45b3dff49b075eeb8c3cd1ef, type: 3}
+      propertyPath: colorChangeCurve.m_Curve.Array.data[0].inSlope
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6283008062092415689, guid: c14fb30c45b3dff49b075eeb8c3cd1ef, type: 3}
+      propertyPath: colorChangeCurve.m_Curve.Array.data[0].outSlope
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7645260409085751319, guid: c14fb30c45b3dff49b075eeb8c3cd1ef, type: 3}
       propertyPath: m_LocalPosition.x
