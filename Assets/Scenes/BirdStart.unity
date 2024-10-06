@@ -123,6 +123,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3753029419665703938, guid: bcde0a273cf83b146a43fee39f3a057b, type: 3}
   m_PrefabInstance: {fileID: 1395247332}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &228282674 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8242135679239231326, guid: c14fb30c45b3dff49b075eeb8c3cd1ef, type: 3}
+  m_PrefabInstance: {fileID: 2076798730884548223}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a2d884ee6ded3343951ecaabdec075a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &242787045 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1478079564472251946, guid: b34d29095e481304aba9ade686e56542, type: 3}
@@ -387,6 +398,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b34d29095e481304aba9ade686e56542, type: 3}
+--- !u!114 &714544279 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3769196859120761033, guid: a634b7ba7d9c0b54a8345827834ca2ed, type: 3}
+  m_PrefabInstance: {fileID: 748218427}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &745727072
 GameObject:
   m_ObjectHideFlags: 0
@@ -1254,6 +1276,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 910702731549381449, guid: c14fb30c45b3dff49b075eeb8c3cd1ef, type: 3}
+      propertyPath: bossHealthBar
+      value: 
+      objectReference: {fileID: 714544279}
+    - target: {fileID: 910702731549381449, guid: c14fb30c45b3dff49b075eeb8c3cd1ef, type: 3}
+      propertyPath: Attacks.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 910702731549381449, guid: c14fb30c45b3dff49b075eeb8c3cd1ef, type: 3}
+      propertyPath: 'Attacks.Array.data[1]'
+      value: 
+      objectReference: {fileID: 228282674}
     - target: {fileID: 3401798143037282946, guid: c14fb30c45b3dff49b075eeb8c3cd1ef, type: 3}
       propertyPath: ui
       value: 
@@ -1269,10 +1303,6 @@ PrefabInstance:
     - target: {fileID: 4635235751006458868, guid: c14fb30c45b3dff49b075eeb8c3cd1ef, type: 3}
       propertyPath: m_Name
       value: TwoBirdHandler
-      objectReference: {fileID: 0}
-    - target: {fileID: 6902918064478774143, guid: c14fb30c45b3dff49b075eeb8c3cd1ef, type: 3}
-      propertyPath: yMoveTime
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7645260409085751319, guid: c14fb30c45b3dff49b075eeb8c3cd1ef, type: 3}
       propertyPath: m_LocalPosition.x
