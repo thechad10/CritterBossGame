@@ -57,7 +57,7 @@ public class Pizza_EA : EnemyAttack
                 resetThick();
                 disableAll();
                 IsAttacking = false;
-                gameObject.GetComponent<Bird>().bIsAttacking = false;
+                gameObject.GetComponent<Boss>().FinishAttack();
                 timer = 0;
                 idleTimer = 0;
                 return;
