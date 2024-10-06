@@ -1258,6 +1258,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 910702731549381449, guid: c14fb30c45b3dff49b075eeb8c3cd1ef, type: 3}
+      propertyPath: maxHealth
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 910702731549381449, guid: c14fb30c45b3dff49b075eeb8c3cd1ef, type: 3}
       propertyPath: Attacks.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -1265,6 +1269,10 @@ PrefabInstance:
       propertyPath: 'Attacks.Array.data[0]'
       value: 
       objectReference: {fileID: 192501545}
+    - target: {fileID: 2497863192682566239, guid: c14fb30c45b3dff49b075eeb8c3cd1ef, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 3401798143037282946, guid: c14fb30c45b3dff49b075eeb8c3cd1ef, type: 3}
       propertyPath: ui
       value: 
