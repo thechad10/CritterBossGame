@@ -968,6 +968,7 @@ MonoBehaviour:
   yMaxPos: {fileID: 203678466566033125}
   yMinPos: {fileID: 5422945461144777729}
   tPivot: {fileID: 3441631596604619483}
+  telegraphTime: 0.5
 --- !u!114 &3403805973588825363
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1061,6 +1062,7 @@ MonoBehaviour:
   yMaxPos: {fileID: 6436535986795088146}
   yMinPos: {fileID: 2117369261368783697}
   tPivot: {fileID: 6738489753476698760}
+  telegraphTime: 0.5
 --- !u!114 &181605139260498947
 MonoBehaviour:
   m_ObjectHideFlags: 0
