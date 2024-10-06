@@ -6,10 +6,12 @@ using System.Collections;
 
 public class FadeSceneChanger : MonoBehaviour
 {
+    [SerializeField] private AudioSource m_AudioSource;
     [SerializeField] private Image black;
     public void ChangeScene(string sceneName)
     {
         black.DOFade(1, 1f);
+        m_AudioSource.DOFade(0, 1f);
         StartCoroutine(HoldLoad(sceneName));
     }
     IEnumerator HoldLoad(string sceneName)
