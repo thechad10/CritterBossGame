@@ -93,6 +93,5 @@ public class Character : MonoBehaviour
         
         // Tell the map manager that
         // the current pin has changed
-        _mapManager.UpdateGui();
     }
 }
