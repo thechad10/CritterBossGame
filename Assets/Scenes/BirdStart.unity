@@ -1271,6 +1271,18 @@ PrefabInstance:
       value: TwoBirdHandler
       objectReference: {fileID: 0}
     - target: {fileID: 6283008062092415689, guid: c14fb30c45b3dff49b075eeb8c3cd1ef, type: 3}
+      propertyPath: spriteColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6283008062092415689, guid: c14fb30c45b3dff49b075eeb8c3cd1ef, type: 3}
+      propertyPath: spriteColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6283008062092415689, guid: c14fb30c45b3dff49b075eeb8c3cd1ef, type: 3}
+      propertyPath: spriteColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6283008062092415689, guid: c14fb30c45b3dff49b075eeb8c3cd1ef, type: 3}
       propertyPath: colorChangeCurve.m_Curve.Array.size
       value: 2
       objectReference: {fileID: 0}
