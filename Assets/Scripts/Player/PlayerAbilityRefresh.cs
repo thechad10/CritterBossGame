@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class PlayerAbilityRefresh : MonoBehaviour
 {
     [HideInInspector] public bool playerSpecialAbilityReady;
-    private float refreshTime = 30f;
+    private float refreshTime = 15f;
     private float refreshCounter;
     private Image playerAbilityFill;
 
@@ -18,7 +18,7 @@ public class PlayerAbilityRefresh : MonoBehaviour
         squirrelSpecial = GetComponent<SquirrelSpecial>();
         if (GameObject.FindWithTag("PlayerAbilityFill"))
             playerAbilityFill = GameObject.FindWithTag("PlayerAbilityFill").GetComponent<Image>();
-        refreshCounter = 0;
+        refreshCounter = refreshTime / 2;
     }
 
     private void Update()
