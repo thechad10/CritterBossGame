@@ -5,9 +5,13 @@ using UnityEngine;
 
 public class BombingRun_EA : EnemyAttack
 {
-    [SerializeField, Tooltip("How long this attack takes to perform")]
-    private float attackLength;
+    [SerializeField, Tooltip("How long this attack performs")]
+    private float attackTime;
+    [SerializeField, Tooltip("How long it takes to rise and fall")]
+    private float yMoveTime;
+    public float TotalTime => attackTime + yMoveTime;
     private float timeLeft;
+    private BombingState bombState;
     [SerializeField, Tooltip("How many this will drop a bomb during a run")]
     private int bombDrops;
     [SerializeField, Tooltip("Speed this moves")]
@@ -16,30 +20,20 @@ public class BombingRun_EA : EnemyAttack
     private AnimationCurve xPosition;
     [SerializeField, Tooltip("Used for the y-position")]
     private AnimationCurve yPosition;
-    [SerializeField, Tooltip("Used for the x AnimationCurve's calculation")]
-    private Transform xMaxPos;
-    [SerializeField, Tooltip("Used for the x AnimationCurve's calculation")]
-    private Transform xMinPos;
-    [SerializeField, Tooltip("Used for the y height of Bird")]
-    private Transform yMaxPos;
-    [SerializeField, Tooltip("Used for the y height of Bird")]
-    private Transform yMinPos;
+    [SerializeField, Tooltip("Used for the max position calculations")]
+    private Transform maxPos;
+    [SerializeField, Tooltip("Used for the min position calculations")]
+    private Transform minPos;
     private float moveRate;
     private float attackRate;
     private List<GameObject> bombs = new();
     [SerializeField]
     private Bird bird;
-    private Vector3 maxPos;
-    private Vector3 minPos;
 
     [SerializeField]
     private GameObject bombPrefab;
 
-    private void OnEnable()
-    {
-        maxPos = new Vector3(xMaxPos.position.x, yMaxPos.position.y, 0);
-        minPos = new Vector3(xMinPos.position.x, yMinPos.position.y, 0);
-    }
+
     public override void Attack()
     {
         if (IsAttacking)
@@ -50,31 +44,57 @@ public class BombingRun_EA : EnemyAttack
 
         hitbox.gameObject.SetActive(true);
         IsAttacking = true;
-        timeLeft = attackLength;
+        //timeLeft = attackLength;
+        timeLeft = yMoveTime;
+        bombState = BombingState.rising;
     }
     private void Update()
     {
         if (!IsAttacking) return;
-        timeLeft -= Time.deltaTime;
-        moveRate = (attackLength - timeLeft) / attackLength;
-        attackRate += Time.deltaTime;
-        Debug.Log(attackRate);
-        float range = maxPos.x - minPos.x;
-        transform.position =
-            new Vector3(Mathf.Clamp((range * xPosition.Evaluate(moveRate)) + minPos.x, minPos.x, maxPos.x),
-                        Mathf.Clamp((range * yPosition.Evaluate(moveRate)) + minPos.y, minPos.y, maxPos.y), 
-                        0);
-        if (attackRate >= bombDrops/attackLength)
+        if(bombState == BombingState.rising)
         {
-            attackRate = 0;
-            Bomb();
+            timeLeft -= Time.deltaTime;
+            moveRate = (yMoveTime - timeLeft) / yMoveTime;
+            transform.position = new Vector3(minPos.position.x, Mathf.Lerp(minPos.position.y, maxPos.position.y, yPosition.Evaluate(moveRate)), 0);
+            if (timeLeft <= 0)
+            {
+                moveRate = 0;
+                timeLeft = attackTime;
+                bombState = BombingState.bombing;
+            }
         }
-
-        if (timeLeft <= 0)
+        else if(bombState == BombingState.bombing)
         {
-            moveRate = 0;
-            IsAttacking = false;
-            bird.FinishAttack();
+            timeLeft -= Time.deltaTime;
+            moveRate = (attackTime - timeLeft) / attackTime;
+            attackRate += Time.deltaTime;
+            Debug.Log(attackRate);
+            transform.position = new Vector3(Mathf.Lerp(maxPos.position.x, minPos.position.x, xPosition.Evaluate(moveRate)), maxPos.position.y, 0);
+            if (attackRate >= bombDrops / attackTime)
+            {
+                attackRate = 0;
+                Bomb();
+            }
+
+            if (timeLeft <= 0)
+            {
+                moveRate = 0;
+                timeLeft = yMoveTime;
+                bombState = BombingState.falling;
+            }
+        }
+        else if(bombState == BombingState.falling)
+        {
+            timeLeft -= Time.deltaTime;
+            moveRate = (yMoveTime - timeLeft) / yMoveTime;
+            transform.position = new Vector3(minPos.position.x, Mathf.Lerp(maxPos.position.y, minPos.position.y, yPosition.Evaluate(moveRate)), 0);
+            if (timeLeft <= 0)
+            {
+                moveRate = 0;
+                timeLeft = attackTime;
+                IsAttacking = false;
+                bird.FinishAttack();
+            }
         }
     }
 
@@ -82,5 +102,12 @@ public class BombingRun_EA : EnemyAttack
     {
         bombs.Add(Instantiate(bombPrefab, transform.position, transform.rotation));
         //spawn a bomb
+    }
+
+    private enum BombingState
+    {
+        rising,
+        bombing,
+        falling
     }
 }
