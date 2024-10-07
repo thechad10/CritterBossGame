@@ -5,7 +5,7 @@ public class BirdTransition : GameAction
     [SerializeField]
     private GameObject pheonix;
     [SerializeField]
-    private GameObject peacock;
+    private GameObject peacockDeath;
     [SerializeField]
     private GameObject pheonixScene;
     [SerializeField]
@@ -18,8 +18,8 @@ public class BirdTransition : GameAction
     private Transform PlayerMoveToPoint;
     public override void Action()
     {
-        peacock.SetActive(false);
         pheonix.SetActive(true);
+        peacockDeath.SetActive(false);
         peacockScene.SetActive(false);
         pheonixScene.SetActive(true);
         player.transform.position = PlayerMoveToPoint.position;
