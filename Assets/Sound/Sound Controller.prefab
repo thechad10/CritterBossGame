@@ -81,8 +81,8 @@ MonoBehaviour:
   - name: CoyoteHit
     source: {fileID: 0}
     mixer: {fileID: -4479698138880582938, guid: 23fcb94e90272dc45b9cf1b88de87e8e, type: 2}
-    clip: {fileID: 8300000, guid: eb3744b42b6501d4083402d54ab64d29, type: 3}
-    random: {fileID: 0}
+    clip: {fileID: 0}
+    random: {fileID: 6418180475301049370, guid: 6d74e7ba4ea665d44813dd09d1e8e1ac, type: 2}
     volume: 1
     loop: 0
     PlayAwake: 0
@@ -121,16 +121,16 @@ MonoBehaviour:
   - name: PlayerKunai
     source: {fileID: 0}
     mixer: {fileID: -4479698138880582938, guid: 23fcb94e90272dc45b9cf1b88de87e8e, type: 2}
-    clip: {fileID: 8300000, guid: 05f499fe25db7844a9bffb1e2d749e84, type: 3}
-    random: {fileID: 0}
+    clip: {fileID: 0}
+    random: {fileID: 6418180475301049370, guid: 4eb220fab6cfdfa449eaa4749b8d1e65, type: 2}
     volume: 1
     loop: 0
     PlayAwake: 0
   - name: PlayerShuriken
     source: {fileID: 0}
     mixer: {fileID: -4479698138880582938, guid: 23fcb94e90272dc45b9cf1b88de87e8e, type: 2}
-    clip: {fileID: 8300000, guid: d8720a72b77b57e48bd5bf1710ae888b, type: 3}
-    random: {fileID: 0}
+    clip: {fileID: 0}
+    random: {fileID: 6418180475301049370, guid: 39e1fbd60bbf44d4fb0112ceda79c57d, type: 2}
     volume: 1
     loop: 0
     PlayAwake: 0
@@ -193,8 +193,8 @@ MonoBehaviour:
   - name: BearHit
     source: {fileID: 0}
     mixer: {fileID: -4479698138880582938, guid: 23fcb94e90272dc45b9cf1b88de87e8e, type: 2}
-    clip: {fileID: 8300000, guid: 99896565c7fe27e4e8b29de36b3b9d98, type: 3}
-    random: {fileID: 0}
+    clip: {fileID: 0}
+    random: {fileID: 6418180475301049370, guid: 87b48788cca866f4aa98bfb6df12585e, type: 2}
     volume: 1
     loop: 0
     PlayAwake: 0
@@ -257,8 +257,8 @@ MonoBehaviour:
   - name: BirdHit
     source: {fileID: 0}
     mixer: {fileID: -4479698138880582938, guid: 23fcb94e90272dc45b9cf1b88de87e8e, type: 2}
-    clip: {fileID: 8300000, guid: 116b196530746f348acdf6260a2de18c, type: 3}
-    random: {fileID: 0}
+    clip: {fileID: 0}
+    random: {fileID: 6418180475301049370, guid: 0ce387d01f4ebe842be3fbbb0dcd452d, type: 2}
     volume: 1
     loop: 0
     PlayAwake: 0
@@ -266,7 +266,7 @@ MonoBehaviour:
     source: {fileID: 0}
     mixer: {fileID: -4479698138880582938, guid: 23fcb94e90272dc45b9cf1b88de87e8e, type: 2}
     clip: {fileID: 0}
-    random: {fileID: 6418180475301049370, guid: 000abad7bc30c9e4486dbfec4f4793fe, type: 2}
+    random: {fileID: 0}
     volume: 1
     loop: 0
     PlayAwake: 0
