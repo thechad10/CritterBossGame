@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: b4158397cd3980243b7b824b688a0c66
+guid: 691743dd3e432544389d8ac389e2bb1a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2806346894453919260
-    second: EnemyDefeated_0
+      213: -5509079748480920980
+    second: fireballSmall_SHEET_0
+  - first:
+      213: 2120993642101921358
+    second: fireballSmall_SHEET_1
+  - first:
+      213: 6329786622001846658
+    second: fireballSmall_SHEET_2
+  - first:
+      213: 4502678614725774978
+    second: fireballSmall_SHEET_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,30 +105,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: EnemyDefeated_0
+      name: fireballSmall_SHEET_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1251
-        height: 1442
+        x: 9
+        y: 7
+        width: 15
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +124,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4e1bd8f3e5add09d0800000000000000
-      internalID: -2806346894453919260
+      spriteID: c621f783821db83b0800000000000000
+      internalID: -5509079748480920980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fireballSmall_SHEET_1
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 8
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e46d850ea784f6d10800000000000000
+      internalID: 2120993642101921358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fireballSmall_SHEET_2
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 9
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2899074656be7d750800000000000000
+      internalID: 6329786622001846658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fireballSmall_SHEET_3
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 9
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28e4a78085abc7e30800000000000000
+      internalID: 4502678614725774978
       vertices: []
       indices: 
       edges: []
@@ -147,8 +209,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      EnemyDefeated_0: -2806346894453919260
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

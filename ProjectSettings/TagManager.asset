@@ -7,6 +7,7 @@ TagManager:
   - Ground
   - PlayerAbilityFill
   - PlayerHP_Text
+  - Boss
   layers:
   - Default
   - TransparentFX

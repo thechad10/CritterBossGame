@@ -19,6 +19,11 @@ public class DamageModifier : MonoBehaviour
         {
             bhealth.ChangeHealth(healthMod);
         }
+        else if (other.GetComponentInParent<Boss>())
+        {
+            other.GetComponentInParent<Boss>().ChangeHealth(healthMod);
+        }
+
 
         if (TryGetComponent<EnablePlayerProjectile>(out yes))
         {
