@@ -132,6 +132,7 @@ public class Slam_EA : EnemyAttack
     private void acornSpawn()
     {
         acorns.Add(Instantiate(acornPrefab, new Vector2(Random.Range(spawnA.position.x, spawnB.position.x), spawnA.position.y), spawnB.rotation));
+        acorns[acorns.Count - 1].GetComponent<Rigidbody2D>().gravityScale = Random.Range(0.95f, 1.05f);
     }
     private void Shake()
     {

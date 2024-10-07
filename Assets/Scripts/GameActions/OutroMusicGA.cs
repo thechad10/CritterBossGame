@@ -9,12 +9,13 @@ public class OutroMusicGA : GameAction
     [SerializeField] private AudioClip m_Clip;
     public override void Action()
     {
-        m_Source.DOFade(0, .5f);
+        m_Source.DOFade(0, .2f);
         StartCoroutine(SwapTrack());
     }
     IEnumerator SwapTrack()
     {
-        yield return new WaitForSeconds(.5f);
+        Debug.Log(Time.timeScale);
+        yield return new WaitForSeconds(0.2f);
         Debug.Log("Coroutine Called");
         m_Source.clip = m_Clip;
         m_Source.volume = 1;
