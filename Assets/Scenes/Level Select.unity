@@ -1318,7 +1318,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsAutomatic: 0
   HideIcon: 0
-  SceneToLoad: 
+  SceneToLoad: BearBoss
   UpPin: {fileID: 0}
   DownPin: {fileID: 0}
   LeftPin: {fileID: 1515413032}
