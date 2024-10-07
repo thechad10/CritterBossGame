@@ -476,6 +476,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Character: {fileID: 1281524528}
   StartPin: {fileID: 1601697428}
+  pins:
+  - {fileID: 1220725975}
+  - {fileID: 1515413030}
+  - {fileID: 561801665}
+  unpins:
+  - {fileID: 1220725977}
+  - {fileID: 1515413031}
+  - {fileID: 561801663}
+  lProgress: {fileID: 11400000, guid: 71b3d3a91f8431343b218bf089ee5f87, type: 2}
 --- !u!4 &71569096
 Transform:
   m_ObjectHideFlags: 0

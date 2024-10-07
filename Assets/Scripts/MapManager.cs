@@ -1,5 +1,7 @@
-﻿using UnityEngine;
+﻿using NUnit.Framework;
+using UnityEngine;
 using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class MapManager : MonoBehaviour
 {
@@ -7,17 +9,39 @@ public class MapManager : MonoBehaviour
 	public Pin StartPin;
 	private PlayerInput pInput;
 	
-	/// <summary>
-	/// Use this for initialization
-	/// </summary>
-	private void Start ()
+	public List<SpriteRenderer> pins;
+	public List<BoxCollider2D> unpins;
+    public LevelProgression lProgress;
+    /// <summary>
+    /// Use this for initialization
+    /// </summary>
+    private void OnEnable()
+    {
+        if (lProgress.coyoteDefeated)
+        {
+            pins[0].color = Color.yellow;
+            unpins[0].enabled = false;
+        }
+        else if (lProgress.birdDefeated)
+        {
+            pins[1].color = Color.yellow;
+            unpins[1].enabled = false;
+        }
+        else if(lProgress.bearDefeated)
+        {
+            pins[2].color = Color.yellow;
+            unpins[2].enabled = false;
+        }
+
+    }
+    private void Start ()
 	{
 		// Pass a ref and default the player Starting Pin
 		Character.Initialise(this, StartPin);
 		pInput = new PlayerInput();
 		pInput.Enable();
 	}
-
+	
     private void OnDisable()
     {
         pInput.Disable();
