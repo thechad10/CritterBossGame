@@ -222,7 +222,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      FlyingCloudswBees_SHEET (1)_0: 296033706177780257
+      FlyingCloudswBees_SHEET (1)_1: -8857552571620722355
+      FlyingCloudswBees_SHEET (1)_2: 5532475764037907602
+      FlyingCloudswBees_SHEET (1)_3: 6132609572951328570
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
