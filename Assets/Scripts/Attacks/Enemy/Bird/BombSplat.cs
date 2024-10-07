@@ -6,6 +6,13 @@ public class BombSplat : MonoBehaviour
 {
     [SerializeField]
     private List<GameAction> gActions;
+    [SerializeField, Tooltip("The animator this animation will play on")]
+    private Animator animator;
+    private void Start()
+    {
+        animator = GetComponent<Animator>();
+        animator.Play("Falling");
+    }
     private void OnTriggerEnter2D(Collider2D other)
     {
         PlaySequence();
