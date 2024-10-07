@@ -368,22 +368,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3288535806680372218, guid: c8599cd5b556baf41a778f7de2942b5d, type: 3}
   m_PrefabInstance: {fileID: 28107511}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &28107514 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 48081099424282591, guid: c8599cd5b556baf41a778f7de2942b5d, type: 3}
-  m_PrefabInstance: {fileID: 28107511}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &28107515 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4966220481541445676, guid: c8599cd5b556baf41a778f7de2942b5d, type: 3}
-  m_PrefabInstance: {fileID: 28107511}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 28107514}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &28107518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -396,9 +380,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11d870713d7d4244c924a5a6195cb1a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button: {fileID: 28107514}
-  firstButton: {fileID: 28107515}
-  ui_Handler: {fileID: 47920873}
+  button: {fileID: 0}
+  firstButton: {fileID: 0}
+  ui_Handler: {fileID: 0}
   ui_Element: {fileID: 1649349377}
   go: {fileID: 767710857}
   startPos: 1800
@@ -722,9 +706,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11d870713d7d4244c924a5a6195cb1a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button: {fileID: 1102735444}
-  firstButton: {fileID: 1102735445}
-  ui_Handler: {fileID: 47920873}
+  button: {fileID: 0}
+  firstButton: {fileID: 0}
+  ui_Handler: {fileID: 0}
   ui_Element: {fileID: 641815824}
   go: {fileID: 767710857}
   startPos: 1800
@@ -1967,22 +1951,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 641815827}
   m_SourcePrefab: {fileID: 100100000, guid: c411e500dd099ec4f9ef28b486560243, type: 3}
---- !u!1 &1102735444 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5091371943497468575, guid: c411e500dd099ec4f9ef28b486560243, type: 3}
-  m_PrefabInstance: {fileID: 1102735443}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1102735445 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2772198084453506602, guid: c411e500dd099ec4f9ef28b486560243, type: 3}
-  m_PrefabInstance: {fileID: 1102735443}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1102735444}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1107576656
 GameObject:
   m_ObjectHideFlags: 0
@@ -2174,9 +2142,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11d870713d7d4244c924a5a6195cb1a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button: {fileID: 986791040}
-  firstButton: {fileID: 986791042}
-  ui_Handler: {fileID: 47920873}
+  button: {fileID: 0}
+  firstButton: {fileID: 0}
+  ui_Handler: {fileID: 0}
   ui_Element: {fileID: 1203283821}
   go: {fileID: 767710857}
   startPos: 1800
