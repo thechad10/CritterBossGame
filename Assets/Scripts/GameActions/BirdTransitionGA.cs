@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 
 public class BirdTransition : GameAction
@@ -18,7 +19,7 @@ public class BirdTransition : GameAction
     [SerializeField]
     private Transform PlayerMoveToPoint;
     [SerializeField]
-    private Vignette hotWub;
+    private Volume vignette;
     public override void Action()
     {
         pheonix.SetActive(true);
@@ -27,5 +28,6 @@ public class BirdTransition : GameAction
         pheonixScene.SetActive(true);
         player.transform.position = PlayerMoveToPoint.position;
         ui.RefillBar();
+        vignette.enabled = true;
     }
 }
