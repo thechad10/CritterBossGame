@@ -115,6 +115,7 @@ public class BombingRun_EA : EnemyAttack
     private void Bomb()
     {
         bombs.Add(Instantiate(bombPrefab, transform.position, transform.rotation));
+        FindObjectOfType<SoundControl>().Play("BirdDrop");
         //spawn a bomb
     }
 

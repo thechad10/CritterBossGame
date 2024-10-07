@@ -4167,6 +4167,10 @@ PrefabInstance:
       value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 910702731549381449, guid: c14fb30c45b3dff49b075eeb8c3cd1ef, type: 3}
+      propertyPath: soundName
+      value: BirdHit
+      objectReference: {fileID: 0}
+    - target: {fileID: 910702731549381449, guid: c14fb30c45b3dff49b075eeb8c3cd1ef, type: 3}
       propertyPath: bossHealthBar
       value: 
       objectReference: {fileID: 714544279}
@@ -4285,6 +4289,10 @@ PrefabInstance:
     - target: {fileID: 9072359260453841236, guid: c14fb30c45b3dff49b075eeb8c3cd1ef, type: 3}
       propertyPath: maxHealth
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 9072359260453841236, guid: c14fb30c45b3dff49b075eeb8c3cd1ef, type: 3}
+      propertyPath: soundName
+      value: BirdHit
       objectReference: {fileID: 0}
     - target: {fileID: 9072359260453841236, guid: c14fb30c45b3dff49b075eeb8c3cd1ef, type: 3}
       propertyPath: isSecondPhase
