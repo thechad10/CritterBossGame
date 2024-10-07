@@ -50,7 +50,7 @@ public class FireBalls_EA : EnemyAttack
     }
     private void Update()
     {
-
+        if (GetComponent<Boss>().IsDead) return;
         if (!IsAttacking) return;
         moveRate += Time.deltaTime * moveSpeed;
         attackRate += Time.deltaTime * attackSpeed;
