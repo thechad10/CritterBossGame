@@ -3740,6 +3740,63 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6708341943702600456, guid: a634b7ba7d9c0b54a8345827834ca2ed, type: 3}
   m_PrefabInstance: {fileID: 748218427}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1966943384
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1639330415971131826, guid: 87e6b685e4ee69f4c88fe729cf3a9b54, type: 3}
+      propertyPath: m_Name
+      value: Sound Controller
+      objectReference: {fileID: 0}
+    - target: {fileID: 7624827078133451314, guid: 87e6b685e4ee69f4c88fe729cf3a9b54, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7624827078133451314, guid: 87e6b685e4ee69f4c88fe729cf3a9b54, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7624827078133451314, guid: 87e6b685e4ee69f4c88fe729cf3a9b54, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7624827078133451314, guid: 87e6b685e4ee69f4c88fe729cf3a9b54, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7624827078133451314, guid: 87e6b685e4ee69f4c88fe729cf3a9b54, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7624827078133451314, guid: 87e6b685e4ee69f4c88fe729cf3a9b54, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7624827078133451314, guid: 87e6b685e4ee69f4c88fe729cf3a9b54, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7624827078133451314, guid: 87e6b685e4ee69f4c88fe729cf3a9b54, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7624827078133451314, guid: 87e6b685e4ee69f4c88fe729cf3a9b54, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7624827078133451314, guid: 87e6b685e4ee69f4c88fe729cf3a9b54, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 87e6b685e4ee69f4c88fe729cf3a9b54, type: 3}
 --- !u!1 &2027584137
 GameObject:
   m_ObjectHideFlags: 0
@@ -4103,7 +4160,7 @@ PrefabInstance:
       objectReference: {fileID: 1107576657}
     - target: {fileID: 910702731549381449, guid: c14fb30c45b3dff49b075eeb8c3cd1ef, type: 3}
       propertyPath: maxHealth
-      value: 3
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 910702731549381449, guid: c14fb30c45b3dff49b075eeb8c3cd1ef, type: 3}
       propertyPath: bossHealthBar
@@ -4245,6 +4302,7 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 1966943384}
   - {fileID: 1782671651}
   - {fileID: 745727073}
   - {fileID: 818437391}
