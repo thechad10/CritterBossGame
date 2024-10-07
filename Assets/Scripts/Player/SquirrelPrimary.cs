@@ -43,6 +43,11 @@ public class SquirrelPrimary : MonoBehaviour
         }
     }
 
+    private void OnDisable()
+    {
+        pInput.Disable();
+    }
+
     void Update()
     {
         if (attackCounter <= attackSpeed - 0.1f)

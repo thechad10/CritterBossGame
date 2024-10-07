@@ -21,6 +21,11 @@ public class PlayerAbilityRefresh : MonoBehaviour
         refreshCounter = refreshTime / 2;
     }
 
+    private void OnDisable()
+    {
+        pInput.Disable();
+    }
+
     private void Update()
     {
         if (playerAbilityFill)

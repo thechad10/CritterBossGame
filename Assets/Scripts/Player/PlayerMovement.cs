@@ -42,6 +42,11 @@ public class PlayerMovement : MonoBehaviour
         bPlayerIsFacingRight = true;
     }
 
+    private void OnDisable()
+    {
+        pInput.Disable();
+    }
+
     private void Update()
     {
         if (rb.linearVelocity.y < -30f)

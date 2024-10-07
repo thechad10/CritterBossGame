@@ -40,6 +40,11 @@ public class SquirrelSpecial : MonoBehaviour
         projectileAngleForce = projectileThrowForce / 6; // 15 degree rise/fall
     }
 
+    private void OnDisable()
+    {
+        pInput.Disable();
+    }
+
     void Update()
     {
         if (pInput.Player.Ability.WasPerformedThisFrame() && playerAbilityRefresh.playerSpecialAbilityReady) // Projectile Logic
