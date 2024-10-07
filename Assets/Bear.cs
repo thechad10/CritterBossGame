@@ -71,10 +71,10 @@ public class Bear : Boss
         }
         cachedAttack = chosenAttack;
 
-        StartCoroutine(Attack(chosenAttack, attackIndex));
+        StartCoroutine(Attack(chosenAttack));
     }
 
-    IEnumerator Attack(EnemyAttack eAttack, int attackAnim)
+    IEnumerator Attack(EnemyAttack eAttack)
     {
         /*if (attackAnim == 0) animName = "Coyote_Swipe_High";
         if (attackAnim == 1) animName = "Coyote_Pounce";
