@@ -64,6 +64,7 @@ public class PounceEA : EnemyAttack
         hitbox.enabled = true;
 
         // Step 1: Jump straight up
+        FindObjectOfType<SoundControl>().Play("CoyoteJump");
         rb.linearVelocity = new Vector2(0, Mathf.Sqrt(2 * jumpHeight * Mathf.Abs(Physics2D.gravity.y)));
 
         // Wait until the enemy reaches the peak of the jump
@@ -93,6 +94,7 @@ public class PounceEA : EnemyAttack
         }
 
         // Snap to the exact target position
+        FindObjectOfType<SoundControl>().Play("CoyoteLand");
         transform.position = targetPosition;
 
         // Step 4: Flip the enemy

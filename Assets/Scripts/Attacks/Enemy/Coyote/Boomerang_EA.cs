@@ -32,6 +32,7 @@ public class Boomerang_EA : EnemyAttack
         
         hitbox.gameObject.SetActive(true);
         IsAttacking = true;
+        FindObjectOfType<SoundControl>().Play("MonacleThrow");
     }
     private void Update()
     {

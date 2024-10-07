@@ -48,6 +48,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if (!isImmune) 
         {
+            FindObjectOfType<SoundControl>().Play("PlayerHit");
             curHealth = (int)Mathf.Clamp(curHealth + modifier, 0, MaxHealth);
             playerHPText.text = ("HP: " + curHealth);
             ;

@@ -58,5 +58,6 @@ public class Swipe_EA : EnemyAttack
         hitbox.gameObject.GetComponent<SpriteRenderer>().enabled = true;
         hitbox.enabled = true;
         IsAttacking = true;
+        FindObjectOfType<SoundControl>().Play("CoyoteSwipe");
     }
 }

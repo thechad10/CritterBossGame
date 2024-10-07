@@ -57,6 +57,7 @@ public class SquirrelSpecial : MonoBehaviour
     private void FireProjectile()
     {
         int incrementor = 0;
+        FindObjectOfType<SoundControl>().Play("PlayerShuriken");
 
         foreach (GameObject projectile in projectilePool)
         {

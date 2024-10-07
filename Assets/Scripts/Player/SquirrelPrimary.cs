@@ -80,6 +80,7 @@ public class SquirrelPrimary : MonoBehaviour
     {
         attackCounter = attackSpeed;
         projectilePool[listIncrementor].transform.position = transform.position;
+        FindObjectOfType<SoundControl>().Play("PlayerKunai");
 
         if (playerMovement.bPlayerIsFacingRight) // Fire Right Logic
         {
