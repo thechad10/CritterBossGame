@@ -426,7 +426,7 @@ MonoBehaviour:
   gameObjects:
   - {fileID: 0}
   - {fileID: 8008663382948502630}
-  setActive: 0
+  setActive: 1
 --- !u!114 &379878600044385806
 MonoBehaviour:
   m_ObjectHideFlags: 0

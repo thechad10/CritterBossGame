@@ -707,6 +707,11 @@ MonoBehaviour:
   go: {fileID: 767710857}
   startPos: 1800
   endPos: 0
+--- !u!1 &672540567 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 366852669131201908, guid: 59aed219865cded4c96f1967d8ea68f6, type: 3}
+  m_PrefabInstance: {fileID: 818437391}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &693602511
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2709,14 +2714,14 @@ PrefabInstance:
       propertyPath: bossHealthBar
       value: 
       objectReference: {fileID: 714544279}
-    - target: {fileID: 1884199713280097521, guid: c14fb30c45b3dff49b075eeb8c3cd1ef, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3401798143037282946, guid: c14fb30c45b3dff49b075eeb8c3cd1ef, type: 3}
       propertyPath: ui
       value: 
       objectReference: {fileID: 1860384577}
+    - target: {fileID: 3401798143037282946, guid: c14fb30c45b3dff49b075eeb8c3cd1ef, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 672540567}
     - target: {fileID: 3401798143037282946, guid: c14fb30c45b3dff49b075eeb8c3cd1ef, type: 3}
       propertyPath: peacockScene
       value: 
@@ -2725,13 +2730,13 @@ PrefabInstance:
       propertyPath: pheonixScene
       value: 
       objectReference: {fileID: 242787045}
+    - target: {fileID: 3401798143037282946, guid: c14fb30c45b3dff49b075eeb8c3cd1ef, type: 3}
+      propertyPath: PlayerMoveToPoint
+      value: 
+      objectReference: {fileID: 900936966}
     - target: {fileID: 4635235751006458868, guid: c14fb30c45b3dff49b075eeb8c3cd1ef, type: 3}
       propertyPath: m_Name
       value: TwoBirdHandler
-      objectReference: {fileID: 0}
-    - target: {fileID: 5945748702677887737, guid: c14fb30c45b3dff49b075eeb8c3cd1ef, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7645260409085751319, guid: c14fb30c45b3dff49b075eeb8c3cd1ef, type: 3}
       propertyPath: m_LocalPosition.x
