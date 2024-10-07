@@ -28,6 +28,7 @@ public class SoundControl : MonoBehaviour
             s.source.loop = s.loop;
             s.source.playOnAwake = s.PlayAwake;
             s.source.outputAudioMixerGroup = s.mixer;
+            s.source.resource = s.random;
 
         }
 
