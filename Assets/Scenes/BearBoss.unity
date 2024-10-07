@@ -1083,6 +1083,8 @@ GameObject:
   - component: {fileID: 485208857}
   - component: {fileID: 485208858}
   - component: {fileID: 485208859}
+  - component: {fileID: 485208861}
+  - component: {fileID: 485208860}
   m_Layer: 0
   m_Name: BearBoss
   m_TagString: Untagged
@@ -1125,7 +1127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9ec6c86e24ebfb47b7303cfe963d6b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 350
+  maxHealth: 15
   Attacks:
   - {fileID: 485208850}
   - {fileID: 485208853}
@@ -1263,6 +1265,8 @@ MonoBehaviour:
   gActions:
   - {fileID: 485208859}
   - {fileID: 485208858}
+  - {fileID: 485208860}
+  - {fileID: 485208861}
 --- !u!114 &485208858
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1292,6 +1296,42 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0
   animator: {fileID: 485208851}
+--- !u!114 &485208860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 485208847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ce55184381358249af878902a8ceb90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 0
+  colliders:
+  - {fileID: 638359839}
+  - {fileID: 278083595}
+  - {fileID: 878982825}
+  - {fileID: 1521498878}
+  - {fileID: 786531784}
+  setActive: 0
+--- !u!114 &485208861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 485208847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 854a702f0d4928b4798c627778734125, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 0
+  gameObjects:
+  - {fileID: 378002010}
+  setActive: 1
 --- !u!1 &551926742
 GameObject:
   m_ObjectHideFlags: 0

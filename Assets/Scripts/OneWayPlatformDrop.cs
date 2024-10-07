@@ -16,11 +16,12 @@ public class OneWayPlatformDrop : MonoBehaviour
     }
     private void Update()
     {
-        if (pInput.Player.Fall.WasPerformedThisFrame()) // Flip Platforms
+        float verticalInput = pInput.Player.Move.ReadValue<Vector2>().y;
+        if (verticalInput < 0) // Flip Platforms
         {
             effector.rotationalOffset = 180f;
         }
-        if (pInput.Player.Fall.WasReleasedThisFrame()) // Reset Platforms
+        else // Reset Platforms
         {
             StartCoroutine(nameof(ResetDelay));
         }
