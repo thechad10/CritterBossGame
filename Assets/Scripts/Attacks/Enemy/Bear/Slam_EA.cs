@@ -119,11 +119,8 @@ public class Slam_EA : EnemyAttack
                     bShaking = false;
                     acornTimer = 0;
                     Timer = 0;
+                    stopShake();
                 }
-            }
-            else
-            {
-                stopShake();
             }
         }
         
@@ -133,6 +130,7 @@ public class Slam_EA : EnemyAttack
     {
         acorns.Add(Instantiate(acornPrefab, new Vector2(Random.Range(spawnA.position.x, spawnB.position.x), spawnA.position.y), spawnB.rotation));
         acorns[acorns.Count - 1].GetComponent<Rigidbody2D>().gravityScale = Random.Range(0.95f, 1.05f);
+        acorns[acorns.Count - 1].transform.localScale = Vector3.one * Random.Range(0.75f, 1.05f);
     }
     private void Shake()
     {
