@@ -30,6 +30,7 @@ public class FireBalls_EA : EnemyAttack
 
     [SerializeField]
     private GameObject fireballPrefab;
+    private Animator birdAnimator;
 
     private void OnEnable()
     {
@@ -43,6 +44,7 @@ public class FireBalls_EA : EnemyAttack
             Debug.LogError($"{this} is already attacking! Don't call this.");
             return;
         }
+        birdAnimator = GetComponent<Animator>();
         attackRate = 0;
         moveRate = 0;
         hitbox.gameObject.SetActive(true);
@@ -62,12 +64,14 @@ public class FireBalls_EA : EnemyAttack
         if (attackRate >= 10)
         {
             attackRate = 0;
+            birdAnimator.Play("Phoenix_Fireball");
             FIREBALL();
         }
         if (moveRate >= 1)
         {
             moveRate = 0;
             IsAttacking = false;
+            birdAnimator.Play("Phoenix_Idle");
             bird.FinishAttack();
         }
     }
@@ -82,6 +86,7 @@ public class FireBalls_EA : EnemyAttack
             //transform.rotation = Quaternion.Lerp(Quaternion.Euler(0,0, transform.eulerAngles.z + (90 - 45)), Quaternion.Euler(0, 0, transform.eulerAngles.z + (90 + 45)), i / ballCount);
             fireballs.Add(Instantiate(fireballPrefab, (transform.forward * 1) + transform.position, transform.rotation));
             fireballs[fireballs.Count - 1].layer = 14;
+            birdAnimator.Play("Phoenix_Idle");
         }
         transform.rotation = temp;
     }

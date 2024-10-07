@@ -36,6 +36,9 @@ public class BombingRun_EA : EnemyAttack
     [SerializeField]
     private GameObject bombPrefab;
 
+    [SerializeField]
+    private Animator birdAnimator;
+
     private void OnEnable()
     {
         minPos = minPosT.position;
@@ -49,6 +52,7 @@ public class BombingRun_EA : EnemyAttack
             return;
         }
 
+        birdAnimator = GetComponent<Animator>();
         hitbox.gameObject.SetActive(true);
         IsAttacking = true;
         //timeLeft = attackLength;
@@ -83,6 +87,7 @@ public class BombingRun_EA : EnemyAttack
                 Bomb();
             }
 
+
             if (timeLeft <= 0)
             {
                 moveRate = 0;
@@ -95,11 +100,13 @@ public class BombingRun_EA : EnemyAttack
             timeLeft -= Time.deltaTime;
             moveRate = (yMoveTime - timeLeft) / yMoveTime;
             parent.position = new Vector3(minPos.x, Mathf.Lerp(maxPos.y, minPos.y, yPosition.Evaluate(moveRate)), 0);
+
             if (timeLeft <= 0)
             {
                 moveRate = 0;
                 timeLeft = attackTime;
                 IsAttacking = false;
+                birdAnimator.Play("Peacock_Idle");
                 bird.FinishAttack();
             }
         }

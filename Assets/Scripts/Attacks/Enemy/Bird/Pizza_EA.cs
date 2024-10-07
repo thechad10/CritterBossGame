@@ -28,7 +28,7 @@ public class Pizza_EA : EnemyAttack
     private Color spriteColor;
     [SerializeField, Tooltip("Used for the Color change rate")]
     private AnimationCurve colorChangeCurve;
-
+    private Animator birdAnimator;
 
     public override void Attack()
     {
@@ -37,6 +37,7 @@ public class Pizza_EA : EnemyAttack
             Debug.LogError($"{this} is already attacking! Don't call this.");
             return;
         }
+        birdAnimator = GetComponent<Animator>();
         IsAttacking = true;
         isSpinning = true;
         timer = 0;
@@ -65,6 +66,7 @@ public class Pizza_EA : EnemyAttack
                 resetThick();
                 disableAll();
                 IsAttacking = false;
+                birdAnimator.Play("Phoenix_Idle");
                 gameObject.GetComponent<Boss>().FinishAttack();
                 timer = 0;
                 idleTimer = 0;
@@ -107,7 +109,8 @@ public class Pizza_EA : EnemyAttack
     }
     private void EnableColliders()
     {
-        foreach(Collider2D collider in colliders) 
+        birdAnimator.Play("Phoenix_Pizza");
+        foreach (Collider2D collider in colliders) 
         {
             collider.enabled = true;
         }

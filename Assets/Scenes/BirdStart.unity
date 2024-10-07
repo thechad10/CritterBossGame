@@ -2080,6 +2080,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &1173126348 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 7691400779802431722, guid: c14fb30c45b3dff49b075eeb8c3cd1ef, type: 3}
+  m_PrefabInstance: {fileID: 2076798730884548223}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1175519319 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1382576007695123622, guid: c411e500dd099ec4f9ef28b486560243, type: 3}
@@ -2747,6 +2752,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TwoBirdHandler
       objectReference: {fileID: 0}
+    - target: {fileID: 6902918064478774143, guid: c14fb30c45b3dff49b075eeb8c3cd1ef, type: 3}
+      propertyPath: renderer
+      value: 
+      objectReference: {fileID: 1173126348}
     - target: {fileID: 7645260409085751319, guid: c14fb30c45b3dff49b075eeb8c3cd1ef, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2787,10 +2796,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7691400779802431722, guid: c14fb30c45b3dff49b075eeb8c3cd1ef, type: 3}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8374911683460130914, guid: c14fb30c45b3dff49b075eeb8c3cd1ef, type: 3}
       propertyPath: 'gameObjects.Array.data[0]'
       value: 
       objectReference: {fileID: 1038433558}
+    - target: {fileID: 9072359260453841236, guid: c14fb30c45b3dff49b075eeb8c3cd1ef, type: 3}
+      propertyPath: isSecondPhase
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

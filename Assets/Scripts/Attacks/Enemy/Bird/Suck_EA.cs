@@ -8,6 +8,7 @@ public class Suck_EA : EnemyAttack
     [SerializeField, Tooltip("How long the suck will last")]
     public float suckTime;
     private float currentTime = 0;
+    private Animator birdAnimator;
     public override void Attack()
     {
         if (IsAttacking)
@@ -15,6 +16,7 @@ public class Suck_EA : EnemyAttack
             Debug.LogError($"{this} is already attacking! Don't call this.");
             return;
         }
+        birdAnimator = GetComponent<Animator>();
         hitbox.enabled = true;
         IsAttacking = true;
     }
@@ -27,6 +29,7 @@ public class Suck_EA : EnemyAttack
             currentTime = 0f;
             IsAttacking = false;
             hitbox.enabled = false;
+            birdAnimator.Play("Peacock_Idle");
             GetComponent<Boss>().FinishAttack();
             return;
         }
