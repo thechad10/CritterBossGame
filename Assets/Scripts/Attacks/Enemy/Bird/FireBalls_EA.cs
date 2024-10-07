@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Collections;
 using Unity.Mathematics;
 using UnityEngine;
 
@@ -64,20 +65,20 @@ public class FireBalls_EA : EnemyAttack
         if (attackRate >= 10)
         {
             attackRate = 0;
-            birdAnimator.Play("Phoenix_Fireball");
-            FIREBALL();
+            StartCoroutine(FIREBALL());
         }
         if (moveRate >= 1)
         {
             moveRate = 0;
             IsAttacking = false;
-            birdAnimator.Play("Phoenix_Idle");
+            //birdAnimator.Play("Phoenix_Idle");
             bird.FinishAttack();
         }
     }
 
-    private void FIREBALL()
+    IEnumerator FIREBALL()
     {
+        birdAnimator.Play("Phoenix_Fireball");
         Quaternion temp = transform.rotation;
         transform.rotation = Quaternion.Euler(Vector3.left);
         for(int i = 0; i < ballCount; i++)
@@ -86,9 +87,10 @@ public class FireBalls_EA : EnemyAttack
             //transform.rotation = Quaternion.Lerp(Quaternion.Euler(0,0, transform.eulerAngles.z + (90 - 45)), Quaternion.Euler(0, 0, transform.eulerAngles.z + (90 + 45)), i / ballCount);
             fireballs.Add(Instantiate(fireballPrefab, (transform.forward * 1) + transform.position, transform.rotation));
             fireballs[fireballs.Count - 1].layer = 14;
-            birdAnimator.Play("Phoenix_Idle");
         }
         transform.rotation = temp;
+        yield return new WaitForSeconds(0.4f);
+        birdAnimator.Play("Phoenix_Idle");
     }
 }
 

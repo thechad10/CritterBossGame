@@ -8,6 +8,7 @@ public class Pizza_EA : EnemyAttack
     private float spinSpeed;
     [SerializeField]
     private bool isSpinning;
+    private bool stoppedSpinning;
     [SerializeField]
     private float spinTime;
     private float timer;
@@ -48,7 +49,6 @@ public class Pizza_EA : EnemyAttack
     {
         if (!IsAttacking) 
         { 
-
             return;
         }
         if (timer >= spinTime) 
@@ -56,8 +56,10 @@ public class Pizza_EA : EnemyAttack
             isSpinning = false;
             idleTimer += Time.deltaTime;
             updateThick();
-            if (idleTimer > idleTime * 4)
+            if (idleTimer > idleTime / 4 && !stoppedSpinning)
             {
+                stoppedSpinning = true;
+                birdAnimator.Play("Phoenix_Pizza");
                 EnableColliders();
                 enableSprites();
             }
@@ -70,6 +72,7 @@ public class Pizza_EA : EnemyAttack
                 gameObject.GetComponent<Boss>().FinishAttack();
                 timer = 0;
                 idleTimer = 0;
+                stoppedSpinning = false;
                 return;
             }
         }
@@ -109,7 +112,6 @@ public class Pizza_EA : EnemyAttack
     }
     private void EnableColliders()
     {
-        birdAnimator.Play("Phoenix_Pizza");
         foreach (Collider2D collider in colliders) 
         {
             collider.enabled = true;

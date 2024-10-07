@@ -56,7 +56,7 @@ public class Bird : Boss
     {
         if(isSecondPhase) //Phoenix
         {
-            if (attackIndex == 0) animName = "Phoenix_Fireball";
+            if (attackIndex == 0) animName = "Phoenix_Idle";
             if (attackIndex == 1) animName = "Phoenix_Charge";
         }
         else //Peacock
