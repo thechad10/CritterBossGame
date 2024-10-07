@@ -16,6 +16,7 @@ public class Bird : Boss
 
     private void Update()
     {
+        if(IsDead) return;
         if (isBeginningOfFight)
         {
             startingTimer += Time.deltaTime;

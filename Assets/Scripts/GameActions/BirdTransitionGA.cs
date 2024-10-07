@@ -12,12 +12,17 @@ public class BirdTransition : GameAction
     private GameObject peacockScene;
     [SerializeField]
     private UIsetup ui;
+    [SerializeField]
+    private GameObject player;
+    [SerializeField]
+    private Transform PlayerMoveToPoint;
     public override void Action()
     {
         peacock.SetActive(false);
         pheonix.SetActive(true);
         peacockScene.SetActive(false);
         pheonixScene.SetActive(true);
+        player.transform.position = PlayerMoveToPoint.position;
         ui.RefillBar();
     }
 }
