@@ -74,7 +74,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6047277715699081209}
   - component: {fileID: 3797762096064957252}
-  - component: {fileID: 4034882207607625838}
+  - component: {fileID: 402798231092991482}
   m_Layer: 0
   m_Name: DeathBird
   m_TagString: Untagged
@@ -152,7 +152,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &4034882207607625838
+--- !u!95 &402798231092991482
 Animator:
   serializedVersion: 7
   m_ObjectHideFlags: 0
