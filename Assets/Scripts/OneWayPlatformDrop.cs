@@ -7,6 +7,10 @@ public class OneWayPlatformDrop : MonoBehaviour
     private PlatformEffector2D effector;
     private GameObject playerObject;
 
+    private void OnDisable()
+    {
+        pInput.Disable();
+    }
     private void Start()
     {
         effector = GetComponent<PlatformEffector2D>();
