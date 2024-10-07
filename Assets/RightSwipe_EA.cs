@@ -29,6 +29,8 @@ public class RightSwipe_EA : EnemyAttack
         if (!bear.IsDead)
             animator.Play("BearSwipeRight");
 
+        FindObjectOfType<SoundControl>().Play("BearSlash");
+
         float animationDuration = GetAnimationDuration("BearSwipeRight");
 
         yield return new WaitForSeconds(animationDuration);
