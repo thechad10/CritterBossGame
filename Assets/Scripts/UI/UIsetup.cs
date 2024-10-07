@@ -34,7 +34,6 @@ public class UIsetup : MonoBehaviour
             {
                 refillTimer = 0;
                 bRefilling = false;
-                ResetUIComponents();
             }
 
         }
@@ -42,6 +41,7 @@ public class UIsetup : MonoBehaviour
     }
     public void RefillBar()
     {
+        ResetUIComponents();
         refillTimer = 0;
         bRefilling = true;
     }
