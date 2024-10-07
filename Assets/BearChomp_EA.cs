@@ -30,10 +30,10 @@ public class BearChomp_EA : EnemyAttack
 
             animator.Play("Bear_Chomp");
 
-        FindObjectOfType<SoundControl>().Play("BearTeeth");
+
 
         float animationDuration = GetAnimationDuration("Bear_Chomp");
-
+        FindObjectOfType<SoundControl>().Play("BearTeeth");
         yield return new WaitForSeconds(animationDuration);
         if (!bear.IsDead)
             animator.Play("Bear_Idle");

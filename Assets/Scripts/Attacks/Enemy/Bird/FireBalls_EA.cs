@@ -79,6 +79,7 @@ public class FireBalls_EA : EnemyAttack
     IEnumerator FIREBALL()
     {
         birdAnimator.Play("Phoenix_Fireball");
+        FindObjectOfType<SoundControl>().Play("BirdFireball");
         Quaternion temp = transform.rotation;
         transform.rotation = Quaternion.Euler(Vector3.left);
         for(int i = 0; i < ballCount; i++)

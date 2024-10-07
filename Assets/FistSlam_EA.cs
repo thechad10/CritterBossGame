@@ -46,6 +46,7 @@ public class FistSlam_EA : EnemyAttack
         float animationDuration = GetAnimationDuration("Bear_Slam");
         FindObjectOfType<SoundControl>().Play("BearSlam");
 
+
         yield return new WaitForSeconds(animationDuration);
         keepSpawning = false;
         CameraShakerHandler.Stop();
@@ -79,6 +80,7 @@ public class FistSlam_EA : EnemyAttack
                 acornTimer -= Time.deltaTime;
             if (acornTimer <= 0f)
             {
+                FindObjectOfType<SoundControl>().Play("BearRocks");
                 acornSpawn();
                 acornTimer = 0.1f;
                 if (!happenOnce)
@@ -94,6 +96,5 @@ public class FistSlam_EA : EnemyAttack
         acorns.Add(Instantiate(acornPrefab, new Vector2(Random.Range(spawnA.position.x, spawnB.position.x), spawnA.position.y), spawnB.rotation));
         acorns[acorns.Count - 1].GetComponent<Rigidbody2D>().gravityScale = Random.Range(0.95f, 1.05f);
         acorns[acorns.Count - 1].transform.localScale = Vector3.one * Random.Range(0.75f, 1.05f);
-        FindObjectOfType<SoundControl>().Play("BearRocks");
     }
 }

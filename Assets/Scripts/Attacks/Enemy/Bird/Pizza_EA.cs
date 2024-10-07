@@ -109,13 +109,16 @@ public class Pizza_EA : EnemyAttack
             sprite.enabled = true;
             sprite.color = spriteColor;
         }
+        FindObjectOfType<SoundControl>().Play("BirdLazerCharge");
     }
     private void EnableColliders()
     {
         foreach (Collider2D collider in colliders) 
         {
             collider.enabled = true;
+
         }
+        FindObjectOfType<SoundControl>().Play("BirdLazerZap");
     }
     private void disableAll()
     {

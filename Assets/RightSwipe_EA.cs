@@ -34,6 +34,7 @@ public class RightSwipe_EA : EnemyAttack
         float animationDuration = GetAnimationDuration("BearSwipeRight");
 
         yield return new WaitForSeconds(animationDuration);
+
         if (!bear.IsDead)
             animator.Play("Bear_Idle");
 

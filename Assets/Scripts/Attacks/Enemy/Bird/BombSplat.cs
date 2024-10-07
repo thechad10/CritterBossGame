@@ -27,6 +27,7 @@ public class BombSplat : MonoBehaviour
         {
             yield return new WaitForSeconds(item.delay);
             item.Action();
+            FindObjectOfType<SoundControl>().Play("BirdBomb");
         }
     }
 }

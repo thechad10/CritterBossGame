@@ -30,11 +30,11 @@ public class BearClapHigh_EA : EnemyAttack
 
             animator.Play("Bear_Clap_High");
 
-        FindObjectOfType<SoundControl>().Play("BearClap");
 
         float animationDuration = GetAnimationDuration("Bear_Clap_High");
 
         yield return new WaitForSeconds(animationDuration);
+        FindObjectOfType<SoundControl>().Play("BearClap");
         if (!bear.IsDead)
             animator.Play("Bear_Idle");
 

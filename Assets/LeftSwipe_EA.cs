@@ -34,6 +34,7 @@ public class LeftSwipe_EA : EnemyAttack
         float animationDuration = GetAnimationDuration("Bear_Swipe_Left");
 
         yield return new WaitForSeconds(animationDuration);
+
         if (!bear.IsDead)
             animator.Play("Bear_Idle");
         GetComponent<Boss>().FinishAttack();

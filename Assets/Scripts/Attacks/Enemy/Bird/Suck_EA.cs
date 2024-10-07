@@ -30,6 +30,8 @@ public class Suck_EA : EnemyAttack
             IsAttacking = false;
             hitbox.enabled = false;
             birdAnimator.Play("Peacock_Idle");
+            FindObjectOfType<SoundControl>().Play("BirdSucc");
+            FindObjectOfType<SoundControl>().StopPlay("BirdSucc");
             GetComponent<Boss>().FinishAttack();
             return;
         }
