@@ -144,6 +144,7 @@ public class PlayerMovement : MonoBehaviour
         if (pInput.Player.Jump.IsPressed() && canJump) // Initiate Jump
         {
             playerIsJumping = true;
+            FindObjectOfType<SoundControl>().Play("PlayerJump");
             if (!playerHealth.playerIsTakingDamage && !playerHealth.playerIsNowDead)
                 playerAnimator.Play("Squirrel_Jump");
             canJump = false;
