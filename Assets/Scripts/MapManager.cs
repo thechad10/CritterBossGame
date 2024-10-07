@@ -18,11 +18,14 @@ public class MapManager : MonoBehaviour
 		pInput.Enable();
 	}
 
-
-	/// <summary>
-	/// This runs once a frame
-	/// </summary>
-	private void Update()
+    private void OnDisable()
+    {
+        pInput.Disable();
+    }
+    /// <summary>
+    /// This runs once a frame
+    /// </summary>
+    private void Update()
 	{
 		// Only check input when character is stopped
 		if (Character.IsMoving) return;
