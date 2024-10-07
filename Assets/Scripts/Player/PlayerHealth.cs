@@ -92,7 +92,7 @@ public class PlayerHealth : MonoBehaviour
 
         for (int x = 0; x < deathAction.Count; x++)
         {
-            yield return new WaitForSeconds(deathWaitTime);
+            yield return new WaitForSeconds(deathAction[x].delay);
             deathAction[x].Action();
         }
     }
