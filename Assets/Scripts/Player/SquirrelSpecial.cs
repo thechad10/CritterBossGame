@@ -32,7 +32,7 @@ public class SquirrelSpecial : MonoBehaviour
 
         for (int i = 0; i < spawnPoolAmount; i++) // Instantiate and add projectiles to pool
         {
-            GameObject spwanedProj = Instantiate(squirrelSpecialProjectile);
+            GameObject spwanedProj = Instantiate(squirrelSpecialProjectile, new Vector2(-10, 0), Quaternion.identity);
             spwanedProj.GetComponent<SpriteRenderer>().enabled = false;
             projectilePool.Add(spwanedProj);
         }

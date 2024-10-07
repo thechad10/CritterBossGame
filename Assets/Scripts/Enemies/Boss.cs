@@ -27,6 +27,7 @@ public abstract class Boss : MonoBehaviour
     protected void OnEnable()
     {
         CurrentHealth = maxHealth;
+        Debug.Log($"{HealthPercentage}");
         if (bossHealthBar)
             bossHealthBar.fillAmount = 1;
     }
