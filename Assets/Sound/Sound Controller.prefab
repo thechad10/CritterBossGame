@@ -228,3 +228,10 @@ MonoBehaviour:
     volume: 1
     loop: 0
     PlayAwake: 0
+  - name: BirdHit
+    source: {fileID: 0}
+    mixer: {fileID: -4479698138880582938, guid: 23fcb94e90272dc45b9cf1b88de87e8e, type: 2}
+    clip: {fileID: 8300000, guid: 116b196530746f348acdf6260a2de18c, type: 3}
+    volume: 1
+    loop: 0
+    PlayAwake: 0
