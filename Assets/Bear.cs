@@ -17,12 +17,12 @@ public class Bear : Boss
     private EnemyAttack cachedAttack;
     private bool isBeginningOfFight = true;
     private float startingTimer;
-    private Animator coyoteAnimator;
-    private string animName;
+    //private Animator bearAnimator;
+    //private string animName;
 
     private void Start()
     {
-        coyoteAnimator = GetComponentInChildren<Animator>();
+        //bearAnimator = GetComponentInChildren<Animator>();
     }
 
     private void Update()
@@ -53,19 +53,21 @@ public class Bear : Boss
 
         if (!isSecondPhase) //first phase
         {
-            do
-            {
+            attackIndex = UnityEngine.Random.Range(0, Attacks.Count);
+            
+            //{
                 attackIndex = UnityEngine.Random.Range(0, Attacks.Count);
                 chosenAttack = Attacks[attackIndex];
-            } while (cachedAttack == chosenAttack);
+            //} while (cachedAttack == chosenAttack);*/
         }
         else //second phase
         {
-            do
+            attackIndex = UnityEngine.Random.Range(0, secondPhaseAttacks.Count);
+            /*do
             {
                 attackIndex = UnityEngine.Random.Range(0, secondPhaseAttacks.Count);
                 chosenAttack = secondPhaseAttacks[attackIndex];
-            } while (cachedAttack == chosenAttack);
+            } while (cachedAttack == chosenAttack);*/
         }
         cachedAttack = chosenAttack;
 
@@ -74,12 +76,12 @@ public class Bear : Boss
 
     IEnumerator Attack(EnemyAttack eAttack, int attackAnim)
     {
-        if (attackAnim == 0) animName = "Coyote_Swipe_High";
+        /*if (attackAnim == 0) animName = "Coyote_Swipe_High";
         if (attackAnim == 1) animName = "Coyote_Pounce";
         if (attackAnim == 2) animName = "Coyote_Swipe_Low";
         if (attackAnim == 3) animName = "Coyote_Sling";
 
-        coyoteAnimator.Play(animName);
+        bearAnimator.Play(animName);*/
         yield return new WaitForSeconds(attackDelay);
         eAttack.Attack();
     }
@@ -87,6 +89,6 @@ public class Bear : Boss
     public void StartSecondPhase()
     {
         isSecondPhase = true;
-        Debug.Log("COYOTE HAS ENTERED SECOND PHASE!");
+        Debug.Log("BEAR HAS ENTERED SECOND PHASE!");
     }
 }
