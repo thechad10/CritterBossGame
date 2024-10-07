@@ -16,20 +16,29 @@ public class OneWayPlatformDrop : MonoBehaviour
     }
     private void Update()
     {
-        float verticalInput = pInput.Player.Move.ReadValue<Vector2>().y;
-        if (verticalInput < 0) // Flip Platforms
+        //float verticalInput = pInput.Player.Move.ReadValue<Vector2>().y;
+        //if (verticalInput < 0) // Flip Platforms
+        //{
+        //    effector.rotationalOffset = 180f;
+        //}
+        //else // Reset Platforms
+        //{
+        //    StartCoroutine(nameof(ResetDelay));
+        //}
+        if (pInput.Player.Fall.WasPerformedThisFrame())
         {
             effector.rotationalOffset = 180f;
         }
-        else // Reset Platforms
+        if (pInput.Player.Fall.WasReleasedThisFrame())
         {
             StartCoroutine(nameof(ResetDelay));
         }
+
     }
 
     IEnumerator ResetDelay()
     {
-        yield return new WaitForSeconds(0.16f);
+        yield return new WaitForSeconds(0.17f);
         effector.rotationalOffset = 0f;
     }
 }

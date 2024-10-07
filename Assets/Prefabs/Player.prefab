@@ -24,11 +24,11 @@ GameObject:
   - component: {fileID: 6475220608813650676}
   - component: {fileID: 2718490684289399814}
   - component: {fileID: 8020728576291109926}
-  - component: {fileID: 7826539532097745003}
   - component: {fileID: 5893762096937234097}
   - component: {fileID: 3822533414336264275}
   - component: {fileID: 2278145626552623912}
   - component: {fileID: 8045304602506005431}
+  - component: {fileID: 2013099102526116491}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -96,7 +96,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: c371a4134d599b14fa3cabfa9a96bf84, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -280,7 +280,6 @@ MonoBehaviour:
   deathAction:
   - {fileID: 2718490684289399814}
   - {fileID: 8020728576291109926}
-  - {fileID: 7826539532097745003}
   - {fileID: 5893762096937234097}
   - {fileID: 3822533414336264275}
   - {fileID: 2278145626552623912}
@@ -380,22 +379,6 @@ MonoBehaviour:
   colliders:
   - {fileID: 4842264853675583072}
   setActive: 0
---- !u!114 &7826539532097745003
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 366852669131201908}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f8a0093cbf9f5e40ad54971d48905e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  delay: 0
-  timeScale1: 0
-  timeScale2: 1
-  setActive: 0
 --- !u!114 &5893762096937234097
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -460,6 +443,29 @@ MonoBehaviour:
   gameObjects:
   - {fileID: 0}
   setActive: 1
+--- !u!114 &2013099102526116491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 366852669131201908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c6c8743dee282f469d3a089ea1f6c73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pStats: {fileID: 11400000, guid: a3eb7711c465d1841a406cbf6235d24e, type: 2}
+  deathWaitTime: 0
+  deathAction: []
+  hitWaitTime: 0
+  hitAction: []
+  iFrames: 2
+  playerHPText: {fileID: 0}
+  playerIsTakingDamage: 0
+  playerIsNowDead: 0
+  publicCurrentHealthPlayer: 0
+  publicIsImmunePlayer: 0
 --- !u!1 &4040880256251234811
 GameObject:
   m_ObjectHideFlags: 0
