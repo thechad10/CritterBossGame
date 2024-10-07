@@ -359,6 +359,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1377953744446927862}
   - component: {fileID: 6525665907436814462}
+  - component: {fileID: 9025257868733644286}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -436,6 +437,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &9025257868733644286
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8197308413305654635}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 68cf91e99a0764049949ffa5558be6d1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &6997103903943511913
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -763,11 +786,11 @@ PrefabInstance:
     - target: {fileID: 6242888498833243919, guid: 77b1f1c5fd05a8142a65c1d32a681c8c, type: 3}
       propertyPath: 'gActions.Array.data[3]'
       value: 
-      objectReference: {fileID: 2205036117367761555}
+      objectReference: {fileID: 5590322581845745403}
     - target: {fileID: 6242888498833243919, guid: 77b1f1c5fd05a8142a65c1d32a681c8c, type: 3}
       propertyPath: 'gActions.Array.data[4]'
       value: 
-      objectReference: {fileID: 7756520045697636013}
+      objectReference: {fileID: 2205036117367761555}
     - target: {fileID: 6494840503234619469, guid: 77b1f1c5fd05a8142a65c1d32a681c8c, type: 3}
       propertyPath: attackSpeed
       value: 0.6
@@ -983,10 +1006,10 @@ PrefabInstance:
       addedObject: {fileID: 8383610011829946706}
     - targetCorrespondingSourceObject: {fileID: 8494899212815389353, guid: 77b1f1c5fd05a8142a65c1d32a681c8c, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2205036117367761555}
+      addedObject: {fileID: 5590322581845745403}
     - targetCorrespondingSourceObject: {fileID: 8494899212815389353, guid: 77b1f1c5fd05a8142a65c1d32a681c8c, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 7756520045697636013}
+      addedObject: {fileID: 2205036117367761555}
     - targetCorrespondingSourceObject: {fileID: 8494899212815389353, guid: 77b1f1c5fd05a8142a65c1d32a681c8c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2347126751737266338}
@@ -1023,6 +1046,22 @@ MonoBehaviour:
   spriteRenderers:
   - {fileID: 4886199455545139162}
   setActive: 0
+--- !u!114 &5590322581845745403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1511315286133185984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ce55184381358249af878902a8ceb90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 0
+  colliders:
+  - {fileID: 2200980011792485088}
+  setActive: 0
 --- !u!114 &2205036117367761555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1038,23 +1077,8 @@ MonoBehaviour:
   delay: 0
   gameObjects:
   - {fileID: 1273954282306799167}
+  - {fileID: 0}
   setActive: 1
---- !u!114 &7756520045697636013
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1511315286133185984}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 854a702f0d4928b4798c627778734125, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  delay: 0.3
-  gameObjects:
-  - {fileID: 1511315286133185984}
-  setActive: 0
 --- !u!114 &2347126751737266338
 MonoBehaviour:
   m_ObjectHideFlags: 0
