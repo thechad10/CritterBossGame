@@ -1,0 +1,790 @@
+fileFormatVersion: 2
+guid: f2f6f29b4cac10247a48de0222f0f821
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2849776920935631849
+    second: BearSwipeAttack_0
+  - first:
+      213: -2419185791214556956
+    second: BearSwipeAttack_1
+  - first:
+      213: 2936792748933533839
+    second: BearSwipeAttack_2
+  - first:
+      213: 9199151068475497870
+    second: BearSwipeAttack_3
+  - first:
+      213: -3220048689955401305
+    second: BearSwipeAttack_4
+  - first:
+      213: -6868916642530046731
+    second: BearSwipeAttack_5
+  - first:
+      213: 8067427426488807850
+    second: BearSwipeAttack_6
+  - first:
+      213: -595455781057616602
+    second: BearSwipeAttack_7
+  - first:
+      213: 8340818917460182
+    second: BearSwipeAttack_8
+  - first:
+      213: 7740322637027296706
+    second: BearSwipeAttack_9
+  - first:
+      213: -191501824685728694
+    second: BearSwipeAttack_10
+  - first:
+      213: 5510121378439617836
+    second: BearSwipeAttack_11
+  - first:
+      213: 8801101905906212696
+    second: BearSwipeAttack_12
+  - first:
+      213: -254531412558849365
+    second: BearSwipeAttack_13
+  - first:
+      213: -5467194919808387873
+    second: BearSwipeAttack_14
+  - first:
+      213: -2779749783055454635
+    second: BearSwipeAttack_15
+  - first:
+      213: -1935255817830243725
+    second: BearSwipeAttack_16
+  - first:
+      213: -629375858846215715
+    second: BearSwipeAttack_17
+  - first:
+      213: 6787891235520022463
+    second: BearSwipeAttack_18
+  - first:
+      213: -3246992307625016575
+    second: BearSwipeAttack_19
+  - first:
+      213: 2353078592684805116
+    second: BearSwipeAttack_20
+  - first:
+      213: -9119878979337553201
+    second: BearSwipeAttack_21
+  - first:
+      213: 8346098887230883466
+    second: BearSwipeAttack_22
+  - first:
+      213: -6702926786315492701
+    second: BearSwipeAttack_23
+  - first:
+      213: 2944637795825071041
+    second: BearSwipeAttack_24
+  - first:
+      213: 2028269731436848852
+    second: BearSwipeAttack_25
+  - first:
+      213: 4866287829944405425
+    second: BearSwipeAttack_26
+  - first:
+      213: 6558821186496437756
+    second: BearSwipeAttack_27
+  - first:
+      213: 710499190595949392
+    second: BearSwipeAttack_28
+  - first:
+      213: 5898048931940934327
+    second: BearSwipeAttack_29
+  - first:
+      213: -4915442800292931856
+    second: BearSwipeAttack_30
+  - first:
+      213: -4716918109681255210
+    second: BearSwipeAttack_31
+  - first:
+      213: 7646364222402005107
+    second: BearSwipeAttack_32
+  - first:
+      213: -5648804444440779895
+    second: BearSwipeAttack_33
+  - first:
+      213: -6243179156026626722
+    second: BearSwipeAttack_34
+  - first:
+      213: 4173631345346389143
+    second: BearSwipeAttack_35
+  - first:
+      213: 7045425929315182373
+    second: BearSwipeAttack_36
+  - first:
+      213: 1334984812994742745
+    second: BearSwipeAttack_37
+  - first:
+      213: -5731990484891552467
+    second: BearSwipeAttack_38
+  - first:
+      213: -4733260975037661120
+    second: BearSwipeAttack_39
+  - first:
+      213: -5120260236358616309
+    second: BearSwipeAttack_40
+  - first:
+      213: 7065205755996410866
+    second: BearSwipeAttack_41
+  - first:
+      213: 5299726842057442627
+    second: BearSwipeAttack_42
+  - first:
+      213: -7205316082228765736
+    second: BearSwipeAttack_43
+  - first:
+      213: 3014952142003175435
+    second: BearSwipeAttack_44
+  - first:
+      213: 6865429109418023031
+    second: BearSwipeAttack_45
+  - first:
+      213: 1857515621182249476
+    second: BearSwipeAttack_46
+  - first:
+      213: 5165944155638631382
+    second: BearSwipeAttack_47
+  - first:
+      213: 1197585742038964480
+    second: BearSwipeAttack_48
+  - first:
+      213: -6150865865958026185
+    second: BearSwipeAttack_49
+  - first:
+      213: -6275850560302937032
+    second: BearSwipeAttack_50
+  - first:
+      213: -6739250520995986413
+    second: BearSwipeAttack_51
+  - first:
+      213: -6737203008357889932
+    second: BearSwipeAttack_52
+  - first:
+      213: 6276312080578529525
+    second: BearSwipeAttack_53
+  - first:
+      213: 3125368129806359203
+    second: BearSwipeAttack_54
+  - first:
+      213: 6435411164345281668
+    second: BearSwipeAttack_55
+  - first:
+      213: 4368160746279647557
+    second: BearSwipeAttack_56
+  - first:
+      213: 9037360548854088665
+    second: BearSwipeAttack_57
+  - first:
+      213: 3167101265313470330
+    second: BearSwipeAttack_58
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BearSwipeAttack_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 350
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9eb8975c2017c8720800000000000000
+      internalID: 2849776920935631849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BearSwipeAttack_1
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 0
+        width: 350
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e8ebfc17535d6ed0800000000000000
+      internalID: -2419185791214556956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BearSwipeAttack_2
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 0
+        width: 350
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f805023027591c820800000000000000
+      internalID: 2936792748933533839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BearSwipeAttack_3
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 0
+        width: 350
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8d13a75823f9af70800000000000000
+      internalID: 9199151068475497870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BearSwipeAttack_4
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 0
+        width: 350
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a11fbbe6c61053d0800000000000000
+      internalID: -3220048689955401305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BearSwipeAttack_5
+      rect:
+        serializedVersion: 2
+        x: 1750
+        y: 0
+        width: 350
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fc4a3ae4b4bca0a0800000000000000
+      internalID: -6868916642530046731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BearSwipeAttack_6
+      rect:
+        serializedVersion: 2
+        x: 2100
+        y: 0
+        width: 350
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa1fb17508245ff60800000000000000
+      internalID: 8067427426488807850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BearSwipeAttack_7
+      rect:
+        serializedVersion: 2
+        x: 2450
+        y: 0
+        width: 350
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 625ab9a3f148cb7f0800000000000000
+      internalID: -595455781057616602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BearSwipeAttack_8
+      rect:
+        serializedVersion: 2
+        x: 2800
+        y: 0
+        width: 350
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d806bc3ee1ad1000800000000000000
+      internalID: 8340818917460182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BearSwipeAttack_9
+      rect:
+        serializedVersion: 2
+        x: 3150
+        y: 0
+        width: 350
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c54deaad662b6b60800000000000000
+      internalID: 7740322637027296706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BearSwipeAttack_10
+      rect:
+        serializedVersion: 2
+        x: 3500
+        y: 0
+        width: 350
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4c94c5ea16a75df0800000000000000
+      internalID: -191501824685728694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BearSwipeAttack_11
+      rect:
+        serializedVersion: 2
+        x: 3850
+        y: 0
+        width: 350
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2ddd272332e77c40800000000000000
+      internalID: 5510121378439617836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BearSwipeAttack_12
+      rect:
+        serializedVersion: 2
+        x: 4200
+        y: 0
+        width: 350
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85f9d8d9d8bc32a70800000000000000
+      internalID: 8801101905906212696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BearSwipeAttack_13
+      rect:
+        serializedVersion: 2
+        x: 4550
+        y: 0
+        width: 350
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: baa50426709b77cf0800000000000000
+      internalID: -254531412558849365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BearSwipeAttack_14
+      rect:
+        serializedVersion: 2
+        x: 4900
+        y: 0
+        width: 350
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd43007df2f9024b0800000000000000
+      internalID: -5467194919808387873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BearSwipeAttack_15
+      rect:
+        serializedVersion: 2
+        x: 5250
+        y: 0
+        width: 350
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55ea280dc485c69d0800000000000000
+      internalID: -2779749783055454635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BearSwipeAttack_16
+      rect:
+        serializedVersion: 2
+        x: 5600
+        y: 0
+        width: 350
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37268bc46179425e0800000000000000
+      internalID: -1935255817830243725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BearSwipeAttack_17
+      rect:
+        serializedVersion: 2
+        x: 5950
+        y: 0
+        width: 350
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd1d34fadf10447f0800000000000000
+      internalID: -629375858846215715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BearSwipeAttack_18
+      rect:
+        serializedVersion: 2
+        x: 6300
+        y: 0
+        width: 350
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb7882b6d1f633e50800000000000000
+      internalID: 6787891235520022463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BearSwipeAttack_19
+      rect:
+        serializedVersion: 2
+        x: 6650
+        y: 0
+        width: 350
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 103c59313bd50f2d0800000000000000
+      internalID: -3246992307625016575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BearSwipeAttack_20
+      rect:
+        serializedVersion: 2
+        x: 7000
+        y: 0
+        width: 350
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfbcd8d4380d7a020800000000000000
+      internalID: 2353078592684805116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 2e6106ba888177e4e9ed09c111acbd2c
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      BearSwipeAttack_0: 2849776920935631849
+      BearSwipeAttack_1: -2419185791214556956
+      BearSwipeAttack_10: -191501824685728694
+      BearSwipeAttack_11: 5510121378439617836
+      BearSwipeAttack_12: 8801101905906212696
+      BearSwipeAttack_13: -254531412558849365
+      BearSwipeAttack_14: -5467194919808387873
+      BearSwipeAttack_15: -2779749783055454635
+      BearSwipeAttack_16: -1935255817830243725
+      BearSwipeAttack_17: -629375858846215715
+      BearSwipeAttack_18: 6787891235520022463
+      BearSwipeAttack_19: -3246992307625016575
+      BearSwipeAttack_2: 2936792748933533839
+      BearSwipeAttack_20: 2353078592684805116
+      BearSwipeAttack_3: 9199151068475497870
+      BearSwipeAttack_4: -3220048689955401305
+      BearSwipeAttack_5: -6868916642530046731
+      BearSwipeAttack_6: 8067427426488807850
+      BearSwipeAttack_7: -595455781057616602
+      BearSwipeAttack_8: 8340818917460182
+      BearSwipeAttack_9: 7740322637027296706
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
