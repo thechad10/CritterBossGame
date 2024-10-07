@@ -74,3 +74,157 @@ MonoBehaviour:
     volume: 0
     loop: 0
     PlayAwake: 0
+  - name: CoyoteHit
+    source: {fileID: 0}
+    mixer: {fileID: -4479698138880582938, guid: 23fcb94e90272dc45b9cf1b88de87e8e, type: 2}
+    clip: {fileID: 8300000, guid: eb3744b42b6501d4083402d54ab64d29, type: 3}
+    volume: 1
+    loop: 0
+    PlayAwake: 0
+  - name: CoyoteJump
+    source: {fileID: 0}
+    mixer: {fileID: -4479698138880582938, guid: 23fcb94e90272dc45b9cf1b88de87e8e, type: 2}
+    clip: {fileID: 8300000, guid: 27de3cb92349e0449b78730a16d03861, type: 3}
+    volume: 1
+    loop: 0
+    PlayAwake: 0
+  - name: CoyoteLand
+    source: {fileID: 0}
+    mixer: {fileID: -4479698138880582938, guid: 23fcb94e90272dc45b9cf1b88de87e8e, type: 2}
+    clip: {fileID: 8300000, guid: c9f8a62c3545ca14b8f53c53517d477f, type: 3}
+    volume: 1
+    loop: 0
+    PlayAwake: 0
+  - name: MonacleThrow
+    source: {fileID: 0}
+    mixer: {fileID: -4479698138880582938, guid: 23fcb94e90272dc45b9cf1b88de87e8e, type: 2}
+    clip: {fileID: 8300000, guid: a2685f870007a7543a82bf02ec8fdefe, type: 3}
+    volume: 1
+    loop: 0
+    PlayAwake: 0
+  - name: CoyoteSwipe
+    source: {fileID: 0}
+    mixer: {fileID: -4479698138880582938, guid: 23fcb94e90272dc45b9cf1b88de87e8e, type: 2}
+    clip: {fileID: 8300000, guid: 75c0fb2cd26cbf44f92dbcd4f825376f, type: 3}
+    volume: 1
+    loop: 0
+    PlayAwake: 0
+  - name: PlayerKunai
+    source: {fileID: 0}
+    mixer: {fileID: -4479698138880582938, guid: 23fcb94e90272dc45b9cf1b88de87e8e, type: 2}
+    clip: {fileID: 8300000, guid: 05f499fe25db7844a9bffb1e2d749e84, type: 3}
+    volume: 1
+    loop: 0
+    PlayAwake: 0
+  - name: PlayerShuriken
+    source: {fileID: 0}
+    mixer: {fileID: -4479698138880582938, guid: 23fcb94e90272dc45b9cf1b88de87e8e, type: 2}
+    clip: {fileID: 8300000, guid: d8720a72b77b57e48bd5bf1710ae888b, type: 3}
+    volume: 1
+    loop: 0
+    PlayAwake: 0
+  - name: PlayerJump
+    source: {fileID: 0}
+    mixer: {fileID: -4479698138880582938, guid: 23fcb94e90272dc45b9cf1b88de87e8e, type: 2}
+    clip: {fileID: 8300000, guid: fb650497655660d40b33b50b97e8a7f8, type: 3}
+    volume: 1
+    loop: 0
+    PlayAwake: 0
+  - name: PlayerHit
+    source: {fileID: 0}
+    mixer: {fileID: -4479698138880582938, guid: 23fcb94e90272dc45b9cf1b88de87e8e, type: 2}
+    clip: {fileID: 8300000, guid: 50588d1deb63dbe4f8191492409c226e, type: 3}
+    volume: 1
+    loop: 0
+    PlayAwake: 0
+  - name: BearTeeth
+    source: {fileID: 0}
+    mixer: {fileID: -4479698138880582938, guid: 23fcb94e90272dc45b9cf1b88de87e8e, type: 2}
+    clip: {fileID: 8300000, guid: 23dc4e2578f270144bb5979ad1640099, type: 3}
+    volume: 1
+    loop: 0
+    PlayAwake: 0
+  - name: BearSlam
+    source: {fileID: 0}
+    mixer: {fileID: -4479698138880582938, guid: 23fcb94e90272dc45b9cf1b88de87e8e, type: 2}
+    clip: {fileID: 8300000, guid: 9dc3ce3fefb28ae4082c83c59347ec15, type: 3}
+    volume: 1
+    loop: 0
+    PlayAwake: 0
+  - name: BearClap
+    source: {fileID: 0}
+    mixer: {fileID: -4479698138880582938, guid: 23fcb94e90272dc45b9cf1b88de87e8e, type: 2}
+    clip: {fileID: 8300000, guid: cf63506c07d93384baa96ddd0179a412, type: 3}
+    volume: 1
+    loop: 0
+    PlayAwake: 0
+  - name: BearRocks
+    source: {fileID: 0}
+    mixer: {fileID: -4479698138880582938, guid: 23fcb94e90272dc45b9cf1b88de87e8e, type: 2}
+    clip: {fileID: 8300000, guid: 51b5b2ed5862d7546a4bc895c95ff4a6, type: 3}
+    volume: 1
+    loop: 0
+    PlayAwake: 0
+  - name: BearSlash
+    source: {fileID: 0}
+    mixer: {fileID: -4479698138880582938, guid: 23fcb94e90272dc45b9cf1b88de87e8e, type: 2}
+    clip: {fileID: 8300000, guid: 4da7563649ea7794aa220d73d1ea0090, type: 3}
+    volume: 1
+    loop: 0
+    PlayAwake: 0
+  - name: BearHit
+    source: {fileID: 0}
+    mixer: {fileID: -4479698138880582938, guid: 23fcb94e90272dc45b9cf1b88de87e8e, type: 2}
+    clip: {fileID: 8300000, guid: 99896565c7fe27e4e8b29de36b3b9d98, type: 3}
+    volume: 1
+    loop: 0
+    PlayAwake: 0
+  - name: BirdDrop
+    source: {fileID: 0}
+    mixer: {fileID: -4479698138880582938, guid: 23fcb94e90272dc45b9cf1b88de87e8e, type: 2}
+    clip: {fileID: 8300000, guid: 15bbfb82fd4460046a3190ddf3ef8074, type: 3}
+    volume: 1
+    loop: 0
+    PlayAwake: 0
+  - name: BirdBomb
+    source: {fileID: 0}
+    mixer: {fileID: -4479698138880582938, guid: 23fcb94e90272dc45b9cf1b88de87e8e, type: 2}
+    clip: {fileID: 8300000, guid: 57c8dbb21c71e5e40a816890c4bc7fbe, type: 3}
+    volume: 1
+    loop: 0
+    PlayAwake: 0
+  - name: BirdSucc
+    source: {fileID: 0}
+    mixer: {fileID: -4479698138880582938, guid: 23fcb94e90272dc45b9cf1b88de87e8e, type: 2}
+    clip: {fileID: 8300000, guid: ca03ba2c5226e99439a73db6bbf5f49e, type: 3}
+    volume: 1
+    loop: 0
+    PlayAwake: 0
+  - name: BirdLazerCharge
+    source: {fileID: 0}
+    mixer: {fileID: -4479698138880582938, guid: 23fcb94e90272dc45b9cf1b88de87e8e, type: 2}
+    clip: {fileID: 8300000, guid: 75cd71c82010986479b32ee3b38a2c24, type: 3}
+    volume: 1
+    loop: 0
+    PlayAwake: 0
+  - name: BirdLazerZap
+    source: {fileID: 0}
+    mixer: {fileID: -4479698138880582938, guid: 23fcb94e90272dc45b9cf1b88de87e8e, type: 2}
+    clip: {fileID: 8300000, guid: e19270612c8c35b40ad36ecb8a0541fc, type: 3}
+    volume: 1
+    loop: 0
+    PlayAwake: 0
+  - name: BirdFireball
+    source: {fileID: 0}
+    mixer: {fileID: -4479698138880582938, guid: 23fcb94e90272dc45b9cf1b88de87e8e, type: 2}
+    clip: {fileID: 8300000, guid: 4e49544403dca2941a066b8d0f61185b, type: 3}
+    volume: 1
+    loop: 0
+    PlayAwake: 0
+  - name: BirdSquawk
+    source: {fileID: 0}
+    mixer: {fileID: -4479698138880582938, guid: 23fcb94e90272dc45b9cf1b88de87e8e, type: 2}
+    clip: {fileID: 8300000, guid: dbf3a28be6d00ce468b4432c5f3c3ce7, type: 3}
+    volume: 1
+    loop: 0
+    PlayAwake: 0
