@@ -2694,10 +2694,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: FullCoyote
       objectReference: {fileID: 0}
-    - target: {fileID: 1841134972415603637, guid: 938757fbc9f52bd45951d757b446baaf, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 2353078592684805116, guid: f2f6f29b4cac10247a48de0222f0f821, type: 3}
     - target: {fileID: 2205036117367761555, guid: 938757fbc9f52bd45951d757b446baaf, type: 3}
       propertyPath: 'gameObjects.Array.data[1]'
       value: 
@@ -2706,10 +2702,6 @@ PrefabInstance:
       propertyPath: m_Source
       value: 
       objectReference: {fileID: 213354931}
-    - target: {fileID: 6787014925916941007, guid: 938757fbc9f52bd45951d757b446baaf, type: 3}
-      propertyPath: maxHealth
-      value: 250
-      objectReference: {fileID: 0}
     - target: {fileID: 6787014925916941007, guid: 938757fbc9f52bd45951d757b446baaf, type: 3}
       propertyPath: bossHealthBar
       value: 
@@ -2754,10 +2746,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7707730876846619045, guid: 938757fbc9f52bd45951d757b446baaf, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 2353078592684805116, guid: f2f6f29b4cac10247a48de0222f0f821, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
