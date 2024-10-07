@@ -4,10 +4,14 @@ using UnityEngine;
 public class RightSwipe_EA : EnemyAttack
 {
     private Animator animator;
+    private Bear bear;
+
 
     private void Start()
     {
         animator = GetComponent<Animator>();
+        bear = GetComponent<Bear>();
+
     }
 
     public override void Attack()
@@ -22,12 +26,14 @@ public class RightSwipe_EA : EnemyAttack
 
     private IEnumerator FinishAnimsAttack()
     {
-        animator.Play("BearSwipeRight");
+        if (!bear.IsDead)
+            animator.Play("BearSwipeRight");
 
         float animationDuration = GetAnimationDuration("BearSwipeRight");
 
         yield return new WaitForSeconds(animationDuration);
-        animator.Play("Bear_Idle");
+        if (!bear.IsDead)
+            animator.Play("Bear_Idle");
 
         GetComponent<Boss>().FinishAttack();
     }

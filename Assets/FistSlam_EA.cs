@@ -16,11 +16,13 @@ public class FistSlam_EA : EnemyAttack
     [SerializeField] private Transform spawnB;
     private bool keepSpawning, happenOnce;
     private float acornTimer = 0.15f, acornStart = 1.17f;
+    private Bear bear;
 
 
     private void Start()
     {
         animator = GetComponent<Animator>();
+        bear = GetComponent<Bear>();
     }
 
     public override void Attack()
@@ -35,7 +37,9 @@ public class FistSlam_EA : EnemyAttack
 
     private IEnumerator FinishAnimsAttack()
     {
-        animator.Play("Bear_Slam");
+        if (!bear.IsDead)
+
+            animator.Play("Bear_Slam");
         keepSpawning = true;
         acornStart = 1.1f;
         happenOnce = false;
@@ -44,7 +48,9 @@ public class FistSlam_EA : EnemyAttack
         yield return new WaitForSeconds(animationDuration);
         keepSpawning = false;
         CameraShakerHandler.Stop();
-        animator.Play("Bear_Idle");
+
+        if (!bear.IsDead)
+            animator.Play("Bear_Idle");
         GetComponent<Boss>().FinishAttack();
     }
 

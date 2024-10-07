@@ -19,11 +19,12 @@ public class Bear : Boss
     private float startingTimer;
     private Animator bearAnimator;
     //private string animName;
-    private bool isDeadFuckinStop;
+    private Animator animator;
 
     private void Start()
     {
         bearAnimator = GetComponent<Animator>();
+        animator = GetComponent<Animator>();
     }
 
     private void Update()
@@ -44,15 +45,10 @@ public class Bear : Boss
         }
         if (IsDead)
         {
-            if (!isDeadFuckinStop)
-            {
-                isDeadFuckinStop = true;
-                bearAnimator.Play("Bear_Dead");
-            }
             return;
         }
 
-        if (HealthPercentage <= 0.5 && !isSecondPhase)
+        if (HealthPercentage <= 0.5 && !isSecondPhase && !IsDead)
         {
             StartSecondPhase();
         }
@@ -67,32 +63,29 @@ public class Bear : Boss
             attackIndex = UnityEngine.Random.Range(0, Attacks.Count);
             
             do{
+                if (IsDead) break;
                 attackIndex = UnityEngine.Random.Range(0, Attacks.Count);
                 chosenAttack = Attacks[attackIndex];
-            } while (cachedAttack == chosenAttack);
+            } while (cachedAttack == chosenAttack && !IsDead);
         }
         else //second phase
         {
             attackIndex = UnityEngine.Random.Range(0, secondPhaseAttacks.Count);
             do
             {
+                if (IsDead) break;
                 attackIndex = UnityEngine.Random.Range(0, secondPhaseAttacks.Count);
                 chosenAttack = secondPhaseAttacks[attackIndex];
             } while (cachedAttack == chosenAttack);
         }
         cachedAttack = chosenAttack;
 
-        StartCoroutine(Attack(chosenAttack));
+        if (!IsDead)
+            StartCoroutine(Attack(chosenAttack));
     }
 
     IEnumerator Attack(EnemyAttack eAttack)
     {
-        /*if (attackAnim == 0) animName = "Coyote_Swipe_High";
-        if (attackAnim == 1) animName = "Coyote_Pounce";
-        if (attackAnim == 2) animName = "Coyote_Swipe_Low";
-        if (attackAnim == 3) animName = "Coyote_Sling";
-
-        bearAnimator.Play(animName);*/
         yield return new WaitForSeconds(attackDelay);
         eAttack.Attack();
     }
@@ -102,6 +95,4 @@ public class Bear : Boss
         isSecondPhase = true;
         Debug.Log("BEAR HAS ENTERED SECOND PHASE!");
     }
-
-    
 }

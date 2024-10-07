@@ -4,10 +4,14 @@ using UnityEngine;
 public class BearChomp_EA : EnemyAttack
 {
     private Animator animator;
+    private Bear bear;
+
 
     private void Start()
     {
         animator = GetComponent<Animator>();
+        bear = GetComponent<Bear>();
+
     }
 
     public override void Attack()
@@ -22,12 +26,15 @@ public class BearChomp_EA : EnemyAttack
 
     private IEnumerator FinishAnimsAttack()
     {
-        animator.Play("Bear_Chomp");
+        if (!bear.IsDead)
+
+            animator.Play("Bear_Chomp");
 
         float animationDuration = GetAnimationDuration("Bear_Chomp");
 
         yield return new WaitForSeconds(animationDuration);
-        animator.Play("Bear_Idle");
+        if (!bear.IsDead)
+            animator.Play("Bear_Idle");
 
         GetComponent<Boss>().FinishAttack();
     }

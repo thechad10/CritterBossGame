@@ -1082,6 +1082,7 @@ GameObject:
   - component: {fileID: 485208856}
   - component: {fileID: 485208857}
   - component: {fileID: 485208858}
+  - component: {fileID: 485208859}
   m_Layer: 0
   m_Name: BearBoss
   m_TagString: Untagged
@@ -1124,7 +1125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9ec6c86e24ebfb47b7303cfe963d6b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 50
+  maxHealth: 500
   Attacks:
   - {fileID: 485208850}
   - {fileID: 485208853}
@@ -1260,6 +1261,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bDisableTrigger: 0
   gActions:
+  - {fileID: 485208859}
   - {fileID: 485208858}
 --- !u!114 &485208858
 MonoBehaviour:
@@ -1276,6 +1278,20 @@ MonoBehaviour:
   delay: 0
   m_Source: {fileID: 1568275468}
   m_Clip: {fileID: 8300000, guid: 9ac6780443b196a4eaf69db396d58908, type: 3}
+--- !u!114 &485208859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 485208847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8b3d91a5de81f74383501ec19f48649, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 0
+  animator: {fileID: 485208851}
 --- !u!1 &551926742
 GameObject:
   m_ObjectHideFlags: 0
