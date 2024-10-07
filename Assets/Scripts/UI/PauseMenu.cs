@@ -10,10 +10,11 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] private GameObject pausePanelUI;
     [SerializeField] private GameObject GameUI;
     [SerializeField] private EventSystem UIButtonStart;
-    [SerializeField] private GameObject pauseStart;
+    [SerializeField] private Button pauseStart;
 
     private void OnEnable()
     {
+        pauseStart.Select();
         pInput = new PlayerInput();
         pInput.Enable();
         pInput.Player.Pause.performed += TryPause;
@@ -61,7 +62,7 @@ public class PauseMenu : MonoBehaviour
     public void Pause()
     {
         pausePanelUI.SetActive(true);
-        UIButtonStart.firstSelectedGameObject = pauseStart;
+        //UIButtonStart.firstSelectedGameObject = pauseStart;
         GameUI.SetActive(false);
         Time.timeScale = 0f;
     }

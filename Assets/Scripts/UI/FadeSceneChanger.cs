@@ -10,6 +10,7 @@ public class FadeSceneChanger : MonoBehaviour
     [SerializeField] private Image black;
     public void ChangeScene(string sceneName)
     {
+        Time.timeScale = 1;
         black.DOFade(1, 1f);
         m_AudioSource.DOFade(0, 1f);
         StartCoroutine(HoldLoad(sceneName));
