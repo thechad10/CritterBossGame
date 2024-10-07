@@ -42,6 +42,7 @@ public class Bear : Boss
             }
         }
         if (IsDead) return;
+
         if (HealthPercentage <= 0.5 && !isSecondPhase)
         {
             StartSecondPhase();
@@ -55,19 +56,19 @@ public class Bear : Boss
         {
             attackIndex = UnityEngine.Random.Range(0, Attacks.Count);
             
-            //{
+            do{
                 attackIndex = UnityEngine.Random.Range(0, Attacks.Count);
                 chosenAttack = Attacks[attackIndex];
-            //} while (cachedAttack == chosenAttack);*/
+            } while (cachedAttack == chosenAttack);
         }
         else //second phase
         {
             attackIndex = UnityEngine.Random.Range(0, secondPhaseAttacks.Count);
-            /*do
+            do
             {
                 attackIndex = UnityEngine.Random.Range(0, secondPhaseAttacks.Count);
                 chosenAttack = secondPhaseAttacks[attackIndex];
-            } while (cachedAttack == chosenAttack);*/
+            } while (cachedAttack == chosenAttack);
         }
         cachedAttack = chosenAttack;
 
