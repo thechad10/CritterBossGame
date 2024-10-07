@@ -3,6 +3,9 @@ using System.Collections;
 
 public class PounceEA : EnemyAttack
 {
+    [SerializeField, Tooltip("Death sprite transform of the coyote")]
+    private Transform deathCoyote;
+
     [SerializeField, Tooltip("Time to pause in the air at the top of the jump")]
     private float pauseDuration = 0.5f;
 
@@ -94,6 +97,8 @@ public class PounceEA : EnemyAttack
 
         // Step 4: Flip the enemy
         FlipEnemy();
+        deathCoyote.position = movingToTarget1 ? target1.position : target2.position; 
+        deathCoyote.GetComponentInChildren<SpriteRenderer>().flipX = !movingToTarget1; 
 
         // Disable the hitbox after the attack
         hitbox.enabled = false;

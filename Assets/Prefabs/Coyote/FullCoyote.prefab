@@ -676,6 +676,10 @@ PrefabInstance:
       propertyPath: moveSpeed
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 3403805973588825363, guid: 77b1f1c5fd05a8142a65c1d32a681c8c, type: 3}
+      propertyPath: deathCoyote
+      value: 
+      objectReference: {fileID: 5087270302885629795}
     - target: {fileID: 3480010270566097357, guid: 77b1f1c5fd05a8142a65c1d32a681c8c, type: 3}
       propertyPath: m_Layer
       value: 14
