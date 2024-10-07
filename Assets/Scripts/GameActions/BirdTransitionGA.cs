@@ -29,5 +29,6 @@ public class BirdTransition : GameAction
         player.transform.position = PlayerMoveToPoint.position;
         ui.RefillBar();
         vignette.enabled = true;
+        FindObjectOfType<SoundControl>().Play("BirdSquawk");
     }
 }
