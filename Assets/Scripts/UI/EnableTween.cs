@@ -6,6 +6,7 @@ using UnityEngine.EventSystems;
 public class NewMonoBehaviourScript : MonoBehaviour
 {
     [SerializeField] private GameObject button;
+    [SerializeField] private Button firstButton;
     [SerializeField] EventSystem ui_Handler;
     [SerializeField] private RectTransform ui_Element;
     [SerializeField] private GameObject go;
@@ -13,6 +14,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
     private void OnEnable()
     {
         ui_Handler.firstSelectedGameObject = button;
+        firstButton.Select();
         ui_Element.DOAnchorPosY(endPos, 1);
         go.SetActive(false);
     }

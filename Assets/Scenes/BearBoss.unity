@@ -118,6 +118,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &13200884 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2772198084453506602, guid: c411e500dd099ec4f9ef28b486560243, type: 3}
+  m_PrefabInstance: {fileID: 1376601555}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376601560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &51915225
 GameObject:
   m_ObjectHideFlags: 0
@@ -2055,10 +2066,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11d870713d7d4244c924a5a6195cb1a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  button: {fileID: 1355032076}
+  firstButton: {fileID: 1018030834}
+  ui_Handler: {fileID: 1272310882}
   ui_Element: {fileID: 1018030831}
   go: {fileID: 198941842}
   startPos: 1800
   endPos: 0
+--- !u!114 &1018030834 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4966220481541445676, guid: c8599cd5b556baf41a778f7de2942b5d, type: 3}
+  m_PrefabInstance: {fileID: 1018030829}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1355032076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1067938566
 GameObject:
   m_ObjectHideFlags: 0
@@ -2488,6 +2513,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 485208848}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1355032076 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 48081099424282591, guid: c8599cd5b556baf41a778f7de2942b5d, type: 3}
+  m_PrefabInstance: {fileID: 1018030829}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1376601555
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2721,10 +2751,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11d870713d7d4244c924a5a6195cb1a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  button: {fileID: 1376601560}
+  firstButton: {fileID: 13200884}
+  ui_Handler: {fileID: 1272310882}
   ui_Element: {fileID: 1376601557}
   go: {fileID: 198941842}
   startPos: 1800
   endPos: 0
+--- !u!1 &1376601560 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5091371943497468575, guid: c411e500dd099ec4f9ef28b486560243, type: 3}
+  m_PrefabInstance: {fileID: 1376601555}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1490781119
 GameObject:
   m_ObjectHideFlags: 0
@@ -3739,8 +3777,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11d870713d7d4244c924a5a6195cb1a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  button: {fileID: 224221284}
+  firstButton: {fileID: 224221286}
+  ui_Handler: {fileID: 1272310882}
   ui_Element: {fileID: 2087864280}
-  go: {fileID: 0}
+  go: {fileID: 198941842}
   startPos: 1800
   endPos: 0
 --- !u!114 &2087864282
