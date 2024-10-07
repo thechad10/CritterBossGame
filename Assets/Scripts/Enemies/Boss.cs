@@ -22,6 +22,8 @@ public abstract class Boss : MonoBehaviour
     [Header("Death")]
     [SerializeField, Tooltip("The death sequence for the boss")]
     protected GameActionTrigger deathSeq;
+    [SerializeField, Tooltip("The sound that plays when a boss gets hurt")]
+    protected string soundName = "";
     public bool IsDead { get; private set; }
     public static Action OnBossDeath = delegate { };
     public SpriteRenderer bossRendererFlash;
@@ -46,6 +48,8 @@ public abstract class Boss : MonoBehaviour
         FlashOnHit();
         CurrentHealth += amount;
         bossHealthBar.fillAmount = HealthPercentage;
+        if (soundName != string.Empty)
+            FindObjectOfType<SoundControl>().Play(soundName);
         if(CurrentHealth <= 0)
         {
             IsDead = true;

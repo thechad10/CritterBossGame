@@ -992,6 +992,63 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3288535806680372218, guid: c8599cd5b556baf41a778f7de2942b5d, type: 3}
   m_PrefabInstance: {fileID: 223736880}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &430381305
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1639330415971131826, guid: 87e6b685e4ee69f4c88fe729cf3a9b54, type: 3}
+      propertyPath: m_Name
+      value: Sound Controller
+      objectReference: {fileID: 0}
+    - target: {fileID: 7624827078133451314, guid: 87e6b685e4ee69f4c88fe729cf3a9b54, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7624827078133451314, guid: 87e6b685e4ee69f4c88fe729cf3a9b54, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7624827078133451314, guid: 87e6b685e4ee69f4c88fe729cf3a9b54, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7624827078133451314, guid: 87e6b685e4ee69f4c88fe729cf3a9b54, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7624827078133451314, guid: 87e6b685e4ee69f4c88fe729cf3a9b54, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7624827078133451314, guid: 87e6b685e4ee69f4c88fe729cf3a9b54, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7624827078133451314, guid: 87e6b685e4ee69f4c88fe729cf3a9b54, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7624827078133451314, guid: 87e6b685e4ee69f4c88fe729cf3a9b54, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7624827078133451314, guid: 87e6b685e4ee69f4c88fe729cf3a9b54, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7624827078133451314, guid: 87e6b685e4ee69f4c88fe729cf3a9b54, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 87e6b685e4ee69f4c88fe729cf3a9b54, type: 3}
 --- !u!1 &531964279
 GameObject:
   m_ObjectHideFlags: 0
@@ -4216,6 +4273,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 213354931}
     - target: {fileID: 6787014925916941007, guid: 938757fbc9f52bd45951d757b446baaf, type: 3}
+      propertyPath: soundName
+      value: CoyoteHit
+      objectReference: {fileID: 0}
+    - target: {fileID: 6787014925916941007, guid: 938757fbc9f52bd45951d757b446baaf, type: 3}
       propertyPath: bossHealthBar
       value: 
       objectReference: {fileID: 887262957}
@@ -4292,3 +4353,4 @@ SceneRoots:
   - {fileID: 1015174005}
   - {fileID: 2119927571}
   - {fileID: 142615752}
+  - {fileID: 430381305}
