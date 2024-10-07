@@ -1,31 +1,55 @@
 fileFormatVersion: 2
-guid: 0966514ea6e66bb43b19aadb298dfd5c
+guid: 11312df5af66ee749a0b36bfba5b0ef7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2660404028959831026
-    second: eggBomb_SHEET_0
+      213: -6066608142369493521
+    second: Crunch (1)_0
   - first:
-      213: 3968654153242225342
-    second: eggBomb_SHEET_1
+      213: -1681930603526877544
+    second: Crunch (1)_1
   - first:
-      213: -1346101101400034588
-    second: eggBomb_SHEET_2
+      213: 2458940957379466739
+    second: Crunch (1)_2
   - first:
-      213: 3689876435089113575
-    second: eggBomb_SHEET_3
+      213: 7887899427971603467
+    second: Crunch (1)_3
   - first:
-      213: 1704243171206778458
-    second: eggBomb_SHEET_4
+      213: -1757240513856188450
+    second: Crunch (1)_4
   - first:
-      213: 1264193122794153084
-    second: eggBomb_SHEET_5
+      213: 5022380418318752994
+    second: Crunch (1)_5
   - first:
-      213: 500966651745463127
-    second: eggBomb_SHEET_6
+      213: 206098253606474318
+    second: Crunch (1)_6
   - first:
-      213: -5338643055039951241
-    second: eggBomb_SHEET_7
+      213: 5721072416634685542
+    second: Crunch (1)_7
+  - first:
+      213: 424551035179271801
+    second: Crunch (1)_8
+  - first:
+      213: -797077534107102299
+    second: Crunch (1)_9
+  - first:
+      213: -221286960087515614
+    second: Crunch (1)_10
+  - first:
+      213: 267310992152404566
+    second: Crunch (1)_11
+  - first:
+      213: -5238370798710750770
+    second: Crunch (1)_12
+  - first:
+      213: 3980820290615703004
+    second: Crunch (1)_13
+  - first:
+      213: -3140334235067794701
+    second: Crunch (1)_14
+  - first:
+      213: 1268795998703942760
+    second: Crunch (1)_15
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -58,7 +82,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -72,7 +96,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -93,10 +117,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -134,13 +158,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: eggBomb_SHEET_0
+      name: Crunch (1)_0
       rect:
         serializedVersion: 2
-        x: 4
+        x: 0
         y: 0
-        width: 24
-        height: 32
+        width: 400
+        height: 240
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -149,20 +173,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2f33b217e57abe420800000000000000
-      internalID: 2660404028959831026
+      spriteID: fede29a69041fcba0800000000000000
+      internalID: -6066608142369493521
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: eggBomb_SHEET_1
+      name: Crunch (1)_1
       rect:
         serializedVersion: 2
-        x: 36
+        x: 400
         y: 0
-        width: 24
-        height: 31
+        width: 400
+        height: 240
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,20 +195,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ebaa160fced731730800000000000000
-      internalID: 3968654153242225342
+      spriteID: 89e0ceff60598a8e0800000000000000
+      internalID: -1681930603526877544
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: eggBomb_SHEET_2
+      name: Crunch (1)_2
       rect:
         serializedVersion: 2
-        x: 68
+        x: 800
         y: 0
-        width: 24
-        height: 28
+        width: 400
+        height: 240
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,20 +217,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4e2f9432e20b15de0800000000000000
-      internalID: -1346101101400034588
+      spriteID: 3f51340d5c9ef1220800000000000000
+      internalID: 2458940957379466739
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: eggBomb_SHEET_3
+      name: Crunch (1)_3
       rect:
         serializedVersion: 2
-        x: 100
+        x: 1200
         y: 0
-        width: 24
-        height: 27
+        width: 400
+        height: 240
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,20 +239,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7e142926113153330800000000000000
-      internalID: 3689876435089113575
+      spriteID: b0c1144ecb2777d60800000000000000
+      internalID: 7887899427971603467
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: eggBomb_SHEET_4
+      name: Crunch (1)_4
       rect:
         serializedVersion: 2
-        x: 132
+        x: 1600
         y: 0
-        width: 24
-        height: 26
+        width: 400
+        height: 240
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -237,20 +261,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a5e4aae7220b6a710800000000000000
-      internalID: 1704243171206778458
+      spriteID: edf4daa10170d97e0800000000000000
+      internalID: -1757240513856188450
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: eggBomb_SHEET_5
+      name: Crunch (1)_5
       rect:
         serializedVersion: 2
-        x: 164
+        x: 2000
         y: 0
-        width: 24
-        height: 25
+        width: 400
+        height: 240
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -259,20 +283,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c7423ab72f05b8110800000000000000
-      internalID: 1264193122794153084
+      spriteID: 2ec54c8716413b540800000000000000
+      internalID: 5022380418318752994
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: eggBomb_SHEET_6
+      name: Crunch (1)_6
       rect:
         serializedVersion: 2
-        x: 191
+        x: 2400
         y: 0
-        width: 34
-        height: 32
+        width: 400
+        height: 240
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -281,20 +305,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 75bea99f38ac3f600800000000000000
-      internalID: 500966651745463127
+      spriteID: e42da0b05453cd200800000000000000
+      internalID: 206098253606474318
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: eggBomb_SHEET_7
+      name: Crunch (1)_7
       rect:
         serializedVersion: 2
-        x: 223
+        x: 2800
         y: 0
-        width: 33
-        height: 32
+        width: 400
+        height: 240
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -303,8 +327,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 77eccb14d6459e5b0800000000000000
-      internalID: -5338643055039951241
+      spriteID: 668cbc72d05556f40800000000000000
+      internalID: 5721072416634685542
       vertices: []
       indices: 
       edges: []
@@ -313,7 +337,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 4db18c1ecbd79584c9da45abccc6d7a4
     internalID: 0
     vertices: []
     indices: 
@@ -323,14 +347,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      eggBomb_SHEET_0: 2660404028959831026
-      eggBomb_SHEET_1: 3968654153242225342
-      eggBomb_SHEET_2: -1346101101400034588
-      eggBomb_SHEET_3: 3689876435089113575
-      eggBomb_SHEET_4: 1704243171206778458
-      eggBomb_SHEET_5: 1264193122794153084
-      eggBomb_SHEET_6: 500966651745463127
-      eggBomb_SHEET_7: -5338643055039951241
+      Crunch (1)_0: -6066608142369493521
+      Crunch (1)_1: -1681930603526877544
+      Crunch (1)_2: 2458940957379466739
+      Crunch (1)_3: 7887899427971603467
+      Crunch (1)_4: -1757240513856188450
+      Crunch (1)_5: 5022380418318752994
+      Crunch (1)_6: 206098253606474318
+      Crunch (1)_7: 5721072416634685542
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -92,7 +92,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 2
+        time: 1.8333334
         value: 1
         inSlope: Infinity
         outSlope: Infinity
@@ -101,7 +101,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 2.3333333
+        time: 2.1666667
         value: 0
         inSlope: Infinity
         outSlope: Infinity
@@ -156,6 +156,54 @@ AnimationClip:
     classID: 61
     script: {fileID: 0}
     flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.8333334
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 2
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 2.1666667
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_Color.a
+    path: BearHead/ChompBox
+    classID: 212
+    script: {fileID: 0}
+    flags: 0
   m_PPtrCurves:
   - serializedVersion: 2
     curve:
@@ -181,6 +229,29 @@ AnimationClip:
       value: {fileID: 4180734364434946539, guid: dc504467fddb9d04d8c6c0c1ec4950a3, type: 3}
     attribute: m_Sprite
     path: BearHead
+    classID: 212
+    script: {fileID: 0}
+    flags: 2
+  - serializedVersion: 2
+    curve:
+    - time: 0
+      value: {fileID: -6066608142369493521, guid: 11312df5af66ee749a0b36bfba5b0ef7, type: 3}
+    - time: 1.85
+      value: {fileID: -1681930603526877544, guid: 11312df5af66ee749a0b36bfba5b0ef7, type: 3}
+    - time: 1.8666667
+      value: {fileID: 2458940957379466739, guid: 11312df5af66ee749a0b36bfba5b0ef7, type: 3}
+    - time: 1.9
+      value: {fileID: 7887899427971603467, guid: 11312df5af66ee749a0b36bfba5b0ef7, type: 3}
+    - time: 1.9333333
+      value: {fileID: -1757240513856188450, guid: 11312df5af66ee749a0b36bfba5b0ef7, type: 3}
+    - time: 1.95
+      value: {fileID: 5022380418318752994, guid: 11312df5af66ee749a0b36bfba5b0ef7, type: 3}
+    - time: 1.9666667
+      value: {fileID: 206098253606474318, guid: 11312df5af66ee749a0b36bfba5b0ef7, type: 3}
+    - time: 2
+      value: {fileID: 5721072416634685542, guid: 11312df5af66ee749a0b36bfba5b0ef7, type: 3}
+    attribute: m_Sprite
+    path: BearHead/ChompBox
     classID: 212
     script: {fileID: 0}
     flags: 2
@@ -219,7 +290,25 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
+      path: 2482633225
+      attribute: 304273561
+      script: {fileID: 0}
+      typeID: 212
+      customType: 0
+      isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
+    - serializedVersion: 2
       path: 2972422229
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 212
+      customType: 23
+      isPPtrCurve: 1
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
+    - serializedVersion: 2
+      path: 2482633225
       attribute: 0
       script: {fileID: 0}
       typeID: 212
@@ -238,6 +327,14 @@ AnimationClip:
     - {fileID: 4377002092769029643, guid: dc504467fddb9d04d8c6c0c1ec4950a3, type: 3}
     - {fileID: 3181690911634167688, guid: dc504467fddb9d04d8c6c0c1ec4950a3, type: 3}
     - {fileID: 4180734364434946539, guid: dc504467fddb9d04d8c6c0c1ec4950a3, type: 3}
+    - {fileID: -6066608142369493521, guid: 11312df5af66ee749a0b36bfba5b0ef7, type: 3}
+    - {fileID: -1681930603526877544, guid: 11312df5af66ee749a0b36bfba5b0ef7, type: 3}
+    - {fileID: 2458940957379466739, guid: 11312df5af66ee749a0b36bfba5b0ef7, type: 3}
+    - {fileID: 7887899427971603467, guid: 11312df5af66ee749a0b36bfba5b0ef7, type: 3}
+    - {fileID: -1757240513856188450, guid: 11312df5af66ee749a0b36bfba5b0ef7, type: 3}
+    - {fileID: 5022380418318752994, guid: 11312df5af66ee749a0b36bfba5b0ef7, type: 3}
+    - {fileID: 206098253606474318, guid: 11312df5af66ee749a0b36bfba5b0ef7, type: 3}
+    - {fileID: 5721072416634685542, guid: 11312df5af66ee749a0b36bfba5b0ef7, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
@@ -273,7 +370,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 2
+        time: 1.8333334
         value: 1
         inSlope: Infinity
         outSlope: Infinity
@@ -282,7 +379,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 2.3333333
+        time: 2.1666667
         value: 0
         inSlope: Infinity
         outSlope: Infinity
@@ -533,6 +630,54 @@ AnimationClip:
     attribute: m_LocalPosition.z
     path: BearHead
     classID: 4
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.8333334
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 2
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 2.1666667
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_Color.a
+    path: BearHead/ChompBox
+    classID: 212
     script: {fileID: 0}
     flags: 0
   m_EulerEditorCurves: []
