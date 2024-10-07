@@ -17,12 +17,13 @@ public class Bear : Boss
     private EnemyAttack cachedAttack;
     private bool isBeginningOfFight = true;
     private float startingTimer;
-    //private Animator bearAnimator;
+    private Animator bearAnimator;
     //private string animName;
+    private bool isDeadFuckinStop;
 
     private void Start()
     {
-        //bearAnimator = GetComponentInChildren<Animator>();
+        bearAnimator = GetComponent<Animator>();
     }
 
     private void Update()
@@ -41,12 +42,21 @@ public class Bear : Boss
                 return;
             }
         }
-        if (IsDead) return;
+        if (IsDead)
+        {
+            if (!isDeadFuckinStop)
+            {
+                isDeadFuckinStop = true;
+                bearAnimator.Play("Bear_Dead");
+            }
+            return;
+        }
 
         if (HealthPercentage <= 0.5 && !isSecondPhase)
         {
             StartSecondPhase();
         }
+
 
         if (IsAttacking) return;
         StartAttack();
@@ -92,4 +102,6 @@ public class Bear : Boss
         isSecondPhase = true;
         Debug.Log("BEAR HAS ENTERED SECOND PHASE!");
     }
+
+    
 }
