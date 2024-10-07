@@ -30,6 +30,8 @@ public class BearClap_EA : EnemyAttack
 
             animator.Play("Bear_Clap");
 
+        FindObjectOfType<SoundControl>().Play("BearClap");
+
         float animationDuration = GetAnimationDuration("Bear_Clap");
 
         yield return new WaitForSeconds(animationDuration);
