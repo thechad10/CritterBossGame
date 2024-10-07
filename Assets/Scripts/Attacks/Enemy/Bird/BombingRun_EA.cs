@@ -21,19 +21,26 @@ public class BombingRun_EA : EnemyAttack
     [SerializeField, Tooltip("Used for the y-position")]
     private AnimationCurve yPosition;
     [SerializeField, Tooltip("Used for the max position calculations")]
-    private Transform maxPos;
+    private Transform maxPosT;
     [SerializeField, Tooltip("Used for the min position calculations")]
-    private Transform minPos;
+    private Transform minPosT;
+    private Vector2 minPos;
+    private Vector2 maxPos;
     private float moveRate;
     private float attackRate;
     private List<GameObject> bombs = new();
     [SerializeField]
     private Bird bird;
+    [SerializeField] private Transform parent;
 
     [SerializeField]
     private GameObject bombPrefab;
 
-
+    private void OnEnable()
+    {
+        minPos = minPosT.position;
+        maxPos = maxPosT.position;
+    }
     public override void Attack()
     {
         if (IsAttacking)
@@ -55,7 +62,7 @@ public class BombingRun_EA : EnemyAttack
         {
             timeLeft -= Time.deltaTime;
             moveRate = (yMoveTime - timeLeft) / yMoveTime;
-            transform.position = new Vector3(minPos.position.x, Mathf.Lerp(minPos.position.y, maxPos.position.y, yPosition.Evaluate(moveRate)), 0);
+            parent.position = new Vector3(minPos.x, Mathf.Lerp(minPos.y, maxPos.y, yPosition.Evaluate(moveRate)), 0);
             if (timeLeft <= 0)
             {
                 moveRate = 0;
@@ -69,7 +76,7 @@ public class BombingRun_EA : EnemyAttack
             moveRate = (attackTime - timeLeft) / attackTime;
             attackRate += Time.deltaTime;
 
-            transform.position = new Vector3(Mathf.Lerp(maxPos.position.x, minPos.position.x, xPosition.Evaluate(moveRate)), maxPos.position.y, 0);
+            parent.position = new Vector3(Mathf.Lerp(maxPos.x, minPos.x, xPosition.Evaluate(moveRate)), maxPos.y, 0);
             if (attackRate >= attackTime / bombDrops )
             {
                 attackRate = 0;
@@ -87,7 +94,7 @@ public class BombingRun_EA : EnemyAttack
         {
             timeLeft -= Time.deltaTime;
             moveRate = (yMoveTime - timeLeft) / yMoveTime;
-            transform.position = new Vector3(minPos.position.x, Mathf.Lerp(maxPos.position.y, minPos.position.y, yPosition.Evaluate(moveRate)), 0);
+            parent.position = new Vector3(minPos.x, Mathf.Lerp(maxPos.y, minPos.y, yPosition.Evaluate(moveRate)), 0);
             if (timeLeft <= 0)
             {
                 moveRate = 0;
