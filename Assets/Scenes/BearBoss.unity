@@ -1262,6 +1262,7 @@ MonoBehaviour:
   bossName: STOKEY, PAPA BEAR
   bossTitle: Kingpin of the Mafia
   deathSeq: {fileID: 485208857}
+  bossRendererFlash: {fileID: 638359840}
   firstAttackDelay: 3
   attackDelay: 1
   secondPhaseAttacks:

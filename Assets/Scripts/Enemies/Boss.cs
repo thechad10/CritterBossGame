@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -23,12 +24,16 @@ public abstract class Boss : MonoBehaviour
     protected GameActionTrigger deathSeq;
     public bool IsDead { get; private set; }
     public static Action OnBossDeath = delegate { };
+    public SpriteRenderer bossRendererFlash;
+    private Color originalColor;
 
     protected void OnEnable()
     {
         CurrentHealth = maxHealth;
         if (bossHealthBar)
             bossHealthBar.fillAmount = 1;
+
+        originalColor = bossRendererFlash.color;
     }
 
     /// <summary>
@@ -38,6 +43,7 @@ public abstract class Boss : MonoBehaviour
     public void ChangeHealth(int amount)
     {
         if (IsDead) return;
+        FlashOnHit();
         CurrentHealth += amount;
         bossHealthBar.fillAmount = HealthPercentage;
         if(CurrentHealth <= 0)
@@ -62,5 +68,17 @@ public abstract class Boss : MonoBehaviour
         Debug.Log($"YEEEOOOOOOWWWWCH! {name} HAS DIED!");
         deathSeq.PlaySequence();
         OnBossDeath();
+    }
+
+    private void FlashOnHit()
+    {
+        StartCoroutine(FlashCoroutine());
+    }
+
+    private IEnumerator FlashCoroutine()
+    {
+        bossRendererFlash.color = new Color(1f, 0.8f, 0.8f);
+        yield return new WaitForSeconds(0.1f);
+        bossRendererFlash.color = originalColor;
     }
 }
