@@ -2114,6 +2114,47 @@ PlatformEffector2D:
   m_UseSideFriction: 0
   m_UseSideBounce: 0
   m_SideArc: 1
+--- !u!1 &911174724 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2199232606630023233, guid: 938757fbc9f52bd45951d757b446baaf, type: 3}
+  m_PrefabInstance: {fileID: 4589306860730430536}
+  m_PrefabAsset: {fileID: 0}
+--- !u!58 &911174729
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 911174724}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 0.4
 --- !u!1 &1015174002
 GameObject:
   m_ObjectHideFlags: 0
@@ -4236,6 +4277,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FullCoyote
       objectReference: {fileID: 0}
+    - target: {fileID: 2199232606630023233, guid: 938757fbc9f52bd45951d757b446baaf, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2205036117367761555, guid: 938757fbc9f52bd45951d757b446baaf, type: 3}
       propertyPath: 'gameObjects.Array.data[1]'
       value: 
@@ -4272,6 +4317,14 @@ PrefabInstance:
       propertyPath: m_Source
       value: 
       objectReference: {fileID: 213354931}
+    - target: {fileID: 5359049468134522916, guid: 938757fbc9f52bd45951d757b446baaf, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6787014925916941007, guid: 938757fbc9f52bd45951d757b446baaf, type: 3}
+      propertyPath: maxHealth
+      value: 250
+      objectReference: {fileID: 0}
     - target: {fileID: 6787014925916941007, guid: 938757fbc9f52bd45951d757b446baaf, type: 3}
       propertyPath: soundName
       value: CoyoteHit
@@ -4284,6 +4337,54 @@ PrefabInstance:
       propertyPath: bossRendererFlash
       value: 
       objectReference: {fileID: 1032639186}
+    - target: {fileID: 7178601487458413418, guid: 938757fbc9f52bd45951d757b446baaf, type: 3}
+      propertyPath: yPosition.m_Curve.Array.data[1].time
+      value: 0.39563125
+      objectReference: {fileID: 0}
+    - target: {fileID: 7178601487458413418, guid: 938757fbc9f52bd45951d757b446baaf, type: 3}
+      propertyPath: yPosition.m_Curve.Array.data[2].time
+      value: 0.63207346
+      objectReference: {fileID: 0}
+    - target: {fileID: 7178601487458413418, guid: 938757fbc9f52bd45951d757b446baaf, type: 3}
+      propertyPath: yPosition.m_Curve.Array.data[1].value
+      value: 0.049493536
+      objectReference: {fileID: 0}
+    - target: {fileID: 7178601487458413418, guid: 938757fbc9f52bd45951d757b446baaf, type: 3}
+      propertyPath: yPosition.m_Curve.Array.data[2].value
+      value: 0.9429119
+      objectReference: {fileID: 0}
+    - target: {fileID: 7178601487458413418, guid: 938757fbc9f52bd45951d757b446baaf, type: 3}
+      propertyPath: yPosition.m_Curve.Array.data[1].inSlope
+      value: 0.3431644
+      objectReference: {fileID: 0}
+    - target: {fileID: 7178601487458413418, guid: 938757fbc9f52bd45951d757b446baaf, type: 3}
+      propertyPath: yPosition.m_Curve.Array.data[2].inSlope
+      value: 0.75350845
+      objectReference: {fileID: 0}
+    - target: {fileID: 7178601487458413418, guid: 938757fbc9f52bd45951d757b446baaf, type: 3}
+      propertyPath: yPosition.m_Curve.Array.data[1].inWeight
+      value: 0.48043647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7178601487458413418, guid: 938757fbc9f52bd45951d757b446baaf, type: 3}
+      propertyPath: yPosition.m_Curve.Array.data[1].outSlope
+      value: 0.5854613
+      objectReference: {fileID: 0}
+    - target: {fileID: 7178601487458413418, guid: 938757fbc9f52bd45951d757b446baaf, type: 3}
+      propertyPath: yPosition.m_Curve.Array.data[2].inWeight
+      value: 0.38690746
+      objectReference: {fileID: 0}
+    - target: {fileID: 7178601487458413418, guid: 938757fbc9f52bd45951d757b446baaf, type: 3}
+      propertyPath: yPosition.m_Curve.Array.data[2].outSlope
+      value: 0.65877694
+      objectReference: {fileID: 0}
+    - target: {fileID: 7178601487458413418, guid: 938757fbc9f52bd45951d757b446baaf, type: 3}
+      propertyPath: yPosition.m_Curve.Array.data[1].outWeight
+      value: 0.6881262
+      objectReference: {fileID: 0}
+    - target: {fileID: 7178601487458413418, guid: 938757fbc9f52bd45951d757b446baaf, type: 3}
+      propertyPath: yPosition.m_Curve.Array.data[2].outWeight
+      value: 0.73533404
+      objectReference: {fileID: 0}
     - target: {fileID: 7422286885331403204, guid: 938757fbc9f52bd45951d757b446baaf, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7
@@ -4331,6 +4432,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1511315286133185984, guid: 938757fbc9f52bd45951d757b446baaf, type: 3}
       insertIndex: -1
       addedObject: {fileID: 293298657}
+    - targetCorrespondingSourceObject: {fileID: 2199232606630023233, guid: 938757fbc9f52bd45951d757b446baaf, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 911174729}
   m_SourcePrefab: {fileID: 100100000, guid: 938757fbc9f52bd45951d757b446baaf, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

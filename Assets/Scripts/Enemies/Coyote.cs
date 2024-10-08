@@ -41,7 +41,7 @@ public class Coyote : Boss
             }
         }
         if (IsDead) return;
-        if(HealthPercentage <= 0.5 && !isSecondPhase)
+        if(HealthPercentage <= 0.65 && !isSecondPhase)
         {
             StartSecondPhase();
         }

@@ -47,7 +47,7 @@ public class Bear : Boss
             return;
         }
 
-        if (HealthPercentage <= 0.5 && !isSecondPhase && !IsDead)
+        if (HealthPercentage <= 0.75 && !isSecondPhase && !IsDead)
         {
             StartSecondPhase();
         }

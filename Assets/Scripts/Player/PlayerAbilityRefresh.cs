@@ -5,7 +5,7 @@ public class PlayerAbilityRefresh : MonoBehaviour
 {
     [HideInInspector] public bool playerSpecialAbilityReady;
     private float refreshTime = 15f;
-    private float refreshCounter;
+    public float refreshCounter;
     private Image playerAbilityFill;
 
     private PlayerInput pInput;
@@ -39,14 +39,13 @@ public class PlayerAbilityRefresh : MonoBehaviour
                 playerSpecialAbilityReady = true;
         }
 
-        if (refreshCounter >= 0.1f)
+        if (refreshCounter >= 0.1f) // animation check
         {
             squirrelSpecial.playerSpecialAttacking = false;
         }
 
-        if (pInput.Player.Ability.WasPerformedThisFrame() && playerSpecialAbilityReady)
+        /*if (pInput.Player.Ability.WasPerformedThisFrame() && playerSpecialAbilityReady)
         {
-            refreshCounter = 0;
-        }
+        }*/
     }
 }

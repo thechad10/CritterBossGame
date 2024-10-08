@@ -70,6 +70,9 @@ public class PlayerHealth : MonoBehaviour
     IEnumerator ImmuneDelay()
     {
         int immuneTickCount = 0;
+
+        yield return new WaitForSecondsRealtime(0.3f);
+
         while (isImmune)
         {
             yield return new WaitForSeconds(1);
@@ -91,6 +94,10 @@ public class PlayerHealth : MonoBehaviour
         playerIsNowDead = true;
         //playerAnimator.Play("Squirrel_Dead");
 
+        Time.timeScale = 0;
+        yield return new WaitForSecondsRealtime(0.3f);
+        Time.timeScale = 1;
+
         for (int x = 0; x < deathAction.Count; x++)
         {
             yield return new WaitForSeconds(deathAction[x].delay);
@@ -99,6 +106,10 @@ public class PlayerHealth : MonoBehaviour
     }
     IEnumerator HitSeq()
     {
+        Time.timeScale = 0;
+        yield return new WaitForSecondsRealtime(0.3f);
+        Time.timeScale = 1;
+
         for (int x = 0; x < hitAction.Count; x++)
         {
             yield return new WaitForSeconds(hitWaitTime);

@@ -49,6 +49,7 @@ public class SquirrelSpecial : MonoBehaviour
     {
         if (pInput.Player.Ability.WasPerformedThisFrame() && playerAbilityRefresh.playerSpecialAbilityReady) // Projectile Logic
         {
+            playerAbilityRefresh.refreshCounter = 0;
             playerAbilityRefresh.playerSpecialAbilityReady = false;
             FireProjectile();
         }
