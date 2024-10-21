@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public enum Direction
 {
@@ -27,6 +28,8 @@ public class Pin : MonoBehaviour
 	private Dictionary<Direction, Pin> _pinDirections;
 	[SerializeField] private GameObject _levelStartScreen;
 	[SerializeField] private Character _playerCharacter;
+	[SerializeField] PlayerInput pInput;
+	[SerializeField] private bool _enabled;
 	
 	
 	/// <summary>
@@ -49,22 +52,28 @@ public class Pin : MonoBehaviour
 			GetComponent<SpriteRenderer>().enabled = false;
 		}
 	}
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-		Debug.Log("This is working");
-		_levelStartScreen.SetActive(true);
-		_playerCharacter.Speed = 0f;
-		Debug.Log(_playerCharacter.Speed);
+	private void OnEnable()
+	{
+		pInput = new PlayerInput();
+		pInput.Enable();
     }
-
-    /// <summary>
-    /// Get the pin in a selected direction
-    /// Using a switch statement rather than linq so this can run in the editor
-    /// </summary>
-    /// <param name="direction"></param>
-    /// <returns></returns>
-    public Pin GetPinInDirection(Direction direction)
+	private void OnTriggerEnter2D(Collider2D collision)
+    {
+		_enabled = true;
+		Debug.Log("calling");
+		
+    }
+	private void OnTriggerExit2D(Collider2D collision)
+	{
+		_enabled = false;
+	}
+	/// <summary>
+	/// Get the pin in a selected direction
+	/// Using a switch statement rather than linq so this can run in the editor
+	/// </summary>
+	/// <param name="direction"></param>
+	/// <returns></returns>
+	public Pin GetPinInDirection(Direction direction)
 	{
 		switch (direction)
 		{
@@ -114,4 +123,12 @@ public class Pin : MonoBehaviour
 		Gizmos.color = Color.blue;
 		Gizmos.DrawLine(transform.position, pin.transform.position);
 	}
+	private void Update()
+	{
+		if (_enabled && pInput.Player.Interact.IsPressed())
+		{ 
+			_levelStartScreen.SetActive(true);
+			_playerCharacter.Speed = 0f;
+		}
+    }
 }
