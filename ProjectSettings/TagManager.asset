@@ -8,6 +8,7 @@ TagManager:
   - PlayerAbilityFill
   - PlayerHP_Text
   - Boss
+  - Boss_Projectile
   layers:
   - Default
   - TransparentFX
