@@ -1069,6 +1069,21 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 1.2
+--- !u!114 &580216129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 580216126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6de0176dbeef6c54b956d7436f94be2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 0
+  winOption: 1
+  levelProgression: {fileID: 11400000, guid: 71b3d3a91f8431343b218bf089ee5f87, type: 2}
 --- !u!1 &609929536
 GameObject:
   m_ObjectHideFlags: 0
@@ -4203,6 +4218,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -213270546, guid: bdaf3c2943fb5f94a9a5d2b43f24ee61, type: 3}
+    - target: {fileID: 776504605058925689, guid: c14fb30c45b3dff49b075eeb8c3cd1ef, type: 3}
+      propertyPath: gActions.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 776504605058925689, guid: c14fb30c45b3dff49b075eeb8c3cd1ef, type: 3}
+      propertyPath: 'gActions.Array.data[6]'
+      value: 
+      objectReference: {fileID: 580216129}
     - target: {fileID: 910702731549381449, guid: c14fb30c45b3dff49b075eeb8c3cd1ef, type: 3}
       propertyPath: maxHealth
       value: 50
@@ -4397,6 +4420,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1655123745327512139, guid: c14fb30c45b3dff49b075eeb8c3cd1ef, type: 3}
       insertIndex: -1
       addedObject: {fileID: 580216128}
+    - targetCorrespondingSourceObject: {fileID: 1655123745327512139, guid: c14fb30c45b3dff49b075eeb8c3cd1ef, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 580216129}
   m_SourcePrefab: {fileID: 100100000, guid: c14fb30c45b3dff49b075eeb8c3cd1ef, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

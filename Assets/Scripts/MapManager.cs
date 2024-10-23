@@ -22,12 +22,14 @@ public class MapManager : MonoBehaviour
             pins[0].color = Color.yellow;
             unpins[0].enabled = false;
         }
-        else if (lProgress.birdDefeated)
+        
+        if (lProgress.birdDefeated)
         {
             pins[1].color = Color.yellow;
             unpins[1].enabled = false;
         }
-        else if(lProgress.bearDefeated)
+        
+        if(lProgress.bearDefeated)
         {
             pins[2].color = Color.yellow;
             unpins[2].enabled = false;
