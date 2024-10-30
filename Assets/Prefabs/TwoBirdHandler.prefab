@@ -100,6 +100,7 @@ GameObject:
   - component: {fileID: 1780216794668116983}
   - component: {fileID: 8056482731387028844}
   - component: {fileID: 7102969977886548782}
+  - component: {fileID: 8162118411777367056}
   m_Layer: 0
   m_Name: TwoBirdHandler
   m_TagString: Untagged
@@ -137,7 +138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec8a145fa7c912d4d97a8dc3e181c2e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 10.25
+  delay: 0.315
   pheonix: {fileID: 5945748702677887737}
   peacockDeath: {fileID: 5098149224801314286}
   pheonixScene: {fileID: 0}
@@ -145,6 +146,7 @@ MonoBehaviour:
   ui: {fileID: 0}
   player: {fileID: 0}
   PlayerMoveToPoint: {fileID: 0}
+  vignette: {fileID: 0}
 --- !u!114 &1780216794668116983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,6 +163,7 @@ MonoBehaviour:
   gActions:
   - {fileID: 8056482731387028844}
   - {fileID: 7102969977886548782}
+  - {fileID: 8162118411777367056}
   - {fileID: 3401798143037282946}
 --- !u!114 &8056482731387028844
 MonoBehaviour:
@@ -193,6 +196,22 @@ MonoBehaviour:
   delay: 0
   gameObjects:
   - {fileID: 5098149224801314286}
+  setActive: 1
+--- !u!114 &8162118411777367056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4635235751006458868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 854a702f0d4928b4798c627778734125, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 9.75
+  gameObjects:
+  - {fileID: 0}
   setActive: 1
 --- !u!1 &5098149224801314286
 GameObject:
@@ -376,6 +395,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7645260409085751319}
     m_Modifications:
+    - target: {fileID: 1053233293202924281, guid: c9fc2b17658e78e449f19e47203f7234, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1422362149074474465, guid: c9fc2b17658e78e449f19e47203f7234, type: 3}
+      propertyPath: hitbox
+      value: 
+      objectReference: {fileID: 1289593930389053465}
     - target: {fileID: 1466616791011468959, guid: c9fc2b17658e78e449f19e47203f7234, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -384,9 +411,17 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3318086659863084342, guid: c9fc2b17658e78e449f19e47203f7234, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 3965576986864137432, guid: c9fc2b17658e78e449f19e47203f7234, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5574557122987244017, guid: c9fc2b17658e78e449f19e47203f7234, type: 3}
+      propertyPath: bossName
+      value: THE IMMORTAL PHOENIX
       objectReference: {fileID: 0}
     - target: {fileID: 5574557122987244017, guid: c9fc2b17658e78e449f19e47203f7234, type: 3}
       propertyPath: deathSeq
@@ -394,7 +429,27 @@ PrefabInstance:
       objectReference: {fileID: 776504605058925689}
     - target: {fileID: 5574557122987244017, guid: c9fc2b17658e78e449f19e47203f7234, type: 3}
       propertyPath: maxHealth
-      value: 5
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 5574557122987244017, guid: c9fc2b17658e78e449f19e47203f7234, type: 3}
+      propertyPath: soundName
+      value: BirdHit
+      objectReference: {fileID: 0}
+    - target: {fileID: 5574557122987244017, guid: c9fc2b17658e78e449f19e47203f7234, type: 3}
+      propertyPath: isSecondPhase
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5574557122987244017, guid: c9fc2b17658e78e449f19e47203f7234, type: 3}
+      propertyPath: bossRendererFlash
+      value: 
+      objectReference: {fileID: 2136390726760484859}
+    - target: {fileID: 5592959840860114617, guid: c9fc2b17658e78e449f19e47203f7234, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 5827455835749478280, guid: c9fc2b17658e78e449f19e47203f7234, type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 5847003862373190380, guid: c9fc2b17658e78e449f19e47203f7234, type: 3}
       propertyPath: m_LocalPosition.x
@@ -499,6 +554,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2757221961101470446, guid: c9fc2b17658e78e449f19e47203f7234, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5523030180198933665}
+    - targetCorrespondingSourceObject: {fileID: 2757221961101470446, guid: c9fc2b17658e78e449f19e47203f7234, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1289593930389053465}
   m_SourcePrefab: {fileID: 100100000, guid: c9fc2b17658e78e449f19e47203f7234, type: 3}
 --- !u!1 &1655123745327512139 stripped
 GameObject:
@@ -634,6 +692,42 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 0
+--- !u!58 &1289593930389053465
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1655123745327512139}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 1.2
 --- !u!212 &2136390726760484859 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 3251120132640726878, guid: c9fc2b17658e78e449f19e47203f7234, type: 3}
@@ -688,7 +782,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 481573412816347148, guid: 19d2927159db61b4fb68b92285d83513, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1816540225124596051, guid: 19d2927159db61b4fb68b92285d83513, type: 3}
       propertyPath: parent
@@ -852,7 +946,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3789849895872007538, guid: 19d2927159db61b4fb68b92285d83513, type: 3}
       propertyPath: suckStrength
-      value: 10
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4416106231611303141, guid: 19d2927159db61b4fb68b92285d83513, type: 3}
       propertyPath: m_Enabled
@@ -908,8 +1002,16 @@ PrefabInstance:
       objectReference: {fileID: 1780216794668116983}
     - target: {fileID: 5357811941691263333, guid: 19d2927159db61b4fb68b92285d83513, type: 3}
       propertyPath: maxHealth
-      value: 3
+      value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 5357811941691263333, guid: 19d2927159db61b4fb68b92285d83513, type: 3}
+      propertyPath: soundName
+      value: BirdHit
+      objectReference: {fileID: 0}
+    - target: {fileID: 5357811941691263333, guid: 19d2927159db61b4fb68b92285d83513, type: 3}
+      propertyPath: bossRendererFlash
+      value: 
+      objectReference: {fileID: 7691400779802431722}
     - target: {fileID: 5357811941691263333, guid: 19d2927159db61b4fb68b92285d83513, type: 3}
       propertyPath: Attacks.Array.size
       value: 2
@@ -1027,6 +1129,11 @@ MonoBehaviour:
 --- !u!4 &7099756121439120401 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2629772665353188925, guid: 19d2927159db61b4fb68b92285d83513, type: 3}
+  m_PrefabInstance: {fileID: 5114315517806516780}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &7691400779802431722 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 3189932408823171782, guid: 19d2927159db61b4fb68b92285d83513, type: 3}
   m_PrefabInstance: {fileID: 5114315517806516780}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &8242135679239231326 stripped
