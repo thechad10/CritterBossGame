@@ -282,6 +282,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a24014c69587ece47b8169c85dcf3857, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMoving: 1
   platformMovementSpeed: 200
   backgroundMovementSpeed: 50
   positionStartPlat: {fileID: 3972662790552735432}

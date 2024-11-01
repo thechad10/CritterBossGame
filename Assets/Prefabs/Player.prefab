@@ -263,6 +263,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSpecialAbilityReady: 0
+  refreshCounter: 0
 --- !u!114 &9154879714767479625
 MonoBehaviour:
   m_ObjectHideFlags: 0
