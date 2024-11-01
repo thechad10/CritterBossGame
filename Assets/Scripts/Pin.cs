@@ -31,7 +31,6 @@ public class Pin : MonoBehaviour
 	[SerializeField] PlayerInput pInput;
 	[SerializeField] private bool _enabled;
 	
-	
 	/// <summary>
 	/// Use this for initialisation
 	/// </summary>

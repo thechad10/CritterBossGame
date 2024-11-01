@@ -15,6 +15,8 @@ public class LevelSelectLoader : MonoBehaviour
     [SerializeField] private RectTransform rectTransform;
 
     [SerializeField] private Character _playerCharacter;
+
+
     private void OnEnable()
     {
         ui_Handler.firstSelectedGameObject = button;
