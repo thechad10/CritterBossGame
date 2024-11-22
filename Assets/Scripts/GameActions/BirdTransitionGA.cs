@@ -20,8 +20,11 @@ public class BirdTransition : GameAction
     private Transform PlayerMoveToPoint;
     [SerializeField]
     private Volume vignette;
+    [SerializeField] private ParticleSystem windEffect;
+
     public override void Action()
     {
+        windEffect.Stop();
         pheonix.SetActive(true);
         peacockDeath.SetActive(false);
         peacockScene.SetActive(false);

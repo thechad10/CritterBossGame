@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      crittergang_title_0: 3005018052087025351
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

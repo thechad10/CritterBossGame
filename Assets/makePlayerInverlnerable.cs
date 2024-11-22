@@ -1,10 +1,9 @@
 using UnityEngine;
 
-public class BirdEndingGA : GameAction
+public class makePlayerInverlnerable : GameAction
 {
     public override void Action()
     {
-        FindFirstObjectByType<PlatformMovementHandler>().isMoving = false;
         GameObject.FindWithTag("Player").layer = 16;
     }
 }

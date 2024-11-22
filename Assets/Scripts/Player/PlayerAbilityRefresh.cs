@@ -33,10 +33,20 @@ public class PlayerAbilityRefresh : MonoBehaviour
 
         if (!playerSpecialAbilityReady)
         {
+            GameObject.FindWithTag("PlayerAbilityFill").transform.localScale = new Vector3(1f, 1f, 1f);
+            GameObject.FindWithTag("PlayerAbilityOut").transform.localScale = new Vector3(1f, 1f, 1f);
+            GameObject.FindWithTag("PlayerAbilityBorder").transform.localScale = new Vector3(1f, 1f, 1f);
+
             refreshCounter += Time.deltaTime;
 
             if (refreshCounter >= refreshTime)
+            {
+                GameObject.FindWithTag("PlayerAbilityFill").transform.localScale = new Vector3(1.2f, 1.2f, 1.2f);
+                GameObject.FindWithTag("PlayerAbilityOut").transform.localScale = new Vector3(1.2f, 1.2f, 1.2f);
+                GameObject.FindWithTag("PlayerAbilityBorder").transform.localScale = new Vector3(1.2f, 1.2f, 1.2f);
+
                 playerSpecialAbilityReady = true;
+            }
         }
 
         if (refreshCounter >= 0.1f) // animation check

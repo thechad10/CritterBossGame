@@ -43,6 +43,7 @@ public class Pizza_EA : EnemyAttack
         isSpinning = true;
         timer = 0;
         idleTimer = 0;
+        FindObjectOfType<SoundControl>().Play("BirdLazerCharge");
         enableSprites();
     }
     private void Update()
@@ -80,9 +81,14 @@ public class Pizza_EA : EnemyAttack
         {
             timer += Time.deltaTime;
             spriteColor.a = colorChangeCurve.Evaluate(Mathf.Clamp(timer / spinTime, 0, 1));
+            spriteColor.g = colorChangeCurve.Evaluate(Mathf.Clamp(timer / spinTime, 0, 1));
+            spriteColor.b = colorChangeCurve.Evaluate(Mathf.Clamp(timer / spinTime, 0, 1));
+
             foreach (SpriteRenderer sprite in renderers)
             {
-                sprite.color = spriteColor;
+                //sprite.color = spriteColor;
+                sprite.color = new Color(1, 1-spriteColor.g, 1-spriteColor.b, spriteColor.a);
+                //Debug.Log(sprite.color);
             }
             centerPoint.rotation = Quaternion.Euler(0, 0, centerPoint.rotation.eulerAngles.z + spinSpeed * Time.deltaTime);
         }
@@ -109,7 +115,6 @@ public class Pizza_EA : EnemyAttack
             sprite.enabled = true;
             sprite.color = spriteColor;
         }
-        FindObjectOfType<SoundControl>().Play("BirdLazerCharge");
     }
     private void EnableColliders()
     {

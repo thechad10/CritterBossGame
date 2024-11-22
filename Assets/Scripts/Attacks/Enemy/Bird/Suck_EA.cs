@@ -7,6 +7,7 @@ public class Suck_EA : EnemyAttack
     public float suckStrength;
     [SerializeField, Tooltip("How long the suck will last")]
     public float suckTime;
+    [SerializeField] private ParticleSystem windEffect;
     private float currentTime = 0;
     private Animator birdAnimator;
     public override void Attack()
@@ -17,15 +18,21 @@ public class Suck_EA : EnemyAttack
             return;
         }
         birdAnimator = GetComponent<Animator>();
+        windEffect.Play();
         hitbox.enabled = true;
         IsAttacking = true;
     }
 
     private void Update()
     {
-        if (!IsAttacking) return;
+        if (!IsAttacking)
+        {
+            return;
+        }
+
         if (currentTime >= suckTime)
         {
+            windEffect.Stop();
             currentTime = 0f;
             IsAttacking = false;
             hitbox.enabled = false;

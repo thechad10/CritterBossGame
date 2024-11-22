@@ -222,9 +222,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameUI
       objectReference: {fileID: 0}
+    - target: {fileID: 1520797841370836501, guid: a634b7ba7d9c0b54a8345827834ca2ed, type: 3}
+      propertyPath: m_TagString
+      value: PlayerAbilityOut
+      objectReference: {fileID: 0}
+    - target: {fileID: 2556538016176681604, guid: a634b7ba7d9c0b54a8345827834ca2ed, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3271371226918151267, guid: a634b7ba7d9c0b54a8345827834ca2ed, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4739811641849289851, guid: a634b7ba7d9c0b54a8345827834ca2ed, type: 3}
       propertyPath: m_text
       value: PAPA BEAR
+      objectReference: {fileID: 0}
+    - target: {fileID: 4757406930431174669, guid: a634b7ba7d9c0b54a8345827834ca2ed, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4897943834038723539, guid: a634b7ba7d9c0b54a8345827834ca2ed, type: 3}
       propertyPath: m_AnchorMax.y
@@ -245,6 +261,10 @@ PrefabInstance:
     - target: {fileID: 4897943834038723539, guid: a634b7ba7d9c0b54a8345827834ca2ed, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5580088126885251276, guid: a634b7ba7d9c0b54a8345827834ca2ed, type: 3}
+      propertyPath: m_TagString
+      value: PlayerAbilityBorder
       objectReference: {fileID: 0}
     - target: {fileID: 6681767550628251866, guid: a634b7ba7d9c0b54a8345827834ca2ed, type: 3}
       propertyPath: m_AnchorMax.y
@@ -1490,6 +1510,7 @@ GameObject:
   - component: {fileID: 485208861}
   - component: {fileID: 485208860}
   - component: {fileID: 485208862}
+  - component: {fileID: 485208863}
   m_Layer: 0
   m_Name: BearBoss
   m_TagString: Untagged
@@ -1675,6 +1696,7 @@ MonoBehaviour:
   - {fileID: 485208858}
   - {fileID: 485208860}
   - {fileID: 485208861}
+  - {fileID: 485208863}
 --- !u!114 &485208858
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1755,6 +1777,19 @@ MonoBehaviour:
   delay: 0
   winOption: 2
   levelProgression: {fileID: 11400000, guid: 71b3d3a91f8431343b218bf089ee5f87, type: 2}
+--- !u!114 &485208863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 485208847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c19e887937d4b1042a47d317dfa30f9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 0
 --- !u!1 &551926742
 GameObject:
   m_ObjectHideFlags: 0

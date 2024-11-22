@@ -1132,6 +1132,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 854a702f0d4928b4798c627778734125, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &293298666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 293298655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c19e887937d4b1042a47d317dfa30f9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 0
 --- !u!1 &417599757
 GameObject:
   m_ObjectHideFlags: 0
@@ -5155,13 +5168,21 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2200980011792485088, guid: 938757fbc9f52bd45951d757b446baaf, type: 3}
+      propertyPath: m_Size.y
+      value: 0.8
+      objectReference: {fileID: 0}
     - target: {fileID: 2205036117367761555, guid: 938757fbc9f52bd45951d757b446baaf, type: 3}
       propertyPath: 'gameObjects.Array.data[1]'
       value: 
       objectReference: {fileID: 2119927567}
+    - target: {fileID: 3539529929670124764, guid: 938757fbc9f52bd45951d757b446baaf, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4015388903201501286, guid: 938757fbc9f52bd45951d757b446baaf, type: 3}
       propertyPath: gActions.Array.size
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4015388903201501286, guid: 938757fbc9f52bd45951d757b446baaf, type: 3}
       propertyPath: 'gActions.Array.data[0]'
@@ -5187,6 +5208,10 @@ PrefabInstance:
       propertyPath: 'gActions.Array.data[5]'
       value: 
       objectReference: {fileID: 293298661}
+    - target: {fileID: 4015388903201501286, guid: 938757fbc9f52bd45951d757b446baaf, type: 3}
+      propertyPath: 'gActions.Array.data[6]'
+      value: 
+      objectReference: {fileID: 293298666}
     - target: {fileID: 4462511612960570922, guid: 938757fbc9f52bd45951d757b446baaf, type: 3}
       propertyPath: m_Source
       value: 
@@ -5306,6 +5331,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1511315286133185984, guid: 938757fbc9f52bd45951d757b446baaf, type: 3}
       insertIndex: -1
       addedObject: {fileID: 293298657}
+    - targetCorrespondingSourceObject: {fileID: 1511315286133185984, guid: 938757fbc9f52bd45951d757b446baaf, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 293298666}
     - targetCorrespondingSourceObject: {fileID: 2199232606630023233, guid: 938757fbc9f52bd45951d757b446baaf, type: 3}
       insertIndex: -1
       addedObject: {fileID: 911174729}

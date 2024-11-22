@@ -9,6 +9,8 @@ TagManager:
   - PlayerHP_Text
   - Boss
   - Boss_Projectile
+  - PlayerAbilityOut
+  - PlayerAbilityBorder
   layers:
   - Default
   - TransparentFX
@@ -26,7 +28,7 @@ TagManager:
   - PlatformsNoProjHit
   - BossAttackHitboxes
   - Acorn
-  - 
+  - Invulnerable
   - 
   - 
   - 
