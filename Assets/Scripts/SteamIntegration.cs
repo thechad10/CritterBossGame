@@ -27,8 +27,9 @@ public class SteamIntegration : MonoBehaviour
     {
         Steamworks.SteamClient.Shutdown();
     }
-    void InvokeCreditsAchievement()
+    public void InvokeCreditsAchievement()
     {
         var ach = new Steamworks.Data.Achievement("credits_visited");
+        ach.Trigger(true);
     }
 }
